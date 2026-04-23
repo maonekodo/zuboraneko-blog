@@ -1,0 +1,54 @@
+baseURL: "https://zuboraneko.pages.dev/"
+languageCode: ja
+title: ズボラ猫暮らし。
+theme: PaperMod
+hasCJKLanguage: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+
+paginate: 10
+
+params:
+  env: production
+  title: ズボラ猫暮らし。
+  description: "ズボラでもOK。猫も自分も、ちゃんと幸せになれる。猫飼いのためのズボラ生活ブログ。"
+  keywords: [猫, ズボラ, 猫グッズ, キャットフード, ペット保険, 猫暮らし]
+  author: まおねこ堂
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+
+  homeInfoParams:
+    Title: "ズボラ猫暮らし。🐱"
+    Content: >
+      ズボラでもOK。猫も自分も、ちゃんと幸せになれる。
+      猫2匹と暮らすズボラ飼い主が、楽になれるグッズ・フード・保険をまとめています。
+
+  socialIcons:
+    - name: x
+      url: "https://x.com/"
+
+menu:
+  main:
+    - identifier: グッズ
+      name: 便利グッズ
+      url: /categories/グッズ/
+      weight: 10
+    - identifier: フード
+      name: フード
+      url: /categories/フード/
+      weight: 20
+    - identifier: 保険
+      name: ペット保険
+      url: /categories/保険/
+      weight: 30
+
+taxonomies:
+  category: categories
+  tag: tags
