@@ -46,21 +46,29 @@ body {
   color: var(--color-accent) !important;
 }
 
-/* --- メインコンテンツ幅 --- */
+/* --- メインコンテンツ幅＆2カラムグリッド --- */
 .main {
   max-width: 1000px !important;
-}
-
-/* --- 2カラムグリッド --- */
-.posts-list {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
   gap: 20px !important;
+  align-items: start !important;
+}
+
+/* プロフィール・ページネーションは全幅 */
+.home-info-container,
+.pagination,
+.page-header,
+.post-single,
+.post-content,
+.toc,
+.breadcrumbs {
+  grid-column: 1 / -1 !important;
 }
 
 /* スマホは1カラム */
 @media (max-width: 640px) {
-  .posts-list {
+  .main {
     grid-template-columns: 1fr !important;
   }
 }
