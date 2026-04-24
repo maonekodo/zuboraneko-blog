@@ -171,6 +171,17 @@ a:hover {
   color: #fff !important;
 }
 
+/* --- もしもアフィリエイト かんたんリンク ボタン文字色 --- */
+.msmaflink-a {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+.msmaflink-a:hover {
+  color: #ffffff !important;
+  opacity: 0.85 !important;
+}
+
 /* --- フッター --- */
 .footer {
   background-color: var(--color-header-bg) !important;
