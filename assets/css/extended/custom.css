@@ -48,7 +48,21 @@ body {
 
 /* --- メインコンテンツ幅 --- */
 .main {
-  max-width: 860px !important;
+  max-width: 1000px !important;
+}
+
+/* --- 2カラムグリッド --- */
+.posts-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+}
+
+/* スマホは1カラム */
+@media (max-width: 640px) {
+  .posts-list {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* --- 記事カード --- */
@@ -57,9 +71,11 @@ body {
   border: 1.5px solid var(--color-border) !important;
   border-radius: var(--radius) !important;
   box-shadow: var(--shadow) !important;
-  padding: 20px 24px !important;
-  margin-bottom: 20px !important;
+  padding: 20px 20px !important;
+  margin-bottom: 0 !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .post-entry:hover {
@@ -70,8 +86,9 @@ body {
 /* --- 記事タイトル --- */
 .post-entry .entry-header h2 {
   color: var(--color-text) !important;
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
   font-weight: 700 !important;
+  line-height: 1.6 !important;
 }
 
 .post-entry:hover .entry-header h2 {
