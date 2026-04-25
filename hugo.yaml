@@ -24,6 +24,12 @@ params:
   ShowToc: true
   TocOpen: false
 
+  logo:
+    url: "/images/logo.png"
+    width: 40
+    height: 40
+    alt: "ズボラ猫暮らし。"
+
   homeInfoParams:
     Title: "ズボラ猫暮らし。🐱"
     Content: >
