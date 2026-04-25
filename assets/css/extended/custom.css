@@ -130,6 +130,14 @@ body {
   font-size: 0.82rem !important;
 }
 
+/* --- 記事内イラスト画像 --- */
+.post-content img {
+  display: block !important;
+  max-width: 280px !important;
+  margin: 24px auto !important;
+  border-radius: 12px !important;
+}
+
 /* --- ホームのプロフィール部分 --- */
 .home-info-container {
   background-color: #fff8f5 !important;
