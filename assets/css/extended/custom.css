@@ -201,6 +201,18 @@ a:hover {
   background-color: #f9ede8 !important;
 }
 
+/* --- ホームヘッダーバナー --- */
+.home-header-banner {
+  grid-column: 1 / -1 !important;
+  margin-bottom: 24px;
+}
+
+.home-header-banner img {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+}
+
 /* --- スクロールバー（Chromium系） --- */
 ::-webkit-scrollbar {
   width: 6px;
