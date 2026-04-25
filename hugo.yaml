@@ -25,7 +25,7 @@ params:
   TocOpen: false
 
   logo:
-    url: "/images/logo.png"
+    url: "logo.png"
     width: 40
     height: 40
     alt: "ズボラ猫暮らし。"
