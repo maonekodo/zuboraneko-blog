@@ -46,18 +46,17 @@ body {
   color: var(--color-accent) !important;
 }
 
-/* --- メインコンテンツ幅＆2カラムグリッド --- */
+/* --- メインコンテンツ幅 --- */
 .main {
-  max-width: 1000px !important;
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap: 20px !important;
-  align-items: start !important;
+  max-width: 1080px !important;
+  display: block !important;
 }
 
-/* プロフィール・ページネーションは全幅 */
-.home-info-container,
-.pagination,
+/* ヘッダーバナー・home-info・ページネーションは全幅 */
+.home-header-banner,
+.home-info,
+.first-entry.home-info,
+.page-footer,
 .page-header,
 .post-single,
 .post-content,
@@ -66,10 +65,32 @@ body {
   grid-column: 1 / -1 !important;
 }
 
+/* --- サイドバーつき2カラムレイアウト --- */
+.main-with-sidebar {
+  display: grid !important;
+  grid-template-columns: 1fr 260px !important;
+  gap: 24px !important;
+  align-items: start !important;
+}
+
+/* 記事一覧エリア（2カラムグリッド） */
+.articles-area {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+  align-items: start !important;
+}
+
 /* スマホは1カラム */
-@media (max-width: 640px) {
-  .main {
+@media (max-width: 768px) {
+  .main-with-sidebar {
     grid-template-columns: 1fr !important;
+  }
+  .articles-area {
+    grid-template-columns: 1fr !important;
+  }
+  .sidebar {
+    display: none !important;
   }
 }
 
@@ -180,6 +201,123 @@ a:hover {
 .msmaflink-a:hover {
   color: #ffffff !important;
   opacity: 0.85 !important;
+}
+
+/* --- サイドバー --- */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-widget {
+  background-color: var(--color-bg-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+
+.sidebar-title {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* プロフィール */
+.sidebar-profile img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  border: 2px solid var(--color-accent-light);
+}
+
+.sidebar-profile p {
+  font-size: 0.84rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.sidebar-x-btn {
+  display: block;
+  text-align: center;
+  background-color: #000;
+  color: #fff !important;
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.sidebar-x-btn:hover {
+  color: #fff !important;
+  opacity: 0.8;
+}
+
+/* カテゴリ */
+.sidebar-categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-categories li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+}
+
+.sidebar-categories a {
+  color: var(--color-text) !important;
+  text-decoration: none;
+}
+
+.sidebar-categories a:hover {
+  color: var(--color-accent) !important;
+}
+
+.sidebar-count {
+  background-color: var(--color-accent-light);
+  color: var(--color-text);
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 0.78rem;
+}
+
+/* タグ */
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sidebar-tag {
+  background-color: var(--color-accent-light);
+  color: var(--color-text) !important;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.sidebar-tag:hover {
+  background-color: var(--color-accent);
+  color: #fff !important;
 }
 
 /* --- フッター --- */

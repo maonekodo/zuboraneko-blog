@@ -1,0 +1,38 @@
+<aside class="sidebar">
+
+  {{/* プロフィールウィジェット */}}
+  <div class="sidebar-widget">
+    <h3 class="sidebar-title">🐱 このブログについて</h3>
+    <div class="sidebar-profile">
+      <img src="/images/logo.png" alt="まおねこ堂">
+      <p>猫2匹と暮らすズボラ飼い主・まおねこ堂です。<br>楽になれるグッズ・フード・保険をまとめてます。</p>
+      <a href="https://x.com/zubora_neko" class="sidebar-x-btn" target="_blank" rel="noopener">
+        𝕏 フォローする @zubora_neko
+      </a>
+    </div>
+  </div>
+
+  {{/* カテゴリウィジェット */}}
+  <div class="sidebar-widget">
+    <h3 class="sidebar-title">📂 カテゴリ</h3>
+    <ul class="sidebar-categories">
+      {{ range site.Taxonomies.categories.ByCount }}
+      <li>
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        <span class="sidebar-count">{{ .Count }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  {{/* タグウィジェット */}}
+  <div class="sidebar-widget">
+    <h3 class="sidebar-title">🏷️ タグ</h3>
+    <div class="sidebar-tags">
+      {{ range site.Taxonomies.tags.ByCount }}
+      <a href="{{ .Page.Permalink }}" class="sidebar-tag">{{ .Page.Title }}</a>
+      {{ end }}
+    </div>
+  </div>
+
+</aside>
