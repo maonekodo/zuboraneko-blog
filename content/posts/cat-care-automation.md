@@ -5,7 +5,9 @@ draft: false
 categories: ["まとめ・ガイド"]
 tags: ["自動化", "時短グッズ", "ズボラグッズ", "給水器", "自動給餌器", "自動トイレ"]
 description: "仕事で疲れて帰っても、猫のお世話が山積み……そんなズボラ飼い主に贈る「猫のお世話自動化ガイド」。給水・給餌・トイレの3つを自動化するだけで、毎日がマジでラクになります。"
-image: "/images/posts/cat-care-automation-thumb.png"
+cover:
+  image: "/images/posts/cat-care-automation-thumb.png"
+  alt: "猫のお世話を自動化する方法"
 ---
 
 ## ぶっちゃけ、毎日の猫のお世話って面倒じゃない？
