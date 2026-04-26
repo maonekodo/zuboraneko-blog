@@ -1,4 +1,8 @@
 baseURL: "https://zubora-neko.com/"
+
+services:
+  googleAnalytics:
+    ID: G-5KE7H9BCXY
 languageCode: ja
 title: ズボラ猫暮らし。
 theme: PaperMod
@@ -11,7 +15,6 @@ paginate: 10
 
 params:
   env: production
-  googleAnalytics: G-5KE7H9BCXY
   title: ズボラ猫暮らし。
   description: "ズボラでもOK。猫も自分も、ちゃんと幸せになれる。猫飼いのためのズボラ生活ブログ。"
   keywords: [猫, ズボラ, 猫グッズ, キャットフード, ペット保険, 猫暮らし]
