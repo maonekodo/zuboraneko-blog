@@ -10,6 +10,7 @@ hasCJKLanguage: true
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
+timeZone: Asia/Tokyo
 
 paginate: 10
 
