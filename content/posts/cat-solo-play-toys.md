@@ -5,6 +5,9 @@ draft: false
 categories: ["おもちゃ・遊び"]
 tags: ["おもちゃ", "一人遊び", "自動おもちゃ", "留守番"]
 description: "猫がおもちゃで遊ばない理由と解決策を解説。ズボラ飼い主目線でズボラ度別に選んだ一人遊びおもちゃ5選をまとめました。"
+cover:
+  image: "/images/posts/cat-solo-play-toys-thumb.png"
+  alt: "猫の一人遊びおもちゃ5選"
 ---
 
 ## 「うちの子も全然食いつかない…」←たぶん全飼い主が通る道

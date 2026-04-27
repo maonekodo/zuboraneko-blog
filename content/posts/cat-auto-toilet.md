@@ -5,6 +5,9 @@ draft: false
 categories: ["便利グッズ"]
 tags: ["自動トイレ", "猫トイレ", "掃除", "ズボラグッズ", "多頭飼い"]
 description: "毎日のトイレ掃除がしんどい…そんなズボラ飼い主に贈る全自動猫トイレ3選。オープン型・ドーム型・計量型を正直比較しました。"
+cover:
+  image: "/images/posts/cat-auto-toilet-thumb.png"
+  alt: "全自動猫トイレ3選"
 ---
 
 ## 猫のトイレ掃除、正直しんどくないですか

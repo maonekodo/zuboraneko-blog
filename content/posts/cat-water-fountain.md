@@ -5,6 +5,9 @@ draft: false
 categories: ["便利グッズ"]
 tags: ["給水器", "自動給水器", "猫の水分不足", "腎臓病", "多頭飼い"]
 description: "毎日の水の取り替えが面倒…そんなズボラ飼い主に贈る、猫用自動給水器4選。腎臓病の猫を抱えるリアルな飼い主目線で、本当に使いやすいものだけを選びました。"
+cover:
+  image: "/images/posts/cat-water-fountain-thumb.png"
+  alt: "猫の給水器4選"
 ---
 
 ## うちの猫、水を全然飲まなくて怖かった話

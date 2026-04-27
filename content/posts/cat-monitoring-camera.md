@@ -5,6 +5,9 @@ draft: false
 categories: ["便利グッズ"]
 tags: ["見守りカメラ", "ペットカメラ", "留守番", "自動追尾", "夜間撮影"]
 description: "留守中の猫が気になって仕事に集中できない…そんな飼い主に贈る見守りカメラ3選。360°・夜間撮影・双方向通話など特徴別に正直比較しました。"
+cover:
+  image: "/images/posts/cat-monitoring-camera-thumb.png"
+  alt: "猫の見守りカメラ3選"
 ---
 
 ## 「今、猫どうしてるんだろう」が止まらない

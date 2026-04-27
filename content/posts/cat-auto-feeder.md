@@ -5,6 +5,9 @@ draft: false
 categories: ["便利グッズ"]
 tags: ["自動給餌器", "留守番", "多頭飼い", "時短", "ズボラグッズ"]
 description: "仕事で帰りが遅い・ごはんやり忘れが不安…そんなズボラ飼い主に贈る自動給餌器5選。タイプ別に正直レビューしました。"
+cover:
+  image: "/images/posts/cat-auto-feeder-thumb.png"
+  alt: "猫の自動給餌器5選"
 ---
 
 ## 「今日もごはん遅くなってごめん」←この罪悪感から解放されたい

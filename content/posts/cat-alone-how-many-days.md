@@ -5,6 +5,9 @@ draft: false
 categories: ["猫の豆知識"]
 tags: ["留守番", "一人暮らし", "旅行", "自動給餌器", "見守りカメラ"]
 description: "猫を一人にして旅行や出張に行っても大丈夫？何日までOKなのか、獣医師の見解や実際の注意点をズボラ飼い主目線で解説。安心して外出するための準備もまとめました。"
+cover:
+  image: "/images/posts/cat-alone-how-many-days-thumb.png"
+  alt: "猫の留守番何日まで"
 ---
 
 ## 「猫、何日まで一人にしていいんだろう」
