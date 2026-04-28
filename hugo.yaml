@@ -40,12 +40,6 @@ params:
     icon: "images/logo.png"
     iconHeight: 35
 
-  homeInfoParams:
-    Title: "ズボラ猫暮らし。🐱"
-    Content: >
-      ズボラでもOK。猫も自分も、ちゃんと幸せになれる。
-      猫2匹と暮らすズボラ飼い主が、楽になれるグッズ・フード・保険をまとめています。
-
   socialIcons:
     - name: x
       url: "https://x.com/zubora_neko"
