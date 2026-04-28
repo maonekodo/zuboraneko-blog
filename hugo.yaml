@@ -64,6 +64,10 @@ menu:
       name: ペット保険
       url: /categories/保険/
       weight: 30
+    - identifier: privacy
+      name: プライバシーポリシー
+      url: /privacy-policy/
+      weight: 35
     - identifier: contact
       name: お問い合わせ
       url: /contact/
