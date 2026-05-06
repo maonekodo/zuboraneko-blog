@@ -201,14 +201,14 @@ a:hover {
 }
 
 /* --- もしもアフィリエイト かんたんリンク ボタン文字色 --- */
-div[id^="msmaflink-"] a,
+div[id^="msmaflink-"] a[style*="background"],
 .msmaflink-a {
   color: #ffffff !important;
   font-weight: bold !important;
   text-decoration: none !important;
 }
 
-div[id^="msmaflink-"] a:hover,
+div[id^="msmaflink-"] a[style*="background"]:hover,
 .msmaflink-a:hover {
   color: #ffffff !important;
   opacity: 0.85 !important;
