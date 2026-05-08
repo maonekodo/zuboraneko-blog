@@ -1,0 +1,24 @@
+{{ $cat := .Get "cat" }}
+{{ $side := .Get "side" | default "left" }}
+
+{{ if eq $cat "mao" }}
+<div class="cat-voice cat-voice--mao">
+  <div class="cat-voice__icon">
+    <img src="/images/cats/mao-icon.jpg" alt="まお君">
+    <span class="cat-voice__name">まお君</span>
+  </div>
+  <div class="cat-voice__bubble cat-voice__bubble--mao">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
+{{ else if eq $cat "rabi" }}
+<div class="cat-voice cat-voice--rabi">
+  <div class="cat-voice__bubble cat-voice__bubble--rabi">
+    {{ .Inner | markdownify }}
+  </div>
+  <div class="cat-voice__icon">
+    <img src="/images/cats/rabi-icon.jpg" alt="らびちゃん">
+    <span class="cat-voice__name">らびちゃん</span>
+  </div>
+</div>
+{{ end }}
