@@ -1,10 +1,12 @@
 {{ $cat := .Get "cat" }}
-{{ $side := .Get "side" | default "left" }}
+{{ $mood := .Get "mood" | default "character" }}
 
 {{ if eq $cat "mao" }}
+  {{ $icon := "/images/cats/mao-icon.jpg" }}
+  {{ if eq $mood "usual" }}{{ $icon = "/images/cats/mao-icon-usual.jpg" }}{{ end }}
 <div class="cat-voice cat-voice--mao">
   <div class="cat-voice__icon">
-    <img src="/images/cats/mao-icon.jpg" alt="まお君">
+    <img src="{{ $icon }}" alt="まお君">
     <span class="cat-voice__name">まお君</span>
   </div>
   <div class="cat-voice__bubble cat-voice__bubble--mao">
@@ -12,12 +14,14 @@
   </div>
 </div>
 {{ else if eq $cat "rabi" }}
+  {{ $icon := "/images/cats/rabi-icon.jpg" }}
+  {{ if eq $mood "usual" }}{{ $icon = "/images/cats/rabi-icon-usual.jpg" }}{{ end }}
 <div class="cat-voice cat-voice--rabi">
   <div class="cat-voice__bubble cat-voice__bubble--rabi">
     {{ .Inner | markdownify }}
   </div>
   <div class="cat-voice__icon">
-    <img src="/images/cats/rabi-icon.jpg" alt="らびちゃん">
+    <img src="{{ $icon }}" alt="らびちゃん">
     <span class="cat-voice__name">らびちゃん</span>
   </div>
 </div>
