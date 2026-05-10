@@ -20,7 +20,7 @@ cover:
 
 避難するとき、何を持って出るかを決めるのは飼い主だけ。いざというときに「あれどこだっけ」と焦らないために、一回だけ整えておくだけでいいんです。
 
-{{< cat-voice cat="mao" >}}ぼくは逃げられへんから、頼むで飼い主よ…なんよな。{{< /cat-voice >}}
+{{< cat-voice cat="mao" >}}ぼくは逃げられへんから、飼い主頼むで～なんよな。{{< /cat-voice >}}
 
 ---
 
@@ -48,7 +48,7 @@ cover:
 - [ ] 猫の写真（迷子になったとき用）← **これ意外と忘れがち**
 - [ ] リード・ハーネス（キャリーがあっても念のため）
 
-{{< cat-voice cat="rabi" >}}猫の写真、いざってときにスマホの充電なかったら見せられないですよねぇッ！{{< /cat-voice >}}
+{{< cat-voice cat="rabi" >}}私の写真、いざって時にスマホの充電無いと見せられないのではッ！？{{< /cat-voice >}}
 
 ---
 
@@ -66,7 +66,7 @@ cover:
 - 普段使いもできるデザインなので「防災グッズを買ったのに押し入れで眠らせる問題」が起きにくい
 - ペット好きが集まって企画した専門店なので、猫飼いの気持ちをわかってる
 
-{{< cat-voice cat="mao" >}}バッグにぼくの顔が入ってんの、ちょっと恥ずかしいんよな…でもまあ助かるんよな。{{< /cat-voice >}}
+{{< cat-voice cat="mao" >}}ぼくの顔写真入り…ちょっと恥ずかしいけどまあ良いかもなんよな。{{< /cat-voice >}}
 
 👉 <a href="//af.moshimo.com/af/c/click?a_id=5545913&p_id=6643&pc_id=18934&pl_id=84924" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" attributionsrc>Paws&Prep ペット用防災トートバッグをみてみる</a><img src="//i.moshimo.com/af/i/impression?a_id=5545913&p_id=6643&pc_id=18934&pl_id=84924" width="1" height="1" style="border:none;" loading="lazy">
 
