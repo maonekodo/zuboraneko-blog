@@ -11,6 +11,7 @@ title: ズボラ猫暮らし。
 theme: PaperMod
 hasCJKLanguage: true
 enableRobotsTXT: true
+enableGitInfo: true
 buildDrafts: false
 buildFuture: false
 timeZone: Asia/Tokyo
