@@ -1,5 +1,8 @@
 baseURL: "https://zubora-neko.com/"
 
+pingURLs:
+  - "https://ping.blogmura.com/xmlrpc/q8k0kqbaxomr/"
+
 services:
   googleAnalytics:
     ID: G-5KE7H9BCXY
