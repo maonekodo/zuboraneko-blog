@@ -100,6 +100,12 @@ cover:
 
 👉 <a href="//af.moshimo.com/af/c/click?a_id=5545913&p_id=6643&pc_id=18934&pl_id=84924" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" attributionsrc>Paws&Prep ペット用防災トートバッグをみてみる</a><img src="//i.moshimo.com/af/i/impression?a_id=5545913&p_id=6643&pc_id=18934&pl_id=84924" width="1" height="1" style="border:none;" loading="lazy">
 
+## 日々のお世話もまとめてラクにしたい方へ
+
+防災の準備が整ったら、毎日のお世話も「仕組み」にしてしまいましょう。給水・給餌・トイレを全部自動化した話をまとめています👇
+
+👉 [猫のお世話を自動化する方法【給水・給餌・トイレ全部ラクになった話】](/posts/cat-care-automation/)
+
 ---
 
 *この記事にはアフィリエイトリンクが含まれます。商品・サービスの評価は著者の個人的な見解です。*
