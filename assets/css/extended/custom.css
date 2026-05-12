@@ -428,6 +428,7 @@ div[id^="msmaflink-"] a[style*="background"]:hover,
 
 /* らびちゃん：右アイコン・左吹き出し（ピンク系） */
 .cat-voice--rabi {
+  justify-content: flex-end;
 }
 
 .cat-voice--rabi .cat-voice__bubble {
