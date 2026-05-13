@@ -154,7 +154,16 @@ msmaflink({"n":"【楽天1位】自動トイレ 猫 トイレ 全自動猫トイ
 ただし毎日の水替えの手間を考えると、十分元が取れます。
 
 <!-- START MoshimoAffiliateEasyLink -->
-<div id="msmaflink-yQX6u">もしも読込中…</div><script>window._msmaflink=window._msmaflink||[];window._msmaflink.push({"id":"yQX6u","st_category":"home","st":"at","mo":"amazon","pl":"textlink","at":"https://www.amazon.co.jp/dp/B0CRNBHXNC","eid":"yQX6u","urltype":1});</script><script async src="https://af.moshimo.com/af/c/click?a_id=4422936&p_id=170&pc_id=185&pl_id=4062&guid=ON" referrerpolicy="no-referrer-when-downgrade"></script>
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"《獣医師監修》超静音 自動給水器 コードレス センサー付 ステンレス 水飲み器 猫 犬 ペット 給水器 静音 フィルター 1年保証 衛生的 洗いやすい 猫給水器 水やり器 いたずら防止 ろ過 流水 水分補給 脱水予防","b":"","t":"","d":"https:\/\/thumbnail.image.rakuten.co.jp","c_p":"\/@0_mall\/next-online\/cabinet\/06938766\/09465194","p":["\/samune0920-min.jpg","\/imgrc0140822354.jpg","\/imgrc0141567314.jpg"],"u":{"u":"https:\/\/item.rakuten.co.jp\/next-online\/10000184\/","t":"rakuten","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/item.rakuten.co.jp\/next-online\/10000184\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":1},{"id":7,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/s\/ref=nb_sb_noss_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Daps&field-keywords=%E8%87%AA%E5%8B%95%E7%B5%A6%E6%B0%B4%E5%99%A8%20%E3%82%B3%E3%83%BC%E3%83%89%E3%83%AC%E3%82%B9%20%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E4%BB%98%20%E3%82%B9%E3%83%86%E3%83%B3%E3%83%AC%E3%82%B9%20%E7%8C%AB","a_id":5531911,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":2},{"id":8,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1&p=%E8%87%AA%E5%8B%95%E7%B5%A6%E6%B0%B4%E5%99%A8%20%E3%82%B3%E3%83%BC%E3%83%89%E3%83%AC%E3%82%B9%20%E3%82%B9%E3%83%86%E3%83%B3%E3%83%AC%E3%82%B9%20%E7%8C%AB","a_id":5531909,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"bIveN","s":"l"});
+</script>
+<div id="msmaflink-bIveN">リンク</div>
 <!-- MoshimoAffiliateEasyLink END -->
 
 他の機種も比較したい方はこちら👇
