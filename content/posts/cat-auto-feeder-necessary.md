@@ -4,7 +4,7 @@ date: 2026-04-29
 draft: false
 categories: ["便利グッズ"]
 tags: ["自動給餌器", "一人暮らし", "留守番", "ズボラグッズ", "猫の飼い方"]
-description: "自動給餌器って手抜き？いらない？一人暮らしで猫2匹を飼うズボラ飼い主が、導入前後のリアルな変化をもとに本音で語ります。"
+description: "自動給餌器って手抜き？いらない？猫2匹と暮らす私が、導入のメリット・デメリットをズボラ目線で徹底的に調べ尽くしました。"
 cover:
   image: "/images/posts/cat-auto-feeder-necessary-thumb.png"
   alt: "猫に自動給餌器は必要か"
