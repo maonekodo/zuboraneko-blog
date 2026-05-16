@@ -73,6 +73,8 @@ PVC素材の窓付きタイプで、当時はかなり使いやすかった。
 片方の側面を下にしてもう片方が上を向いた状態から入れて、チャックを閉める。
 出入口が広いので、大きい猫でも案外スムーズに入れられます。
 
+> まお君はされるがままタイプなのでそのまま入れられますが、すばしっこい猫ちゃんには洗濯ネットを併用するのがおすすめです😊
+
 <!-- START MoshimoAffiliateEasyLink -->
 <script type="text/javascript">
 (function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
