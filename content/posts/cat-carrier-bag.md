@@ -124,6 +124,31 @@ msmaflink({"n":"最新型 犬 猫 リュック メッシュ窓3つ カーテン�
 
 ---
 
+## 災害時を考えるなら、ハードタイプも一択
+
+獣医師監修の記事では、**災害時の避難にはハードタイプのキャリーを推奨**しているものが多いです。
+
+理由は衝撃に強く、倒壊物などから猫を守りやすいから。
+
+…原付では絶対に無理ですが😂
+
+車移動がメインの方や、防災グッズとして一台備えておきたい方には、バリケンネルタイプが候補になります。
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"【OFT】 ペットケンネル ファーストクラス L60 キャリー ペット クレート 犬 猫 ハード ケース コンテナ 小型犬 中型犬 すのこ 防災 通院 飛行機 IATA ハウス キャリーバッグ サイズ バック ゲージ ケージ バリケンネル バリケン 水飲み","b":"","t":"","d":"https:\/\/thumbnail.image.rakuten.co.jp","c_p":"\/@0_mall\/ip-plus\/cabinet","p":["\/item-image\/pk-1st\/km_petkennel_60.jpg","\/oftftp19\/23_pk_01.jpg","\/oftftp19\/23_pk5060_02.jpg"],"u":{"u":"https:\/\/item.rakuten.co.jp\/ip-plus\/petmode-s\/","t":"rakuten","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/item.rakuten.co.jp\/ip-plus\/petmode-s\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":1},{"id":7,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/s\/ref=nb_sb_noss_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Daps&field-keywords=%E3%80%90OFT%E3%80%91%20%E3%83%9A%E3%83%83%E3%83%88%E3%82%B1%E3%83%B3%E3%83%8D%E3%83%AB%20%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%82%AF%E3%83%A9%E3%82%B9%20L60","a_id":5531911,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":2},{"id":8,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1&p=%E3%80%90OFT%E3%80%91%20%E3%83%9A%E3%83%83%E3%83%88%E3%82%B1%E3%83%B3%E3%83%8D%E3%83%AB%20%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%82%AF%E3%83%A9%E3%82%B9%20L60","a_id":5531909,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"sqJho","s":"l"});
+</script>
+<div id="msmaflink-sqJho">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
+
+---
+
 ## 通院以外にも使えます
 
 キャリーは通院だけじゃなく、**撮影会・避難・おでかけ**にも必要になります。
