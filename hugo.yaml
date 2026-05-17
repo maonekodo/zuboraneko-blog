@@ -2,6 +2,7 @@ baseURL: "https://zubora-neko.com/"
 
 pingURLs:
   - "https://ping.blogmura.com/xmlrpc/q8k0kqbaxomr/"
+  - "https://blog.with2.net/ping.php/2140496/1779040164"
 
 services:
   googleAnalytics:
