@@ -1,0 +1,43 @@
+name: IndexNow Auto Submit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/posts/**'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Submit changed URLs to IndexNow
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'content/posts/*.md' | grep -v '_index.md')
+
+          if [ -z "$CHANGED" ]; then
+            echo "変更されたポストなし、スキップします"
+            exit 0
+          fi
+
+          URL_LIST=""
+          for file in $CHANGED; do
+            slug=$(basename "$file" .md)
+            url="\"https://zubora-neko.com/posts/${slug}/\""
+            URL_LIST="${URL_LIST}${url},"
+          done
+          URL_LIST="${URL_LIST%,}"
+
+          echo "送信するURL: $URL_LIST"
+
+          curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"zubora-neko.com\",
+              \"key\": \"ebd2431ba5e446c1ae00a29138aca9e7\",
+              \"keyLocation\": \"https://zubora-neko.com/ebd2431ba5e446c1ae00a29138aca9e7.txt\",
+              \"urlList\": [$URL_LIST]
+            }"
