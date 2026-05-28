@@ -1,0 +1,56 @@
+name: Blog Ranking Ping
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/posts/**'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check for changed posts
+        id: check
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'content/posts/*.md' | grep -v '_index.md')
+          if [ -z "$CHANGED" ]; then
+            echo "変更されたポストなし、スキップします"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Ping にほんブログ村
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          curl -s -o /dev/null -w "にほんブログ村 ping: %{http_code}\n" \
+            -X POST "https://ping.blogmura.com/xmlrpc/q8k0kqbaxomr/" \
+            -H "Content-Type: text/xml" \
+            -d '<?xml version="1.0"?>
+          <methodCall>
+            <methodName>weblogUpdates.ping</methodName>
+            <params>
+              <param><value>ズボラ猫暮らし。</value></param>
+              <param><value>https://zubora-neko.com</value></param>
+            </params>
+          </methodCall>'
+
+      - name: Ping 日本ブログランキング
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          curl -s -o /dev/null -w "日本ブログランキング ping: %{http_code}\n" \
+            -X POST "https://blog.with2.net/ping.php/2140496/1779040164" \
+            -H "Content-Type: text/xml" \
+            -d '<?xml version="1.0"?>
+          <methodCall>
+            <methodName>weblogUpdates.ping</methodName>
+            <params>
+              <param><value>ズボラ猫暮らし。</value></param>
+              <param><value>https://zubora-neko.com</value></param>
+            </params>
+          </methodCall>'
