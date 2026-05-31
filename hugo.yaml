@@ -23,7 +23,7 @@ params:
   env: production
   title: ズボラ猫暮らし。
   description: "ズボラでもOK。猫も自分も、ちゃんと幸せになれる。猫飼いのためのズボラ生活ブログ。"
-  keywords: [猫, ズボラ, 猫グッズ, キャットフード, ペット保険, 猫暮らし]
+  keywords: [猫, ズボラ, 猫グッズ, キャットフード, 猫暮らし]
   author: まおねこ堂
 
   ShowReadingTime: true
@@ -59,10 +59,6 @@ menu:
       name: フード
       url: /categories/フード/
       weight: 20
-    - identifier: 保険
-      name: ペット保険
-      url: /categories/保険/
-      weight: 30
     - identifier: privacy
       name: プライバシーポリシー
       url: /privacy-policy/
