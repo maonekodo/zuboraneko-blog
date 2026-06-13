@@ -31,6 +31,16 @@ body {
   box-shadow: 0 2px 8px rgba(200, 140, 120, 0.08) !important;
 }
 
+/* --- ヘッダー追従（スクロールしても上に貼りつく） --- */
+.header {
+  position: sticky !important;
+  top: 0;
+  z-index: 30;
+  background-color: var(--color-header-bg) !important;
+  border-bottom: 2px solid var(--color-border) !important;
+  box-shadow: 0 2px 8px rgba(200, 140, 120, 0.08) !important;
+}
+
 .logo a,
 .logo span {
   color: var(--color-accent) !important;
