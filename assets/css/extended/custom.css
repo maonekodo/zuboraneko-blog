@@ -482,3 +482,17 @@ div[id^="msmaflink-"] a[style*="background"]:hover,
   background-color: var(--color-accent-light);
   border-radius: 10px;
 }
+
+/* --- カテゴリ・タグ一覧でもサムネイルを表示する --- */
+/* PaperMod標準は .tag-entry .entry-cover を display:none で隠すため上書き */
+.tag-entry .entry-cover {
+  display: flex !important;
+  margin-bottom: 14px !important;
+}
+
+.tag-entry .entry-cover img {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  border-radius: var(--radius) !important;
+}
