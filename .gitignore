@@ -1,0 +1,11 @@
+# Hugoが自動生成する一時ファイル（GitHub/Cloudflareに上げる必要なし）
+/public/
+/resources/
+.hugo_build.lock
+
+# Mac特有のゴミファイル
+.DS_Store
+
+# OS・エディタの一時ファイル
+*.log
+Thumbs.db
