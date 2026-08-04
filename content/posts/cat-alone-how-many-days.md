@@ -203,7 +203,7 @@ cover:
 
 {{< cat-voice cat="rabi" >}}知らない人が来るんですかッ！？とりあえず隠れときますねぇッ{{< /cat-voice >}}
 
-{{< cat-voice cat="mao" >}}僕は寝てるだけやから誰が来ても関係ないんよな{{< /cat-voice >}}
+{{< cat-voice cat="mao" >}}仲悪いのに、こういう時だけ一緒に隠れることになるんよな{{< /cat-voice >}}
 
 ---
 
