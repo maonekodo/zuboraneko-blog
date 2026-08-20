@@ -1,0 +1,47 @@
+name: Scheduled Rebuild
+
+# Hugoは「ビルドした瞬間の日付」で公開/非公開を判定するため、
+# 未来日付の予約記事は公開日にもう一度ビルドしないと404になる。
+# 毎朝空コミットをpushして、Cloudflare Pagesのビルドを起こす。
+
+on:
+  schedule:
+    # UTC 21:00 = JST 6:00（前日UTCなので日本の朝6時）
+    - cron: '0 21 * * *'
+  workflow_dispatch:   # 手動実行もできるようにしておく
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 公開予定の記事があるか確認
+        id: check
+        run: |
+          TODAY=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+          echo "今日（JST）: $TODAY"
+
+          # front matterの date が今日の記事を探す
+          HIT=$(grep -l "^date: ${TODAY}" content/posts/*.md 2>/dev/null || true)
+
+          if [ -z "$HIT" ]; then
+            echo "本日公開予定の記事なし"
+            echo "found=false" >> $GITHUB_OUTPUT
+          else
+            echo "本日公開予定:"
+            echo "$HIT"
+            echo "found=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 空コミットで再ビルドを起こす
+        if: steps.check.outputs.found == 'true'
+        run: |
+          TODAY=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "自動再ビルド（${TODAY} 公開分）"
+          git push
