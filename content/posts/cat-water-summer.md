@@ -58,14 +58,22 @@ cover:
 
 <div class="affiliate-link">
 
-<script async src="https://af.moshimo.com/af/c/click?a_id=4422936&p_id=170&pc_id=185&pl_id=4062&guid=ON" referrerpolicy="no-referrer-when-downgrade"></script>
-<noscript><img src="https://affiliate.moshimo.com/af/i/click?a_id=4422936&p_id=170&pc_id=185&pl_id=4062" width="1" height="1" style="border:none;"><a href="https://www.amazon.co.jp" rel="nofollow">Amazon</a></noscript>
-<!-- moshi もしも -->
-<div id="msmaflink-ySoCA">もしも読込中…</div><script>window._msmaflink=window._msmaflink||[];window._msmaflink.push({"id":"ySoCA","st_category":"home","st":"at","mo":"amazon","pl":"textlink","at":"https://www.amazon.co.jp/dp/B0D7XFXFCP","eid":"ySoCA","urltype":1});</script><script async src="https://af.moshimo.com/af/c/click?a_id=4422936&p_id=170&pc_id=185&pl_id=4062&guid=ON" referrerpolicy="no-referrer-when-downgrade"></script>
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"《獣医師監修》超静音 自動給水器 コードレス センサー付 ステンレス 水飲み器 猫 犬 ペット 給水器 静音 フィルター 1年保証 衛生的 洗いやすい 猫給水器 水やり器 いたずら防止 ろ過 流水 水分補給 脱水予防 尿路管理 1年保証 フィルター 軽量","b":"","t":"","d":"https:\/\/thumbnail.image.rakuten.co.jp","c_p":"\/@0_mall\/next-online\/cabinet\/06938766\/09465194","p":["\/samune0920-min.jpg","\/imgrc0140822354.jpg","\/imgrc0141567314.jpg"],"u":{"u":"https:\/\/item.rakuten.co.jp\/next-online\/10000184\/","t":"rakuten","r_v":""},"v":"2.1","b_l":[{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/item.rakuten.co.jp\/next-online\/10000184\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":1}],"eid":"gdXEg","s":"l"});
+</script>
+<div id="msmaflink-gdXEg">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
 
 </div>
 
-センサー付きで猫が近づいたときだけ水が流れるタイプなので、モーター音が鳴りっぱなしにならないのもポイントです。
+センサー付きで猫が近づいたときだけ水が流れるタイプなので、モーター音が鳴りっぱなしにならないのもポイントです。タンクが<b>ステンレス製</b>なのも、夏場のヌメリを考えると安心だと思います。
 
 給水器のタイプ別の比較はこちらにまとめています👇
 
