@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 350" width="640" height="350" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
+  <rect width="640" height="350" fill="#fffaf3"/>
+
+  <!-- タイトル -->
+  <text x="320" y="36" text-anchor="middle" font-size="21" font-weight="bold" fill="#4a3f35">見えている範囲、こんなに違う</text>
+
+  <!-- ===== 人間（180度） ===== -->
+  <g transform="translate(160,205)">
+    <path d="M 0 0 L -120 0 A 120 120 0 0 1 120 0 Z" fill="#bcd6e8" opacity="0.6"/>
+    <line x1="-142" y1="0" x2="142" y2="0" stroke="#a9a29a" stroke-width="1.6" stroke-dasharray="5 5"/>
+    <circle cx="0" cy="0" r="21" fill="#f7e3cf" stroke="#4a3f35" stroke-width="2.5"/>
+    <circle cx="-7" cy="-4" r="2.6" fill="#4a3f35"/>
+    <circle cx="7" cy="-4" r="2.6" fill="#4a3f35"/>
+    <path d="M -6 6 Q 0 10 6 6" stroke="#4a3f35" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="0" y="76" text-anchor="middle" font-size="17" font-weight="bold" fill="#4a3f35">人間</text>
+    <text x="0" y="106" text-anchor="middle" font-size="30" font-weight="bold" fill="#5b8fb0">約180度</text>
+  </g>
+
+  <!-- ===== 猫（200度・左右に10度ずつはみ出す） ===== -->
+  <g transform="translate(480,205)">
+    <path d="M 0 0 L -118.2 20.8 A 120 120 0 1 1 118.2 20.8 Z" fill="#f5c98f" opacity="0.7"/>
+    <line x1="-142" y1="0" x2="142" y2="0" stroke="#a9a29a" stroke-width="1.6" stroke-dasharray="5 5"/>
+    <!-- はみ出し強調 -->
+    <text x="-128" y="42" text-anchor="middle" font-size="12" font-weight="bold" fill="#c9762a">+10°</text>
+    <text x="128" y="42" text-anchor="middle" font-size="12" font-weight="bold" fill="#c9762a">+10°</text>
+    <!-- 猫の頭 -->
+    <path d="M -19 -12 L -22 -30 L -6 -20 Z" fill="#f7e3cf" stroke="#4a3f35" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 19 -12 L 22 -30 L 6 -20 Z" fill="#f7e3cf" stroke="#4a3f35" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="0" cy="0" r="21" fill="#f7e3cf" stroke="#4a3f35" stroke-width="2.5"/>
+    <ellipse cx="-8" cy="-4" rx="2.2" ry="4" fill="#4a3f35"/>
+    <ellipse cx="8" cy="-4" rx="2.2" ry="4" fill="#4a3f35"/>
+    <path d="M 0 5 L -3 8 M 0 5 L 3 8" stroke="#4a3f35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <text x="0" y="76" text-anchor="middle" font-size="17" font-weight="bold" fill="#4a3f35">猫</text>
+    <text x="0" y="106" text-anchor="middle" font-size="30" font-weight="bold" fill="#e08b2d">約200度</text>
+  </g>
+
+  <!-- 補足 -->
+  <text x="320" y="336" text-anchor="middle" font-size="14" fill="#8a7a6a">猫は左右に10度ずつ広い。ただし視力そのものは人間の約10分の1</text>
+</svg>
