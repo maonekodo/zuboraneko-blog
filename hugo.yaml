@@ -59,6 +59,10 @@ menu:
       name: フード
       url: /categories/フード/
       weight: 20
+    - identifier: about
+      name: 運営者情報
+      url: /about/
+      weight: 30
     - identifier: privacy
       name: プライバシーポリシー
       url: /privacy-policy/
