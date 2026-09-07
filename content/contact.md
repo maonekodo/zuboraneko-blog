@@ -16,15 +16,21 @@ description: "ズボラ猫暮らし。へのお問い合わせページです。
 
 👉 **[@zubora_neko](https://x.com/zubora_neko)**
 
+### InstagramのDMから
+
+こちらでも受け付けています。
+
+👉 **[@zuboraneko_life](https://www.instagram.com/zuboraneko_life/)**
+
 ---
 
 ## よくあるお問い合わせ
 
 **Q. 記事の内容について質問したい**
-→ XのDMにてお気軽にどうぞ！
+→ X・InstagramどちらのDMでもお気軽にどうぞ！
 
 **Q. ブログへの掲載依頼・コラボについて**
-→ 同じくXのDMからお願いします。内容によってご対応します。
+→ 同じくX・InstagramのDMからお願いします。内容によってご対応します。
 
 **Q. 記事の情報が古い・間違っている**
 → ご指摘いただけると助かります！確認のうえ修正します。

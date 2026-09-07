@@ -48,6 +48,8 @@ params:
   socialIcons:
     - name: x
       url: "https://x.com/zubora_neko"
+    - name: instagram
+      url: "https://www.instagram.com/zuboraneko_life/"
 
 menu:
   main:

@@ -108,6 +108,7 @@ description: "「ズボラ猫暮らし。」の運営者プロフィール。猫
 ## 発信しているところ
 
 - X（旧Twitter）：[@zubora_neko](https://x.com/zubora_neko)
+- Instagram：[@zuboraneko_life](https://www.instagram.com/zuboraneko_life/)
 
 ---
 
