@@ -61,6 +61,10 @@ menu:
       name: フード
       url: /categories/フード/
       weight: 20
+    - identifier: tools
+      name: 計算ツール
+      url: /tools/cat-food-calculator/
+      weight: 25
     - identifier: about
       name: 運営者情報
       url: /about/
