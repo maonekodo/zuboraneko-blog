@@ -1,0 +1,117 @@
+{{- $id := printf "fc%d" .Ordinal -}}
+<div class="fc" id="{{ $id }}">
+  <div class="fc__head">
+    <span class="fc__paw">🐾</span>
+    <span class="fc__title">キャットフード、あと何日？</span>
+  </div>
+
+  <div class="fc__body">
+    <div class="fc__row">
+      <label class="fc__label" for="{{ $id }}-bag">袋の容量</label>
+      <div class="fc__inputwrap">
+        <input class="fc__input" id="{{ $id }}-bag" type="number" inputmode="decimal" min="0" step="0.1" value="2" data-fc="bag">
+        <select class="fc__unit" id="{{ $id }}-unit" data-fc="unit">
+          <option value="1000">kg</option>
+          <option value="1">g</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="fc__row">
+      <label class="fc__label" for="{{ $id }}-day">1日の量<span class="fc__sub">（猫1匹あたり）</span></label>
+      <div class="fc__inputwrap">
+        <input class="fc__input" id="{{ $id }}-day" type="number" inputmode="decimal" min="0" step="1" value="60" data-fc="day">
+        <span class="fc__unit fc__unit--fixed">g</span>
+      </div>
+    </div>
+
+    <div class="fc__row">
+      <label class="fc__label" for="{{ $id }}-cats">猫の頭数</label>
+      <div class="fc__inputwrap">
+        <input class="fc__input" id="{{ $id }}-cats" type="number" inputmode="numeric" min="1" step="1" value="1" data-fc="cats">
+        <span class="fc__unit fc__unit--fixed">匹</span>
+      </div>
+    </div>
+
+    <div class="fc__row">
+      <label class="fc__label" for="{{ $id }}-price">袋の値段<span class="fc__sub">（任意）</span></label>
+      <div class="fc__inputwrap">
+        <input class="fc__input" id="{{ $id }}-price" type="number" inputmode="numeric" min="0" step="1" placeholder="未入力でもOK" data-fc="price">
+        <span class="fc__unit fc__unit--fixed">円</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fc__result" data-fc="result" aria-live="polite">
+    <div class="fc__days"><span data-fc="days">－</span><span class="fc__daysunit">日ぶん</span></div>
+    <div class="fc__when" data-fc="when"></div>
+    <div class="fc__order" data-fc="order"></div>
+    <div class="fc__cost" data-fc="cost"></div>
+  </div>
+
+  <p class="fc__note">※ 今日から食べ始めた場合の目安です。実際の量は体重・年齢・フードによって変わるので、パッケージの給与量を確認してください。</p>
+</div>
+
+{{- if eq .Ordinal 0 -}}
+<style>
+.fc{max-width:520px;margin:2em auto;border:2px solid #e08b2d;border-radius:16px;background:#fffaf3;overflow:hidden;font-size:16px;line-height:1.6}
+.fc__head{background:#e08b2d;color:#fffaf3;padding:.7em 1em;display:flex;align-items:center;gap:.5em;font-weight:bold;font-size:1.05em}
+.fc__paw{font-size:1.1em}
+.fc__body{padding:1.1em 1.1em .4em}
+.fc__row{display:flex;align-items:center;justify-content:space-between;gap:.8em;margin-bottom:.9em;flex-wrap:wrap}
+.fc__label{color:#4a3f35;font-weight:bold;flex:1 1 auto;min-width:8em}
+.fc__sub{font-weight:normal;font-size:.82em;color:#8a7a6a;margin-left:.2em}
+.fc__inputwrap{display:flex;align-items:center;gap:.4em;flex:0 0 auto}
+.fc__input{width:6.5em;padding:.45em .6em;border:2px solid #e8dccb;border-radius:8px;background:#fff;color:#4a3f35;font-size:1em;text-align:right;font-family:inherit}
+.fc__input:focus{outline:none;border-color:#e08b2d}
+.fc__unit{padding:.45em .4em;border:2px solid #e8dccb;border-radius:8px;background:#fff;color:#4a3f35;font-size:.95em;font-family:inherit}
+.fc__unit--fixed{border:none;background:none;color:#8a7a6a;padding:.45em 0;min-width:1.6em}
+.fc__result{margin:0 1.1em 1em;padding:1em;border-radius:12px;background:#fdf1de;text-align:center}
+.fc__days{font-size:2.4em;font-weight:bold;color:#c9762a;line-height:1.2}
+.fc__daysunit{font-size:.42em;margin-left:.2em}
+.fc__when{color:#4a3f35;font-weight:bold;margin-top:.3em}
+.fc__order{color:#5b8fb0;font-weight:bold;margin-top:.5em;font-size:.95em}
+.fc__cost{color:#8a7a6a;margin-top:.5em;font-size:.9em}
+.fc__note{margin:0;padding:0 1.1em 1.1em;font-size:.8em;color:#8a7a6a;line-height:1.5}
+@media(max-width:420px){.fc__row{flex-direction:column;align-items:flex-start}.fc__inputwrap{width:100%}.fc__input{flex:1}}
+</style>
+<script>
+(function(){
+  function calc(root){
+    var g=function(k){return root.querySelector('[data-fc="'+k+'"]')};
+    var unit=parseFloat(g('unit').value)||1;
+    var bag=(parseFloat(g('bag').value)||0)*unit;
+    var day=parseFloat(g('day').value)||0;
+    var cats=parseInt(g('cats').value,10)||0;
+    var price=parseFloat(g('price').value)||0;
+    var perDay=day*cats;
+    var out={days:g('days'),when:g('when'),order:g('order'),cost:g('cost')};
+    if(!(bag>0&&perDay>0)){out.days.textContent='－';out.when.textContent='';out.order.textContent='';out.cost.textContent='';return}
+    var days=Math.floor(bag/perDay);
+    out.days.textContent=days;
+    var end=new Date();end.setDate(end.getDate()+days);
+    var w=['日','月','火','水','木','金','土'][end.getDay()];
+    out.when.textContent='だいたい '+(end.getMonth()+1)+'月'+end.getDate()+'日（'+w+'）ごろになくなります';
+    var od=Math.max(days-4,0);
+    var ord=new Date();ord.setDate(ord.getDate()+od);
+    var ow=['日','月','火','水','木','金','土'][ord.getDay()];
+    out.order.textContent=days<=4?'🛒 そろそろ注文しておくと安心です'
+      :'🛒 注文するなら '+(ord.getMonth()+1)+'月'+ord.getDate()+'日（'+ow+'）ごろ';
+    if(price>0){
+      var perDayYen=price/days;
+      out.cost.textContent='1日あたり約 '+Math.round(perDayYen)+' 円 ／ 1か月あたり約 '+Math.round(perDayYen*30).toLocaleString()+' 円';
+    }else{out.cost.textContent=''}
+  }
+  function init(){
+    document.querySelectorAll('.fc').forEach(function(root){
+      root.querySelectorAll('input,select').forEach(function(el){
+        el.addEventListener('input',function(){calc(root)});
+        el.addEventListener('change',function(){calc(root)});
+      });
+      calc(root);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}
+})();
+</script>
+{{- end -}}
