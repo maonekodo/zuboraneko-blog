@@ -155,6 +155,28 @@ body {
   height: auto !important;
 }
 
+/* --- スマホで横にはみ出さないようにする --- */
+html,
+body {
+  overflow-x: clip; /* hiddenだとヘッダーの追従が効かなくなるのでclip */
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* 画像は画面幅まで（枠に収める） */
+  .post-content img,
+  .post-content img[src$=".svg"] {
+    max-width: 100% !important;
+  }
+}
+
+/* 幅の広い表は、表の中だけ横スクロールさせる */
+.post-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
 /* --- ホームのプロフィール部分 --- */
 .home-info-container {
   background-color: #fff8f5 !important;
