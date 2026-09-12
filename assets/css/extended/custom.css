@@ -150,7 +150,7 @@ body {
 
 /* 図解（SVG）は写真より少し大きめに */
 .post-content img[src$=".svg"] {
-  max-width: 500px !important;
+  max-width: 600px !important;
   width: 100% !important;
   height: auto !important;
 }
