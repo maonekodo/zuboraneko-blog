@@ -143,9 +143,16 @@ body {
 /* --- 記事内イラスト画像 --- */
 .post-content img {
   display: block !important;
-  max-width: 280px !important;
+  max-width: 450px !important;
   margin: 24px auto !important;
   border-radius: 12px !important;
+}
+
+/* 図解（SVG）は本文幅いっぱいまで広げる */
+.post-content img[src$=".svg"] {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
 /* --- ホームのプロフィール部分 --- */
