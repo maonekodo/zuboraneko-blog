@@ -148,9 +148,9 @@ body {
   border-radius: 12px !important;
 }
 
-/* 図解（SVG）は本文幅いっぱいまで広げる */
+/* 図解（SVG）は写真より少し大きめに */
 .post-content img[src$=".svg"] {
-  max-width: 100% !important;
+  max-width: 500px !important;
   width: 100% !important;
   height: auto !important;
 }
