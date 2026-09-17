@@ -1,6 +1,7 @@
 ---
 title: "猫のおもちゃ反応しない問題を解決！一人遊びできる自動おもちゃ4選【ズボラ目線で比較】"
 date: 2026-04-24
+lastmod: 2026-09-17
 draft: false
 categories: ["おもちゃ・遊び"]
 tags: ["おもちゃ", "一人遊び", "自動おもちゃ", "留守番"]
@@ -142,7 +143,7 @@ msmaflink({"n":"DEER-AFFLUX 自動猫おもちゃ 電動重力UFO 猫 おもち�
 
 {{< cat-voice cat="mao" >}}追いかけたいけど、今は無理なんよな{{< /cat-voice >}}
 
-<b>元気に走れる子には最高</b>だけど、<b>足腰に不安がある子には向かない</b>。ここは正直に書いておきます。
+<b>元気に走れる子には最高</b>だけど、<b>足腰に不安がある子には向かない</b>。ここは隠さず書いておきます。
 
 <!-- START MoshimoAffiliateEasyLink -->
 <script type="text/javascript">
