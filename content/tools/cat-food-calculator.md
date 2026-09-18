@@ -3,6 +3,9 @@ title: "キャットフードあと何日？計算機【袋の容量と1日の�
 date: 2026-09-11
 draft: false
 layout: "single"
+cover:
+  image: "/images/posts/cat-food-calculator-thumb.jpg"
+  alt: "キャットフードあと何日？計算機"
 description: "キャットフードが残り何日もつか、袋の容量と1日の給与量を入れるだけで自動計算します。なくなる日と注文するタイミング、1日あたりのフード代もわかります。多頭飼いにも対応。"
 ---
 
