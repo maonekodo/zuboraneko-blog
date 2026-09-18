@@ -1,6 +1,6 @@
 ---
 title: "「ちゅ〜るって水分ばっかりでしょ？」に答えます【猫の水分補給とおやつの話】"
-date: 2026-09-20
+date: 2026-09-19
 draft: false
 categories: ["猫の豆知識"]
 tags: ["ちゅ〜る", "水分補給", "ウェットフード", "猫の豆知識", "腎臓ケア"]
@@ -185,7 +185,24 @@ cover:
 
 {{< cat-voice cat="mao" >}}まだ食べてへんから、なんとも言われへんな{{< /cat-voice >}}
 
-_（※ アフィリエイトリンク）_
+いきなり大袋を買うのは不安なので、<b>4種類が4本ずつ入った16本のお試しセット</b>から試すのがよさそうです👇
+
+<div class="affiliate-link">
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"【猫用お試しセット\/お一人様１個まで】無添加ピュア 日本産 おやつ ねこぴゅーれ PureValue5 トライアルセット 16本入 (4本×4種) 鶏ささみ\/まぐろ\/かつお\/海鮮ミックス リバードリパブリック","b":"RIVERD REPUBLIC","t":"4571130126855","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/41FbgHKfUUL._SL500_.jpg","\/510T-OZgVAL._SL500_.jpg","\/61Z0QigdpvL._SL500_.jpg","\/41t84iuoDOL._SL500_.jpg","\/51YcDc0xRLL._SL500_.jpg","\/51Jqj7wl0VL._SL500_.jpg","\/41MvXObhZsL._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B08DTP59YS","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B08DTP59YS","a_id":5019497,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E3%80%90%E7%8C%AB%E7%94%A8%E3%81%8A%E8%A9%A6%E3%81%97%E3%82%BB%E3%83%83%E3%83%88%2F%E3%81%8A%E4%B8%80%E4%BA%BA%E6%A7%98%EF%BC%91%E5%80%8B%E3%81%BE%E3%81%A7%E3%80%91%E7%84%A1%E6%B7%BB%E5%8A%A0%E3%83%94%E3%83%A5%E3%82%A2%20%E6%97%A5%E6%9C%AC%E7%94%A3%20%E3%81%8A%E3%82%84%E3%81%A4%20%E3%81%AD%E3%81%93%E3%81%B4%E3%82%85%E3%83%BC%E3%82%8C%20PureValue5%20%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%BB%E3%83%83%E3%83%88%2016%E6%9C%AC%E5%85%A5%20(4%E6%9C%AC%C3%974%E7%A8%AE)%20%E9%B6%8F%E3%81%95%E3%81%95%E3%81%BF%2F%E3%81%BE%E3%81%90%E3%82%8D%2F%E3%81%8B%E3%81%A4%E3%81%8A%2F%E6%B5%B7%E9%AE%AE%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9%20%E3%83%AA%E3%83%90%E3%83%BC%E3%83%89%E3%83%AA%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF\/","a_id":5019495,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1\u0026p=%E3%80%90%E7%8C%AB%E7%94%A8%E3%81%8A%E8%A9%A6%E3%81%97%E3%82%BB%E3%83%83%E3%83%88%2F%E3%81%8A%E4%B8%80%E4%BA%BA%E6%A7%98%EF%BC%91%E5%80%8B%E3%81%BE%E3%81%A7%E3%80%91%E7%84%A1%E6%B7%BB%E5%8A%A0%E3%83%94%E3%83%A5%E3%82%A2%20%E6%97%A5%E6%9C%AC%E7%94%A3%20%E3%81%8A%E3%82%84%E3%81%A4%20%E3%81%AD%E3%81%93%E3%81%B4%E3%82%85%E3%83%BC%E3%82%8C%20PureValue5%20%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%BB%E3%83%83%E3%83%88%2016%E6%9C%AC%E5%85%A5%20(4%E6%9C%AC%C3%974%E7%A8%AE)%20%E9%B6%8F%E3%81%95%E3%81%95%E3%81%BF%2F%E3%81%BE%E3%81%90%E3%82%8D%2F%E3%81%8B%E3%81%A4%E3%81%8A%2F%E6%B5%B7%E9%AE%AE%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9%20%E3%83%AA%E3%83%90%E3%83%BC%E3%83%89%E3%83%AA%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%AF","a_id":5040893,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"AK4Zy","s":"l"});
+</script>
+<div id="msmaflink-AK4Zy">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
+
+</div>
 
 ---
 
