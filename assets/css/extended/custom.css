@@ -535,3 +535,43 @@ div[id^="msmaflink-"] a[style*="background"]:hover,
   object-fit: cover !important;
   border-radius: var(--radius) !important;
 }
+
+/* --- PR枠（ASPのテキストリンクを目立たせる） --- */
+.pr-box {
+  margin: 28px 0;
+  padding: 18px 20px;
+  background: #fff8f2;
+  border: 2px solid var(--color-accent-light);
+  border-radius: 14px;
+}
+.pr-box__title {
+  display: block;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+.pr-box p {
+  margin: 0 0 12px !important;
+  font-size: 0.95rem;
+}
+.pr-box a.pr-box__btn {
+  display: block;
+  text-align: center;
+  background: var(--color-accent);
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 10px 16px;
+  text-decoration: none !important;
+}
+.pr-box a.pr-box__btn:hover {
+  opacity: 0.85;
+  color: #fff !important;
+}
+
+/* 計測用の1px画像に余白をつけない */
+.post-content img[width="1"] {
+  display: inline !important;
+  margin: 0 !important;
+  max-width: 1px !important;
+}

@@ -1,7 +1,7 @@
 ---
 title: "猫の留守番、何時間・何日まで大丈夫？【準備リストとグッズの優先順位】"
 date: 2026-04-25
-lastmod: 2026-09-17
+lastmod: 2026-09-18
 draft: false
 categories: ["まとめ・ガイド"]
 tags: ["留守番", "一人暮らし", "旅行", "自動給餌器", "見守りカメラ", "ズボラグッズ"]
@@ -199,10 +199,10 @@ cover:
 
 ペットシッターサービスの<b>セワクル</b>は、初回カウンセリング（無料相談）から申し込める形になっているので、いきなり依頼するのが不安な方も相談だけ先にしておけます。
 
-<div class="affiliate-link">
-
-<img src="https://www.rentracks.jp/adx/p.gifx?idx=0.64136.379949.5703.8268&dna=107139" border="0" height="1" width="1"><a href="https://www.rentracks.jp/adx/r.html?idx=0.64136.379949.5703.8268&dna=107139" rel="nofollow noopener" target="_blank">👉 ペットシッターサービス「セワクル」を見てみる</a>
-
+<div class="pr-box">
+<span class="pr-box__title">【PR】ペットシッターのセワクル</span>
+<p>初回カウンセリング（無料相談）から申し込めるので、いきなり依頼するのが不安な方も、相談だけ先にしておけます。</p>
+<img src="https://www.rentracks.jp/adx/p.gifx?idx=0.64136.379949.5703.8268&dna=107139" border="0" height="1" width="1"><a class="pr-box__btn" href="https://www.rentracks.jp/adx/r.html?idx=0.64136.379949.5703.8268&dna=107139" rel="nofollow noopener" target="_blank">セワクルの無料カウンセリングを見てみる</a>
 </div>
 
 <b>※対応エリアは東京都・神奈川県・大阪府・京都府・兵庫県・愛知県・福岡県です。</b>エリア外の方はお住まいの地域のペットシッターを探してみてください。
