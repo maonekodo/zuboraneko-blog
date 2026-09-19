@@ -342,6 +342,8 @@ div[id^="msmaflink-"] a[style*="background"]:hover,
 }
 
 .sidebar-count {
+  white-space: nowrap;
+  flex-shrink: 0;
   background-color: var(--color-accent-light);
   color: var(--color-text);
   border-radius: 10px;
