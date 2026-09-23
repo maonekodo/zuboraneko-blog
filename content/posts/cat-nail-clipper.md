@@ -141,6 +141,21 @@ cover:
 - ⚠️ <b>血管がくっきり見えるわけではない</b>。ライトが明るいぶん、飛んでしまう感じがある
 - ⚠️ 爪の色によっては、見え方が変わりそう
 
+### 今回使ったのはこれです
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"LAVAMOND 猫爪切り LED 血線確認 犬爪切り 爪やすり付き 飛び散り防止 内蔵 犬つめきり 猫つめきり 軽量静音 安全簡単初心者向け ペット用爪きり 滑り止めグリップ 爪収納カバー 小型中型大型犬猫兼用爪トリマー","b":"LAVAMOND","t":"JP-ZJJ01","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/310XCJpR5KL._SL500_.jpg","\/41xM2iRKOpL._SL500_.jpg","\/31i+X3sB7nL._SL500_.jpg","\/418jTnmwUWL._SL500_.jpg","\/41Rd5TXNRqL._SL500_.jpg","\/41KVzqPqx2L._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B0BYJR2W66","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B0BYJR2W66","a_id":5531911,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/LAVAMOND%20%E7%8C%AB%E7%88%AA%E5%88%87%E3%82%8A%20LED%20%E8%A1%80%E7%B7%9A%E7%A2%BA%E8%AA%8D%20%E7%8A%AC%E7%88%AA%E5%88%87%E3%82%8A%20%E7%88%AA%E3%82%84%E3%81%99%E3%82%8A%E4%BB%98%E3%81%8D%20%E9%A3%9B%E3%81%B3%E6%95%A3%E3%82%8A%E9%98%B2%E6%AD%A2%20%E5%86%85%E8%94%B5%20%E7%8A%AC%E3%81%A4%E3%82%81%E3%81%8D%E3%82%8A%20%E7%8C%AB%E3%81%A4%E3%82%81%E3%81%8D%E3%82%8A%20%E8%BB%BD%E9%87%8F%E9%9D%99%E9%9F%B3%20%E5%AE%89%E5%85%A8%E7%B0%A1%E5%8D%98%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%20%E3%83%9A%E3%83%83%E3%83%88%E7%94%A8%E7%88%AA%E3%81%8D%E3%82%8A%20%E6%BB%91%E3%82%8A%E6%AD%A2%E3%82%81%E3%82%B0%E3%83%AA%E3%83%83%E3%83%97%20%E7%88%AA%E5%8F%8E%E7%B4%8D%E3%82%AB%E3%83%90%E3%83%BC%20%E5%B0%8F%E5%9E%8B%E4%B8%AD%E5%9E%8B%E5%A4%A7%E5%9E%8B%E7%8A%AC%E7%8C%AB%E5%85%BC%E7%94%A8%E7%88%AA%E3%83%88%E3%83%AA%E3%83%9E%E3%83%BC\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1&p=LAVAMOND%20%E7%8C%AB%E7%88%AA%E5%88%87%E3%82%8A%20LED%20%E8%A1%80%E7%B7%9A%E7%A2%BA%E8%AA%8D%20%E7%8A%AC%E7%88%AA%E5%88%87%E3%82%8A%20%E7%88%AA%E3%82%84%E3%81%99%E3%82%8A%E4%BB%98%E3%81%8D%20%E9%A3%9B%E3%81%B3%E6%95%A3%E3%82%8A%E9%98%B2%E6%AD%A2%20%E5%86%85%E8%94%B5%20%E7%8A%AC%E3%81%A4%E3%82%81%E3%81%8D%E3%82%8A%20%E7%8C%AB%E3%81%A4%E3%82%81%E3%81%8D%E3%82%8A%20%E8%BB%BD%E9%87%8F%E9%9D%99%E9%9F%B3%20%E5%AE%89%E5%85%A8%E7%B0%A1%E5%8D%98%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%20%E3%83%9A%E3%83%83%E3%83%88%E7%94%A8%E7%88%AA%E3%81%8D%E3%82%8A%20%E6%BB%91%E3%82%8A%E6%AD%A2%E3%82%81%E3%82%B0%E3%83%AA%E3%83%83%E3%83%97%20%E7%88%AA%E5%8F%8E%E7%B4%8D%E3%82%AB%E3%83%90%E3%83%BC%20%E5%B0%8F%E5%9E%8B%E4%B8%AD%E5%9E%8B%E5%A4%A7%E5%9E%8B%E7%8A%AC%E7%8C%AB%E5%85%BC%E7%94%A8%E7%88%AA%E3%83%88%E3%83%AA%E3%83%9E%E3%83%BC","a_id":5531909,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"cXUfg","s":"l"});
+</script>
+<div id="msmaflink-cXUfg">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
+
 ---
 
 ## 買う前に確認しておきたい3つ
@@ -194,6 +209,19 @@ cover:
 猫の爪切りは、道具を変えても嫌がられます。それでも、<b>飼い主の側が落ち着いて切れるようになる</b>だけで、お互いにかかる時間はずいぶん短くなりました。
 
 {{< cat-voice cat="rabi" >}}早く終わるならそれでいいですよッ{{< /cat-voice >}}
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"LAVAMOND 猫爪切り LED 血線確認 犬爪切り 爪やすり付き 飛び散り防止 内蔵 犬つめきり 猫つめきり 軽量静音 安全簡単初心者向け ペット用爪きり 滑り止めグリップ 爪収納カバー 小型中型大型犬猫兼用爪トリマー","b":"LAVAMOND","t":"JP-ZJJ01","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/310XCJpR5KL._SL500_.jpg","\/41xM2iRKOpL._SL500_.jpg","\/31i+X3sB7nL._SL500_.jpg","\/418jTnmwUWL._SL500_.jpg","\/41Rd5TXNRqL._SL500_.jpg","\/41KVzqPqx2L._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B0BYJR2W66","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B0BYJR2W66","a_id":5531911,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/LAVAMOND%20%E7%8C%AB%E7%88%AA%E5%88%87%E3%82%8A%20LED%20%E8%A1%80%E7%B7%9A%E7%A2%BA%E8%AA%8D%20%E7%8A%AC%E7%88%AA%E5%88%87%E3%82%8A%20%E7%88%AA%E3%82%84%E3%81%99%E3%82%8A%E4%BB%98%E3%81%8D%20%E9%A3%9B%E3%81%B3%E6%95%A3%E3%82%8A%E9%98%B2%E6%AD%A2%20%E5%86%85%E8%94%B5%20%E7%8A%AC%E3%81%A4%E3%82%81%E3%81%8D%E3%82%8A%20%E7%8C%AB%E3%81%A4%E3%82%81%E3%81%8D%E3%82%8A%20%E8%BB%BD%E9%87%8F%E9%9D%99%E9%9F%B3%20%E5%AE%89%E5%85%A8%E7%B0%A1%E5%8D%98%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%20%E3%83%9A%E3%83%83%E3%83%88%E7%94%A8%E7%88%AA%E3%81%8D%E3%82%8A%20%E6%BB%91%E3%82%8A%E6%AD%A2%E3%82%81%E3%82%B0%E3%83%AA%E3%83%83%E3%83%97%20%E7%88%AA%E5%8F%8E%E7%B4%8D%E3%82%AB%E3%83%90%E3%83%BC%20%E5%B0%8F%E5%9E%8B%E4%B8%AD%E5%9E%8B%E5%A4%A7%E5%9E%8B%E7%8A%AC%E7%8C%AB%E5%85%BC%E7%94%A8%E7%88%AA%E3%83%88%E3%83%AA%E3%83%9E%E3%83%BC\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1&p=LAVAMOND%20%E7%8C%AB%E7%88%AA%E5%88%87%E3%82%8A%20LED%20%E8%A1%80%E7%B7%9A%E7%A2%BA%E8%AA%8D%20%E7%8A%AC%E7%88%AA%E5%88%87%E3%82%8A%20%E7%88%AA%E3%82%84%E3%81%99%E3%82%8A%E4%BB%98%E3%81%8D%20%E9%A3%9B%E3%81%B3%E6%95%A3%E3%82%8A%E9%98%B2%E6%AD%A2%20%E5%86%85%E8%94%B5%20%E7%8A%AC%E3%81%A4%E3%82%81%E3%81%8D%E3%82%8A%20%E7%8C%AB%E3%81%A4%E3%82%81%E3%81%8D%E3%82%8A%20%E8%BB%BD%E9%87%8F%E9%9D%99%E9%9F%B3%20%E5%AE%89%E5%85%A8%E7%B0%A1%E5%8D%98%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%20%E3%83%9A%E3%83%83%E3%83%88%E7%94%A8%E7%88%AA%E3%81%8D%E3%82%8A%20%E6%BB%91%E3%82%8A%E6%AD%A2%E3%82%81%E3%82%B0%E3%83%AA%E3%83%83%E3%83%97%20%E7%88%AA%E5%8F%8E%E7%B4%8D%E3%82%AB%E3%83%90%E3%83%BC%20%E5%B0%8F%E5%9E%8B%E4%B8%AD%E5%9E%8B%E5%A4%A7%E5%9E%8B%E7%8A%AC%E7%8C%AB%E5%85%BC%E7%94%A8%E7%88%AA%E3%83%88%E3%83%AA%E3%83%9E%E3%83%BC","a_id":5531909,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"cXUfg","s":"l"});
+</script>
+<div id="msmaflink-cXUfg">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
 
 ---
 
