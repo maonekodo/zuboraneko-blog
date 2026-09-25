@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="猫の点滴・薬・サプリや、介護や育児の消耗品を「あと何日分あるか」で管理するカレンダーです。やった日をチェックすると、次の予定と残りが自動で計算されます。">
+<link rel="canonical" href="https://zubora-neko.com/tools/stock-calendar/">
+<meta property="og:title" content="ストックカレンダー｜ズボラ猫暮らし。">
+<meta property="og:description" content="点滴・薬・消耗品の残りと、やった記録をまとめて管理できる無料ツールです。">
+<meta property="og:url" content="https://zubora-neko.com/tools/stock-calendar/">
+<meta property="og:type" content="website">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:inherit}
+[hidden]{display:none!important}
+img{max-width:100%}
+.sitebar{background:#23325c;color:#fff;font-size:12.5px;padding:9px 16px;display:flex;
+  justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  font-family:"Hiragino Sans","Yu Gothic",sans-serif}
+.sitebar a{color:#ffe45c;text-decoration:none;font-weight:700}
+.sitebar a:hover{text-decoration:underline}
+.pagefoot{text-align:center;font-size:12px;color:#7a839d;padding:0 16px 26px;
+  font-family:"Hiragino Sans","Yu Gothic",sans-serif}
+.pagefoot a{color:#7a839d}
+</style>
+</head>
+<body>
+<div class="sitebar">
+  <span>🐈 ズボラ猫暮らし。の無料ツール</span>
+  <a href="https://zubora-neko.com/">ブログへ戻る</a>
+</div>
+<title>ストックカレンダー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#fdf6f4;
+  --card:#ffffff;
+  --navy:#23325c;
+  --ink:#23325c;
+  --sub:#7a839d;
+  --pink:#efb0b0;
+  --pink-soft:#fae7e5;
+  --yellow:#ffe45c;
+  --yellow-soft:#fff6c9;
+  --line:#e6dcd8;
+  --done:#4f9d63;
+  --done-soft:#e4f2e7;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --round:"Zen Maru Gothic","Hiragino Maru Gothic ProN",var(--sans);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#1a1720;
+    --card:#241f2c;
+    --navy:#e9e3f0;
+    --ink:#e9e3f0;
+    --sub:#9c93ad;
+    --pink:#b97c82;
+    --pink-soft:#3a2b31;
+    --yellow:#d9b843;
+    --yellow-soft:#3b3320;
+    --line:#3a3346;
+    --done:#6cb783;
+    --done-soft:#1f3326;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#1a1720; --card:#241f2c; --navy:#e9e3f0; --ink:#e9e3f0; --sub:#9c93ad;
+  --pink:#b97c82; --pink-soft:#3a2b31; --yellow:#d9b843; --yellow-soft:#3b3320; --line:#3a3346;
+  --done:#6cb783; --done-soft:#1f3326;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:15px;line-height:1.7;
+  padding-inline:16px;padding-block:20px 0;
+}
+.wrap{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+h1{font-family:var(--round);font-size:20px;margin:0}
+.lead{color:var(--sub);font-size:12.5px;margin:2px 0 0}
+
+/* カレンダー */
+.calbox{border:3px solid var(--navy);border-radius:16px;background:var(--pink-soft);padding:14px}
+.calhead{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;margin-bottom:12px}
+.year{background:var(--pink);color:var(--navy);font-family:var(--round);font-weight:700;font-size:26px;
+  border-radius:12px;padding:12px 16px;text-align:center;font-variant-numeric:tabular-nums}
+.mon{display:flex;align-items:center;justify-content:space-between;gap:6px;
+  background:var(--yellow);border-radius:12px;padding:8px 10px}
+.mon b{font-family:var(--round);font-size:24px;color:var(--navy);font-variant-numeric:tabular-nums}
+.mon button{font:inherit;font-size:20px;line-height:1;border:0;background:transparent;color:var(--navy);
+  cursor:pointer;padding:4px 10px;border-radius:8px;font-family:var(--round)}
+.mon button:hover{background:rgba(35,50,92,.1)}
+.dows{display:grid;grid-template-columns:repeat(7,1fr);background:var(--pink);border-radius:8px;overflow:hidden}
+.dows span{text-align:center;font-size:11px;font-weight:700;color:var(--navy);padding:4px 0;letter-spacing:.04em}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:4px}
+.day{position:relative;aspect-ratio:1;border:0;border-radius:9px;background:var(--pink-soft);
+  font:inherit;font-family:var(--round);font-weight:700;font-size:16px;color:var(--navy);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;
+  padding:0}
+.day:hover{background:var(--yellow-soft)}
+.day.pad{visibility:hidden}
+.day.today{box-shadow:inset 0 0 0 2.5px var(--navy)}
+.day.sel{background:var(--yellow)}
+.day.hasdone{background:var(--done-soft)}
+.day.sel.hasdone{background:var(--yellow)}
+.dots{position:absolute;bottom:5px;left:0;right:0;display:flex;gap:2.5px;justify-content:center}
+.dots i{width:5px;height:5px;border-radius:50%;display:block}
+.dots i.miss{background:transparent!important;border:1.5px solid var(--sub);width:6px;height:6px}
+.check{position:absolute;top:3px;right:4px;font-size:10px;color:var(--done);line-height:1}
+.day:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2.5px solid var(--navy);outline-offset:2px}
+
+/* 予定 */
+.plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.plan h2{font-family:var(--round);font-size:15px;margin:0 0 10px}
+.ev{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:2px solid var(--line)}
+.ev:last-child{border-bottom:0}
+.ev i{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+.ev .nm{font-family:var(--round);font-size:16px}
+.ev .nm small{display:block;font-family:var(--sans);font-size:11.5px;color:var(--sub);font-weight:400}
+.ev .nm.is-done{color:var(--sub);text-decoration:line-through}
+.ev .act{margin-left:auto;display:flex;gap:6px;flex:0 0 auto}
+.chk{font:inherit;font-family:var(--round);font-weight:700;font-size:13px;border:2px solid var(--done);
+  background:transparent;color:var(--done);border-radius:9px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.chk:hover{background:var(--done-soft)}
+.chk.on{background:var(--done);color:#fff;border-color:var(--done)}
+.mini{font:inherit;font-size:12px;border:1.5px solid var(--line);background:transparent;color:var(--sub);
+  border-radius:8px;padding:5px 9px;cursor:pointer;white-space:nowrap}
+.mini:hover{border-color:var(--pink);color:var(--pink)}
+.empty{color:var(--sub);font-size:13px}
+.memo{margin-top:14px;border-top:2px dashed var(--line);padding-top:14px}
+.memo label{display:flex;align-items:center;gap:6px;font-family:var(--round);font-size:14px;margin-bottom:6px}
+.memo textarea{font:inherit;font-size:15px;line-height:1.6;width:100%;min-height:86px;resize:vertical;
+  padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+.memo textarea:focus-visible{outline:2.5px solid var(--navy);outline-offset:2px}
+.memo .saved{font-size:11.5px;color:var(--done);margin-top:4px;height:1.2em}
+.day .memomark{position:absolute;top:3px;left:5px;width:5px;height:5px;border-radius:1px;background:var(--navy);opacity:.55}
+
+/* 物品リスト */
+.item{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;background:var(--card)}
+.item .top{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.item .top i{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
+.item .top b{font-family:var(--round);font-size:16px}
+.item .top .sp{margin-left:auto;display:flex;gap:6px}
+.item .meta{font-size:12.5px;color:var(--sub);margin-top:6px;line-height:1.6}
+.item .meta b{color:var(--ink)}
+.item .bar{height:6px;border-radius:3px;background:var(--pink-soft);margin-top:8px;overflow:hidden}
+.item .bar em{display:block;height:100%;border-radius:3px}
+.warnline{margin-top:8px;background:var(--yellow-soft);border-left:3px solid var(--yellow);
+  border-radius:0 7px 7px 0;padding:7px 10px;font-size:12.5px}
+
+/* フォーム */
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+label{font-size:12.5px;font-weight:500}
+input,select{font:inherit;font-size:16px;padding:9px 11px;border-radius:9px;border:1.5px solid var(--line);
+  background:var(--card);color:var(--ink);width:100%;font-variant-numeric:tabular-nums}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.swatches{display:flex;gap:8px;flex-wrap:wrap}
+.swatches button{width:30px;height:30px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;padding:0}
+.swatches button[aria-pressed="true"]{border-color:var(--navy)}
+.btn{font:inherit;font-family:var(--round);font-weight:700;font-size:15px;border:0;border-radius:11px;
+  padding:12px 18px;background:var(--yellow);color:var(--navy);cursor:pointer;width:100%}
+.btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--sub);font-weight:500}
+
+/* 下バー */
+.spacer{height:86px;flex:0 0 auto}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr 1fr;
+  background:var(--yellow);border-top:3px solid var(--navy);
+  padding:0 0 env(safe-area-inset-bottom,0px)}
+.bar button{font:inherit;font-family:var(--round);font-weight:700;font-size:15px;border:0;background:transparent;
+  color:var(--navy);padding:16px 6px;cursor:pointer}
+.bar button[aria-current="true"]{background:rgba(35,50,92,.13)}
+.note{font-size:12px;color:var(--sub)}
+.memocard{width:100%;text-align:left;font:inherit;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:13px 14px;margin-bottom:10px;cursor:pointer;color:var(--ink);display:block}
+.memocard:hover{border-color:var(--pink)}
+.memocard .dt{font-family:var(--round);font-size:14px;color:var(--navy);display:flex;align-items:center;gap:8px}
+.memocard .dt span{font-size:11.5px;color:var(--sub);font-weight:400;font-family:var(--sans)}
+.memocard .tx{font-size:14px;margin-top:5px;white-space:pre-wrap;line-height:1.65}
+.memocard .tags{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
+.memocard .tags i{width:9px;height:9px;border-radius:50%;display:block}
+.who{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;
+  color:#fff;margin-right:6px;vertical-align:1px}
+.tagbox{margin-bottom:14px}
+.tagrow{margin-bottom:10px}
+.tagrow .hd{font-family:var(--round);font-size:13px;margin-bottom:5px;display:flex;align-items:center;gap:6px}
+.tagrow .bs{display:flex;gap:6px;flex-wrap:wrap}
+.tagrow button{font:inherit;font-size:12.5px;padding:6px 11px;border-radius:999px;cursor:pointer;
+  border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+.tagrow button:hover{border-color:var(--pink);background:var(--pink-soft)}
+.target{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);
+  border-radius:11px;background:var(--card);margin-bottom:8px}
+.target b{font-family:var(--round);font-size:15px}
+.target .sp{margin-left:auto}
+.subhead{font-family:var(--round);font-size:14px;margin:18px 0 8px}
+.item.child{margin-left:18px;border-left:3px solid var(--line)}
+.linkmark{font-size:11px;color:var(--sub)}
+.ord{display:flex;gap:4px;margin-left:auto}
+.ord button{font:inherit;font-size:14px;line-height:1;width:32px;height:30px;border-radius:8px;
+  border:1.5px solid var(--line);background:transparent;color:var(--navy);cursor:pointer;padding:0}
+.ord button:disabled{opacity:.28;cursor:default}
+.ord button:not(:disabled):hover{border-color:var(--pink);background:var(--pink-soft)}
+.item .sp{margin-left:0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--sub);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:4px}
+.legend i.miss{border:1.5px solid var(--sub);background:transparent}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1 id="title">ストックカレンダー</h1>
+    <p class="lead" id="lead">やった日をチェックすると、次の予定がずれていきます。</p>
+  </header>
+
+  <!-- カレンダー -->
+  <section id="viewCal">
+    <div class="calbox">
+      <div class="calhead">
+        <div class="year" id="year">2026</div>
+        <div class="mon">
+          <button type="button" id="prev" aria-label="前の月">«</button>
+          <b id="monLabel">1月</b>
+          <button type="button" id="next" aria-label="次の月">»</button>
+        </div>
+      </div>
+      <div class="dows">
+        <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+      </div>
+      <div class="days" id="days"></div>
+    </div>
+
+    <div class="legend">
+      <span><i style="background:var(--done)"></i>やった日</span>
+      <span><i style="background:var(--pink)"></i>これからの予定</span>
+      <span><i class="miss"></i>やってない日</span>
+    </div>
+
+    <div class="plan" style="margin-top:16px">
+      <h2 id="planDate">今日の予定</h2>
+      <div id="planList"></div>
+      <div class="memo">
+        <div class="tagbox" id="tagbox"></div>
+        <label for="memoText">📝 この日のメモ</label>
+        <textarea id="memoText" placeholder="点滴の入りが悪かった、ごはん半分残した、元気そう…"></textarea>
+        <div class="saved" id="memoSaved"></div>
+      </div>
+      <div id="evAdd" style="margin-top:12px">
+        <div style="display:grid;grid-template-columns:1fr auto;gap:8px">
+          <input id="evText" placeholder="受診、フード注文、爪切り…" aria-label="予定">
+          <button class="btn" id="evSave" style="width:auto;padding:10px 16px">追加</button>
+        </div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </section>
+
+  <!-- 物品 -->
+  <section id="viewItems" hidden>
+    <p class="subhead" style="margin-top:0">だれの分か</p>
+    <div id="targetList"></div>
+    <div style="display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:6px">
+      <input id="tName" placeholder="まお君 / らびちゃん / 自分…" aria-label="対象の名前">
+      <button class="btn" id="tAdd" style="width:auto;padding:10px 16px">追加</button>
+    </div>
+    <p class="subhead">物品</p>
+    <div id="itemList"></div>
+    <button class="btn" id="addOpen">＋ 物品を追加</button>
+
+    <p class="subhead">記録の持ち出し</p>
+    <p class="note" style="margin-bottom:8px">記録はこの端末の中だけに残ります。機種変や、パソコンと使い分けるときは、ここで書き出して読み込んでください。</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <button class="btn ghost" id="expBtn">書き出す</button>
+      <button class="btn ghost" id="impBtn">読み込む</button>
+    </div>
+    <textarea id="ioBox" hidden style="width:100%;min-height:110px;margin-top:8px;font-size:13px;
+      padding:10px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)"></textarea>
+    <div id="ioMsg" class="note" style="margin-top:6px"></div>
+    <div class="spacer"></div>
+  </section>
+
+  <!-- メモ一覧 -->
+  <section id="viewMemo" hidden>
+    <div id="memoList"></div>
+    <div class="spacer"></div>
+  </section>
+
+  <!-- 登録フォーム -->
+  <section id="viewForm" hidden>
+    <div class="plan">
+      <h2 id="formTitle">物品を登録</h2>
+      <div class="field">
+        <label for="fName">名前</label>
+        <input id="fName" placeholder="猫点滴（ソルラクト）">
+      </div>
+      <div class="field">
+        <label for="fParent">一緒に使うもの</label>
+        <select id="fParent"></select>
+        <span class="note">えらぶと、その物品の「やった」で一緒にへります。（点滴 → 翼状針・チューブ など）</span>
+      </div>
+      <div class="field">
+        <label for="fWho">だれの分</label>
+        <select id="fWho"></select>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="fQty">残りの個数</label>
+          <input type="number" id="fQty" value="16" min="0" step="1" inputmode="numeric">
+        </div>
+        <div class="field">
+          <label for="fPer">1回に使う数</label>
+          <input type="number" id="fPer" value="1" min="0.1" step="0.1" inputmode="decimal">
+          <span class="note">1/2は0.5、1/3は0.33、1/4は0.25</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="fSlots">1日に何回</label>
+        <select id="fSlots">
+          <option value="1" selected>1回</option>
+          <option value="2">2回（朝・夜）</option>
+          <option value="3">3回（朝・昼・夜）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fPace">使うペース</label>
+        <select id="fPace">
+          <option value="1">毎日</option>
+          <option value="2" selected>1日おき（2日に1回）</option>
+          <option value="3">2日おき（3日に1回）</option>
+          <option value="3.5">週2回</option>
+          <option value="7">週1回</option>
+        </select>
+      </div>
+      <div class="field">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer">
+          <input type="checkbox" id="fCheck" checked style="width:auto;margin:0">
+          「やった」ボタンを出す
+        </label>
+        <span class="note">出さないと、予定の日が来たら自動でへります。毎日かならずやるもの（翼状針・チューブなど）向き。</span>
+      </div>
+      <div class="field">
+        <label for="fNext">次に使う日</label>
+        <input type="date" id="fNext">
+        <span class="note">やった日をチェックしていくと、ここから先は自動でずれます。</span>
+      </div>
+      <div class="field">
+        <label>色</label>
+        <div class="swatches" id="fColors"></div>
+      </div>
+      <div class="field">
+        <label for="fLead">何日前に知らせる？</label>
+        <input type="number" id="fLead" value="7" min="0" step="1" inputmode="numeric">
+        <span class="note">受診や注文の目安です。</span>
+      </div>
+      <button class="btn" id="save">保存する</button>
+      <button class="btn ghost" id="cancel" style="margin-top:8px">やめる</button>
+    </div>
+    <div class="spacer"></div>
+  </section>
+</div>
+
+<nav class="bar">
+  <button type="button" id="navItems">物品登録</button>
+  <button type="button" id="navCal" aria-current="true">カレンダー</button>
+  <button type="button" id="navMemo">メモ</button>
+</nav>
+
+<script>
+const $ = s => document.querySelector(s);
+const COLORS = ["#e0736f","#e89b3c","#4f9d63","#3f86c4","#8a6ec9","#c2609c"];
+const PACES = {1:"毎日",2:"1日おき",3:"2日おき",3.5:"週2回",7:"週1回"};
+const DOW = "日月火水木金土";
+const mid = d => { const x = new Date(d); x.setHours(0,0,0,0); return x; };
+const addD = (d,n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const key = d => `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const fromIso = s => mid(new Date(s + "T00:00:00"));
+
+let items = [];
+try{ const raw = localStorage.getItem("stockcal_items"); if(raw) items = JSON.parse(raw); }catch(e){}
+if(!items.length){
+  items = [{id:1, name:"猫点滴（ソルラクト）", qty:16, per:1, pace:2, slots:1, next:iso(new Date()), color:COLORS[0], lead:7, done:[]}];
+}
+items.forEach(it => { if(!Array.isArray(it.done)) it.done = []; if(!it.slots) it.slots = 1; if(it.check === undefined) it.check = true; });
+const SLOT_NAMES = {1:[""], 2:["朝","夜"], 3:["朝","昼","夜"]};
+const slotsOf = it => SLOT_NAMES[it.slots] || [""];
+const doneKey = (d, name) => iso(d) + (name ? "#" + name : "");
+function save(){ try{ localStorage.setItem("stockcal_items", JSON.stringify(items)); }catch(e){} }
+
+let targets = [];
+try{ const raw = localStorage.getItem("stockcal_targets"); if(raw) targets = JSON.parse(raw); }catch(e){}
+if(!targets.length) targets = [{id:1, name:"まお君", color:"#3f86c4"}, {id:2, name:"らびちゃん", color:"#c2609c"}];
+function saveT(){ try{ localStorage.setItem("stockcal_targets", JSON.stringify(targets)); }catch(e){} }
+const findT = id => targets.find(t => t.id === id);
+const kidsOf = id => items.filter(x => x.parent === id);
+const isChild = it => !!it.parent && items.some(x => x.id === it.parent);
+
+const TAGS = ["吐いた","泥状便","軟便","食欲なし","完食","元気ない","おしっこ多い","おしっこ少ない"];
+
+let events = [];
+try{ const raw = localStorage.getItem("stockcal_events"); if(raw) events = JSON.parse(raw); }catch(e){}
+function saveEv(){ try{ localStorage.setItem("stockcal_events", JSON.stringify(events)); }catch(e){} }
+
+let notes = {};
+try{ const raw = localStorage.getItem("stockcal_notes"); if(raw) notes = JSON.parse(raw); }catch(e){}
+function saveNotes(){ try{ localStorage.setItem("stockcal_notes", JSON.stringify(notes)); }catch(e){} }
+
+let cur = mid(new Date());
+let sel = mid(new Date());
+let editing = null;
+let pickedColor = COLORS[0];
+
+const step = (it, i) => it.pace === 3.5 ? (i % 2 === 0 ? 3 : 4) : it.pace;
+
+// 残りの個数（やった回数ぶんを引く）
+// 登録した日から数えた、ぜんぶの予定日
+function allDates(it){
+  const n = Math.floor(it.qty / (it.per * it.slots));
+  const out = [];
+  let d = fromIso(it.next);
+  for(let i=0;i<n;i++){ out.push(mid(d)); d = addD(d, step(it,i)); }
+  return out;
+}
+// 自動でへるぶん（「やった」ボタンを出さないもの）
+const autoUsed = it => (it.check || isChild(it)) ? 0 : allDates(it).filter(d => d < mid(new Date())).length;
+// 親にぶら下がっているものは、親のチェックで入った done で数える
+const restQty = it => Math.max(0, Math.round((it.qty - ((it.check || isChild(it)) ? it.done.length : autoUsed(it) * it.slots) * it.per) * 100) / 100);
+// 何日分のこっているか（1日に slots 回ぶん使う）
+const restDays = it => Math.floor(restQty(it) / (it.per * it.slots));
+const restTimes = it => restDays(it);
+
+// これからの予定。最後にやった日があれば、そこを起点にずらす
+function useDates(it){
+  if(isChild(it)){
+    const pa = items.find(x => x.id === it.parent);
+    return useDates(pa).slice(0, restTimes(it));
+  }
+  if(!it.check){
+    const t0 = mid(new Date());
+    return allDates(it).filter(d => d >= t0);
+  }
+  const sorted = [...it.done].map(x => x.split("#")[0]).sort();
+  const lastDay = sorted.length ? fromIso(sorted[sorted.length-1]) : null;
+  // その日の朝・夜がぜんぶ済んでいれば次の日へ。まだ残っていればその日のまま
+  const allDone = lastDay && slotsOf(it).every(sl => it.done.includes(doneKey(lastDay, sl)));
+  const base = lastDay ? (allDone ? addD(lastDay, step(it,0)) : lastDay) : fromIso(it.next);
+  const today = mid(new Date());
+  let start = base;
+  // やり忘れて日が過ぎていたら、今日からやり直す
+  if(sorted.length && start < today && allDone) start = today;
+  const out = [];
+  let d = start;
+  for(let i=0;i<restTimes(it);i++){
+    out.push(mid(d));
+    d = addD(d, step(it,i));
+  }
+  return out;
+}
+
+function scheduleMap(){
+  const map = {};
+  items.filter(it => !isChild(it)).forEach(it=>{
+    // これからの予定
+    const ds = useDates(it);
+    ds.forEach((d,i)=>{
+      const k = key(d);
+      (map[k] = map[k] || []).push({it, kind:"plan", left: ds.length - i, last: i === ds.length-1});
+    });
+    // やった日
+    it.done.forEach(s=>{
+      const k = key(fromIso(s.split("#")[0]));
+      (map[k] = map[k] || []).push({it, kind:"done"});
+    });
+  });
+  return map;
+}
+
+function drawCal(){
+  const map = scheduleMap();
+  const today = mid(new Date());
+  $("#year").textContent = cur.getFullYear();
+  $("#monLabel").textContent = (cur.getMonth()+1) + "月";
+  const first = new Date(cur.getFullYear(), cur.getMonth(), 1);
+  const days = new Date(cur.getFullYear(), cur.getMonth()+1, 0).getDate();
+  let h = "";
+  for(let i=0;i<first.getDay();i++) h += `<button class="day pad" tabindex="-1">0</button>`;
+  for(let d=1;d<=days;d++){
+    const dt = new Date(cur.getFullYear(), cur.getMonth(), d);
+    const evs = map[key(dt)] || [];
+    const mine = events.filter(e=>e.date === iso(dt));
+    const cls = ["day"];
+    if(key(dt) === key(today)) cls.push("today");
+    if(key(dt) === key(sel)) cls.push("sel");
+    if(evs.some(e=>e.kind==="done")) cls.push("hasdone");
+    const marks = evs.map(e => e.kind === "done"
+        ? `<i style="background:${e.it.color}"></i>`
+        : (dt < today ? `<i class="miss"></i>` : `<i style="background:${e.it.color}"></i>`))
+      .concat(mine.map(()=>`<i style="background:var(--navy)"></i>`));
+    const dots = marks.length ? `<span class="dots">${marks.slice(0,4).join("")}</span>` : "";
+    const chk = evs.some(e=>e.kind==="done") ? `<span class="check">✓</span>` : "";
+    const memo = notes[iso(dt)] ? `<span class="memomark"></span>` : "";
+    h += `<button class="day ${cls.join(" ")}" data-d="${d}">${d}${chk}${memo}${dots}</button>`;
+  }
+  $("#days").innerHTML = h;
+  $("#days").querySelectorAll("[data-d]").forEach(b=>{
+    b.onclick = () => { sel = new Date(cur.getFullYear(), cur.getMonth(), +b.dataset.d); drawCal(); drawPlan(); drawMemo(); };
+  });
+}
+
+function toggleDone(id, slot){
+  const it = items.find(x=>x.id === id);
+  const k = doneKey(sel, slot);
+  const on = !it.done.includes(k);
+  const apply = t => {
+    if(on){ if(!t.done.includes(k)) t.done.push(k); }
+    else t.done = t.done.filter(x=>x !== k);
+  };
+  apply(it);
+  kidsOf(it.id).forEach(apply);
+  save(); drawCal(); drawPlan();
+}
+
+function drawPlan(){
+  const map = scheduleMap();
+  const evs = map[key(sel)] || [];
+  const today = mid(new Date());
+  const isToday = key(sel) === key(today);
+  const past = sel < today;
+  $("#planDate").textContent = `${sel.getMonth()+1}月${sel.getDate()}日（${DOW[sel.getDay()]}）${isToday ? " ・今日" : ""}`;
+
+  const mine = events.filter(e=>e.date === iso(sel));
+  // 予定にない日でも、その日にやったことを記録できるようにする
+  const shown = new Set(evs.map(e=>e.it.id));
+  const extra = (isToday || past) ? items.filter(it => it.check && !shown.has(it.id) && restTimes(it) > 0) : [];
+
+  if(!evs.length && !mine.length && !extra.length){
+    $("#planList").innerHTML = `<p class="empty">この日の予定はありません。</p>`;
+  }else{
+    const rows = [];
+    const seen = new Set();
+    const pushItem = (it, kind, info) => {
+      if(seen.has(it.id)) return;
+      seen.add(it.id);
+      (it.check ? slotsOf(it) : [""]).forEach(slot => {
+        const k = doneKey(sel, slot);
+        const isDone = it.done.includes(k);
+        const left = (info && typeof info.left === "number") ? info.left : restDays(it);
+        const label = isDone ? "やった"
+          : kind === "extra" ? "予定外"
+          : past ? "やってない"
+          : (info && info.last) || left <= 1 ? "最後の1つ"
+          : `のこり ${left} 日分`;
+        rows.push(`<div class="ev">
+          <i style="background:${it.color}"></i>
+          <span class="nm ${isDone ? "is-done" : ""}">${it.who && findT(it.who) ? `<span class="who" style="background:${findT(it.who).color}">${findT(it.who).name}</span>` : ""}${it.name}${slot ? `<b style="font-weight:700">（${slot}）</b>` : ""}<small>${label}${kidsOf(it.id).length ? `　＋ ${kidsOf(it.id).map(k=>k.name).join("・")}` : ""}</small></span>
+          ${it.check ? `<span class="act"><button class="chk ${isDone ? "on" : ""}" data-done="${it.id}" data-slot="${slot}">${isDone ? "✓ やった" : "やった"}</button></span>` : ""}
+        </div>`);
+      });
+    };
+    evs.filter(e => e.kind !== "done" || !evs.some(x => x.it.id === e.it.id && x.kind === "plan"))
+       .forEach(e => pushItem(e.it, e.kind, e));
+    extra.forEach(it => pushItem(it, "extra", null));
+    const evRows = mine.map(e=>`
+      <div class="ev">
+        <i style="background:var(--navy)"></i>
+        <span class="nm">${e.text}</span>
+        <span class="act"><button class="mini" data-ev="${e.id}">消す</button></span>
+      </div>`);
+    $("#planList").innerHTML = rows.concat(evRows).join("");
+    $("#planList").querySelectorAll("[data-done]").forEach(b=>{
+      b.onclick = () => toggleDone(+b.dataset.done, b.dataset.slot);
+    });
+    $("#planList").querySelectorAll("[data-ev]").forEach(b=>{
+      b.onclick = () => { events = events.filter(x=>x.id !== +b.dataset.ev); saveEv(); drawCal(); drawPlan(); };
+    });
+  }
+}
+
+function drawMemo(){
+  const t = $("#memoText");
+  if(!t) return;
+  t.value = notes[iso(sel)] || "";
+  $("#memoSaved").textContent = "";
+}
+
+function drawTargets(){
+  const el = $("#targetList");
+  if(!el) return;
+  el.innerHTML = targets.length ? targets.map(t=>`
+    <div class="target">
+      <i style="display:block;width:12px;height:12px;border-radius:50%;background:${t.color}"></i>
+      <b>${t.name}</b>
+      <span class="sp"><button class="mini" data-tdel="${t.id}">消す</button></span>
+    </div>`).join("") : `<p class="empty">まだ登録がありません。</p>`;
+  el.querySelectorAll("[data-tdel]").forEach(b=>{
+    b.onclick = () => {
+      const id = +b.dataset.tdel;
+      targets = targets.filter(x=>x.id !== id);
+      items.forEach(it => { if(it.who === id) it.who = null; });
+      saveT(); save(); drawTargets(); drawItems(); drawCal(); drawPlan(); drawTags();
+    };
+  });
+}
+
+function drawTags(){
+  const box = $("#tagbox");
+  if(!box) return;
+  const add = txt => {
+    const t = $("#memoText");
+    t.value = (t.value ? t.value.replace(/\s*$/,"") + "\n" : "") + txt;
+    t.dispatchEvent(new Event("input"));
+  };
+  const rows = targets.length ? targets : [{id:0, name:"", color:"var(--navy)"}];
+  box.innerHTML = rows.map(t=>`
+    <div class="tagrow">
+      ${t.name ? `<div class="hd"><i style="display:block;width:10px;height:10px;border-radius:50%;background:${t.color}"></i>${t.name}</div>` : ""}
+      <div class="bs">${TAGS.map(g=>`<button type="button" data-tag="${t.id}|${g}">${g}</button>`).join("")}</div>
+    </div>`).join("");
+  box.querySelectorAll("[data-tag]").forEach(b=>{
+    b.onclick = () => {
+      const [id, g] = b.dataset.tag.split("|");
+      const t = findT(+id);
+      add(t ? `${t.name}：${g}` : g);
+    };
+  });
+}
+
+function drawItems(){
+  if(!items.length){ $("#itemList").innerHTML = `<p class="empty">まだ登録がありません。</p>`; return; }
+  const today = mid(new Date());
+  $("#itemList").innerHTML = items.map(it=>{
+    const ds = useDates(it);
+    const times = ds.length;
+    const last = ds[times-1];
+    const left = last ? Math.round((last - today)/86400000) : 0;
+    const visit = last ? addD(last, -it.lead) : null;
+    const vd = visit ? Math.round((visit - today)/86400000) : 0;
+    const total = Math.floor(it.qty / (it.per * it.slots)) || 1;
+    const pct = Math.max(4, Math.min(100, Math.round(times / total * 100)));
+    const warn = !times ? "在庫がありません。" : vd <= 0 ? "そろそろ用意する時期です。" : vd <= 3 ? `あと ${vd} 日で、用意する目安です。` : "";
+    const nextDay = ds[0];
+    return `<div class="item${isChild(it) ? " child" : ""}">
+      <div class="top"><i style="background:${it.color}"></i>${it.who && findT(it.who) ? `<span class="who" style="background:${findT(it.who).color}">${findT(it.who).name}</span>` : ""}<b>${it.name}</b>${isChild(it) ? `<span class="linkmark">↳ ${(items.find(x=>x.id===it.parent)||{}).name} と一緒</span>` : ""}
+        <span class="ord">
+          <button type="button" data-up="${it.id}" aria-label="上へ">▲</button>
+          <button type="button" data-down="${it.id}" aria-label="下へ">▼</button>
+        </span>
+        <span class="sp">
+          <button class="mini" data-edit="${it.id}">なおす</button>
+          <button class="mini" data-del="${it.id}">消す</button>
+        </span></div>
+      <div class="meta">
+        のこり <b>${restQty(it)}</b> 個（<b>${times}</b> 日分） ／ ${PACES[it.pace]}${it.slots>1 ? ` ・1日${it.slots}回` : ""} ／ 1回 ${it.per} 個<br>
+        ${nextDay ? `次は <b>${nextDay.getMonth()+1}月${nextDay.getDate()}日</b>` : "使いきりました"}
+        ${last ? ` ・ 最後は <b>${last.getMonth()+1}月${last.getDate()}日</b>（あと ${left} 日）` : ""}<br>
+        ${isChild(it) ? `一緒に使った回数：${it.done.length} 回` : it.check ? `やった回数：${it.done.length} 回` : `自動でへる設定（${autoUsed(it)} 日ぶん使用ずみ）`}
+      </div>
+      <div class="bar"><em style="width:${pct}%;background:${it.color}"></em></div>
+      ${warn ? `<div class="warnline">${warn}</div>` : ""}
+    </div>`;
+  }).join("");
+  $("#itemList").querySelectorAll("[data-del]").forEach(b=>{
+    b.onclick = () => {
+      const id = +b.dataset.del;
+      items = items.filter(x=>x.id !== id);
+      items.forEach(x => { if(x.parent === id) x.parent = null; });
+      save(); drawItems(); drawCal(); drawPlan();
+    };
+  });
+  const move = (id, dir) => {
+    const i = items.findIndex(x => x.id === id);
+    const j = i + dir;
+    if(i < 0 || j < 0 || j >= items.length) return;
+    [items[i], items[j]] = [items[j], items[i]];
+    save(); drawItems(); drawCal(); drawPlan();
+  };
+  $("#itemList").querySelectorAll("[data-up]").forEach(b=>{ b.onclick = () => move(+b.dataset.up, -1) });
+  $("#itemList").querySelectorAll("[data-down]").forEach(b=>{ b.onclick = () => move(+b.dataset.down, 1) });
+  const first = items[0] && items[0].id, last = items[items.length-1] && items[items.length-1].id;
+  const fu = $("#itemList").querySelector(`[data-up="${first}"]`); if(fu) fu.disabled = true;
+  const fd = $("#itemList").querySelector(`[data-down="${last}"]`); if(fd) fd.disabled = true;
+  $("#itemList").querySelectorAll("[data-edit]").forEach(b=>{
+    b.onclick = () => openForm(items.find(x=>x.id === +b.dataset.edit));
+  });
+}
+
+function drawColors(){
+  $("#fColors").innerHTML = COLORS.map(c=>
+    `<button type="button" data-c="${c}" style="background:${c}" aria-pressed="${c===pickedColor}" aria-label="色"></button>`).join("");
+  $("#fColors").querySelectorAll("[data-c]").forEach(b=>{
+    b.onclick = () => { pickedColor = b.dataset.c; drawColors(); };
+  });
+}
+
+function openForm(it){
+  editing = it || null;
+  $("#formTitle").textContent = it ? "物品をなおす" : "物品を登録";
+  $("#fName").value = it ? it.name : "";
+  $("#fQty").value  = it ? it.qty  : 16;
+  $("#fPer").value  = it ? it.per  : 1;
+  $("#fPace").value = it ? it.pace : 2;
+  $("#fSlots").value = it ? (it.slots || 1) : 1;
+  $("#fWho").innerHTML = `<option value="">（なし）</option>` +
+    targets.map(t=>`<option value="${t.id}">${t.name}</option>`).join("");
+  $("#fWho").value = it && it.who ? it.who : "";
+  $("#fCheck").checked = it ? it.check !== false : true;
+  $("#fParent").innerHTML = `<option value="">（なし）</option>` +
+    items.filter(x => (!it || x.id !== it.id) && !x.parent)
+         .map(x=>`<option value="${x.id}">${x.name}</option>`).join("");
+  $("#fParent").value = it && it.parent ? it.parent : "";
+  $("#fNext").value = it ? it.next : iso(new Date());
+  $("#fLead").value = it ? it.lead : 7;
+  pickedColor = it ? it.color : COLORS[items.length % COLORS.length];
+  drawColors();
+  show("form");
+}
+
+function show(v){
+  ["Cal","Items","Form","Memo"].forEach(x=>$("#view"+x).hidden = true);
+  $("#view"+{cal:"Cal",items:"Items",form:"Form",memo:"Memo"}[v]).hidden = false;
+  $("#navCal").setAttribute("aria-current", String(v==="cal"));
+  $("#navItems").setAttribute("aria-current", String(v==="items"||v==="form"));
+  $("#navMemo").setAttribute("aria-current", String(v==="memo"));
+  const t = {cal:["ストックカレンダー","やった日をチェックすると、次の予定がずれていきます。"],
+             items:["物品登録","登録しているものの、のこりです。"],
+             form:["物品登録","名前と残りの数を入れてください。"],
+             memo:["メモ","書いた日だけ、新しい順に並びます。"]}[v];
+  $("#title").textContent = t[0]; $("#lead").textContent = t[1];
+  if(v==="items"){ drawTargets(); drawItems(); }
+  if(v==="memo") drawMemoList();
+  window.scrollTo(0,0);
+}
+
+function drawMemoList(){
+  const ks = Object.keys(notes).filter(k => (notes[k]||"").trim()).sort().reverse();
+  if(!ks.length){
+    $("#memoList").innerHTML = `<p class="empty">まだメモがありません。<br>カレンダーで日を選んで、下の欄に書いてください。</p>`;
+    return;
+  }
+  const today = mid(new Date());
+  $("#memoList").innerHTML = ks.map(k=>{
+    const d = fromIso(k);
+    const diff = Math.round((today - d)/86400000);
+    const when = diff === 0 ? "今日" : diff === 1 ? "きのう" : diff > 0 ? `${diff}日前` : `${-diff}日後`;
+    const dones = items.filter(it => it.done.some(x => x.split("#")[0] === k));
+    const evs = events.filter(e => e.date === k);
+    return `<button type="button" class="memocard" data-go="${k}">
+      <div class="dt">${d.getFullYear() === today.getFullYear() ? "" : d.getFullYear()+"年 "}${d.getMonth()+1}月${d.getDate()}日（${DOW[d.getDay()]}）<span>${when}</span></div>
+      <div class="tx">${(notes[k]||"").replace(/</g,"&lt;")}</div>
+      ${(dones.length||evs.length) ? `<div class="tags">${dones.map(it=>`<i style="background:${it.color}" title="${it.name}"></i>`).join("")}${evs.map(()=>`<i style="background:var(--navy)"></i>`).join("")}</div>` : ""}
+    </button>`;
+  }).join("");
+  $("#memoList").querySelectorAll("[data-go]").forEach(b=>{
+    b.onclick = () => {
+      sel = fromIso(b.dataset.go);
+      cur = new Date(sel.getFullYear(), sel.getMonth(), 1);
+      show("cal"); drawCal(); drawPlan(); drawMemo();
+    };
+  });
+}
+
+$("#prev").onclick = () => { cur = new Date(cur.getFullYear(), cur.getMonth()-1, 1); drawCal(); };
+$("#next").onclick = () => { cur = new Date(cur.getFullYear(), cur.getMonth()+1, 1); drawCal(); };
+$("#navCal").onclick = () => show("cal");
+$("#navItems").onclick = () => show("items");
+$("#navMemo").onclick = () => show("memo");
+$("#tAdd").onclick = () => {
+  const n = $("#tName").value.trim();
+  if(!n) return;
+  const cs = ["#3f86c4","#c2609c","#4f9d63","#e89b3c","#8a6ec9","#e0736f"];
+  targets.push({id: Date.now(), name: n, color: cs[targets.length % cs.length]});
+  $("#tName").value = "";
+  saveT(); drawTargets(); drawTags();
+};
+$("#tName").addEventListener("keydown", e => { if(e.key === "Enter") $("#tAdd").click(); });
+$("#addOpen").onclick = () => openForm(null);
+$("#cancel").onclick = () => show("items");
+$("#save").onclick = () => {
+  const o = {
+    id: editing ? editing.id : Date.now(),
+    name: ($("#fName").value || "名前なし").trim(),
+    qty: Math.max(0, parseFloat($("#fQty").value) || 0),
+    per: Math.max(0.1, parseFloat($("#fPer").value) || 1),
+    pace: parseFloat($("#fPace").value) || 1,
+    slots: parseInt($("#fSlots").value) || 1,
+    who: $("#fWho").value ? +$("#fWho").value : null,
+    check: $("#fCheck").checked,
+    parent: $("#fParent").value ? +$("#fParent").value : null,
+    next: $("#fNext").value || iso(new Date()),
+    color: pickedColor,
+    lead: Math.max(0, parseInt($("#fLead").value) || 0),
+    done: editing ? editing.done : []
+  };
+  if(editing) items = items.map(x => x.id === editing.id ? o : x);
+  else items.push(o);
+  save(); drawCal(); drawPlan(); show("items");
+};
+
+let memoTimer = null;
+$("#memoText").addEventListener("input", () => {
+  clearTimeout(memoTimer);
+  memoTimer = setTimeout(() => {
+    const v = $("#memoText").value.trim();
+    if(v) notes[iso(sel)] = v; else delete notes[iso(sel)];
+    saveNotes(); drawCal();
+    $("#memoSaved").textContent = "保存しました";
+    setTimeout(() => { $("#memoSaved").textContent = ""; }, 1600);
+  }, 500);
+});
+
+$("#evSave").onclick = () => {
+  const t = $("#evText").value.trim();
+  if(!t) return;
+  events.push({id:Date.now(), date: iso(sel), text: t});
+  $("#evText").value = "";
+  saveEv(); drawCal(); drawPlan();
+};
+$("#evText").addEventListener("keydown", e => { if(e.key === "Enter") $("#evSave").click(); });
+
+// ===== 記録の持ち出し =====
+const pack = () => JSON.stringify({v:1, items, targets, events, notes}, null, 1);
+$("#expBtn").onclick = () => {
+  const box = $("#ioBox");
+  box.hidden = false; box.value = pack(); box.select();
+  let ok = false;
+  try{ ok = document.execCommand("copy"); }catch(e){}
+  if(navigator.clipboard) navigator.clipboard.writeText(box.value).then(()=>{
+    $("#ioMsg").textContent = "コピーしました。メモアプリなどに貼って保存してください。";
+  }).catch(()=>{
+    $("#ioMsg").textContent = ok ? "コピーしました。" : "この文字を全部コピーして、保存してください。";
+  });
+  else $("#ioMsg").textContent = ok ? "コピーしました。" : "この文字を全部コピーして、保存してください。";
+  // ファイルに保存できる環境なら、そのまま落とす
+  try{
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([pack()], {type:"application/json"}));
+    a.download = `stock-calendar-${iso(new Date())}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
+  }catch(e){}
+};
+$("#impBtn").onclick = () => {
+  const box = $("#ioBox");
+  if(box.hidden){ box.hidden = false; box.value = ""; $("#ioMsg").textContent = "書き出した文字を貼り付けて、もう一度「読み込む」を押してください。"; box.focus(); return; }
+  try{
+    const o = JSON.parse(box.value);
+    if(!o || !Array.isArray(o.items)) throw 0;
+    items = o.items; targets = o.targets || targets; events = o.events || []; notes = o.notes || {};
+    items.forEach(it => { if(!Array.isArray(it.done)) it.done = []; if(!it.slots) it.slots = 1; if(it.check === undefined) it.check = true; });
+    save(); saveT(); saveEv(); saveNotes();
+    drawTargets(); drawItems(); drawCal(); drawPlan(); drawMemo(); drawTags();
+    box.hidden = true; $("#ioMsg").textContent = "読み込みました。";
+  }catch(e){
+    $("#ioMsg").textContent = "うまく読み込めませんでした。書き出した文字を、まるごと貼り付けてください。";
+  }
+};
+
+drawColors(); drawCal(); drawPlan(); drawMemo(); drawTags();
+</script>
+
+<p class="pagefoot">
+  入力したデータは、お使いの端末の中だけに保存されます。サーバーには送信されません。<br>
+  実際の投薬量・回数は、かならず獣医師や医師の指示に従ってください。<br>
+  <a href="https://zubora-neko.com/">ズボラ猫暮らし。</a>
+</p>
+</body>
+</html>
