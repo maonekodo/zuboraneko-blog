@@ -435,11 +435,7 @@ const restTimes = it => restDays(it);
 
 // これからの予定。最後にやった日があれば、そこを起点にずらす
 function useDates(it){
-  if(isChild(it)){
-    const pa = items.find(x => x.id === it.parent);
-    return useDates(pa).slice(0, restTimes(it));
-  }
-  if(!it.check){
+  if(!it.check && !isChild(it)){
     const t0 = mid(new Date());
     return allDates(it).filter(d => d >= t0);
   }
@@ -520,7 +516,12 @@ function toggleDone(id, slot){
     else t.done = t.done.filter(x=>x !== k);
   };
   apply(it);
-  kidsOf(it.id).forEach(apply);
+  // 一緒に使うものは、その子自身の予定日が来ていたときだけ減らす
+  kidsOf(it.id).forEach(kid => {
+    const nx = useDates(kid)[0];
+    if(on){ if(nx && nx <= sel) apply(kid); }
+    else apply(kid);   // 取り消しは、入っていれば外す
+  });
   save(); drawCal(); drawPlan();
 }
 
@@ -556,7 +557,7 @@ function drawPlan(){
           : `のこり ${left} 日分`;
         rows.push(`<div class="ev">
           <i style="background:${it.color}"></i>
-          <span class="nm ${isDone ? "is-done" : ""}">${it.who && findT(it.who) ? `<span class="who" style="background:${findT(it.who).color}">${findT(it.who).name}</span>` : ""}${it.name}${slot ? `<b style="font-weight:700">（${slot}）</b>` : ""}<small>${label}${kidsOf(it.id).length ? `　＋ ${kidsOf(it.id).map(k=>k.name).join("・")}` : ""}</small></span>
+          <span class="nm ${isDone ? "is-done" : ""}">${it.who && findT(it.who) ? `<span class="who" style="background:${findT(it.who).color}">${findT(it.who).name}</span>` : ""}${it.name}${slot ? `<b style="font-weight:700">（${slot}）</b>` : ""}<small>${label}${(() => { const due = kidsOf(it.id).filter(k => { const n = useDates(k)[0]; return (n && n <= sel) || k.done.includes(doneKey(sel, slot)); }); return due.length ? `　＋ ${due.map(k=>k.name).join("・")}` : ""; })()}</small></span>
           ${it.check ? `<span class="act"><button class="chk ${isDone ? "on" : ""}" data-done="${it.id}" data-slot="${slot}">${isDone ? "✓ やった" : "やった"}</button></span>` : ""}
         </div>`);
       });
