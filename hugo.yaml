@@ -55,7 +55,7 @@ menu:
   main:
     - identifier: グッズ
       name: 便利グッズ
-      url: /categories/グッズ/
+      url: /categories/便利グッズ/
       weight: 10
     - identifier: フード
       name: フード
