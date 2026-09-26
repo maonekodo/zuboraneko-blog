@@ -263,10 +263,11 @@ input,select{font:inherit;font-size:16px;padding:9px 11px;border-radius:9px;bord
   <section id="viewItems" hidden>
     <p class="subhead" style="margin-top:0">だれの分か</p>
     <div id="targetList"></div>
-    <div style="display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:6px">
-      <input id="tName" placeholder="まお君 / らびちゃん / 自分…" aria-label="対象の名前">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:8px">
+      <input id="tName" placeholder="猫の名前 / 自分 / 子どもの名前…" aria-label="対象の名前">
       <button class="btn" id="tAdd" style="width:auto;padding:10px 16px">追加</button>
     </div>
+    <div class="swatches" id="tColors" style="margin-bottom:6px"></div>
     <p class="subhead">物品</p>
     <div id="itemList"></div>
     <button class="btn" id="addOpen">＋ 物品を追加</button>
@@ -382,9 +383,7 @@ const fromIso = s => mid(new Date(s + "T00:00:00"));
 
 let items = [];
 try{ const raw = localStorage.getItem("stockcal_items"); if(raw) items = JSON.parse(raw); }catch(e){}
-if(!items.length){
-  items = [{id:1, name:"猫点滴（ソルラクト）", qty:16, per:1, pace:2, slots:1, next:iso(new Date()), color:COLORS[0], lead:7, done:[]}];
-}
+// はじめて開いた人には、何も入っていない状態で見せる
 items.forEach(it => { if(!Array.isArray(it.done)) it.done = []; if(!it.slots) it.slots = 1; if(it.check === undefined) it.check = true; });
 const SLOT_NAMES = {1:[""], 2:["朝","夜"], 3:["朝","昼","夜"]};
 const slotsOf = it => SLOT_NAMES[it.slots] || [""];
@@ -393,9 +392,26 @@ function save(){ try{ localStorage.setItem("stockcal_items", JSON.stringify(item
 
 let targets = [];
 try{ const raw = localStorage.getItem("stockcal_targets"); if(raw) targets = JSON.parse(raw); }catch(e){}
-if(!targets.length) targets = [{id:1, name:"まお君", color:"#3f86c4"}, {id:2, name:"らびちゃん", color:"#c2609c"}];
+// 対象（だれの分か）も、最初は空
 function saveT(){ try{ localStorage.setItem("stockcal_targets", JSON.stringify(targets)); }catch(e){} }
 const findT = id => targets.find(t => t.id === id);
+const TCOLORS = ["#3f86c4","#c2609c","#4f9d63","#e89b3c","#8a6ec9","#e0736f","#2fa3a3","#7a839d"];
+let tPicked = TCOLORS[0];
+let tEditing = null;   // 色を変えたい対象のid
+function drawTColors(){
+  const el = $("#tColors");
+  if(!el) return;
+  el.innerHTML = TCOLORS.map(c=>
+    `<button type="button" data-tc="${c}" style="background:${c}" aria-pressed="${c===tPicked}" aria-label="色"></button>`).join("");
+  el.querySelectorAll("[data-tc]").forEach(b=>{
+    b.onclick = () => {
+      tPicked = b.dataset.tc;
+      if(tEditing){ const t = findT(tEditing); if(t) t.color = tPicked; saveT(); tEditing = null;
+        drawTargets(); drawItems(); drawCal(); drawPlan(); drawTags(); }
+      drawTColors();
+    };
+  });
+}
 const kidsOf = id => items.filter(x => x.parent === id);
 const isChild = it => !!it.parent && items.some(x => x.id === it.parent);
 
@@ -593,10 +609,14 @@ function drawTargets(){
   if(!el) return;
   el.innerHTML = targets.length ? targets.map(t=>`
     <div class="target">
-      <i style="display:block;width:12px;height:12px;border-radius:50%;background:${t.color}"></i>
+      <button type="button" data-tcol="${t.id}" title="色を変える"
+        style="width:20px;height:20px;padding:0;border-radius:50%;border:2px solid ${tEditing===t.id ? "var(--navy)" : "transparent"};background:${t.color};cursor:pointer"></button>
       <b>${t.name}</b>
       <span class="sp"><button class="mini" data-tdel="${t.id}">消す</button></span>
-    </div>`).join("") : `<p class="empty">まだ登録がありません。</p>`;
+    </div>`).join("") : `<p class="empty">まだ登録がありません。<br>猫の名前、自分、お子さんの名前など、ケアする相手を登録してください。</p>`;
+  el.querySelectorAll("[data-tcol]").forEach(b=>{
+    b.onclick = () => { tEditing = (tEditing === +b.dataset.tcol) ? null : +b.dataset.tcol; drawTargets(); drawTColors(); };
+  });
   el.querySelectorAll("[data-tdel]").forEach(b=>{
     b.onclick = () => {
       const id = +b.dataset.tdel;
@@ -631,7 +651,7 @@ function drawTags(){
 }
 
 function drawItems(){
-  if(!items.length){ $("#itemList").innerHTML = `<p class="empty">まだ登録がありません。</p>`; return; }
+  if(!items.length){ $("#itemList").innerHTML = `<p class="empty">まだ登録がありません。<br>下の「＋ 物品を追加」から、点滴・薬・サプリ・ガーゼなど、残りを数えたいものを登録してください。</p>`; return; }
   const today = mid(new Date());
   $("#itemList").innerHTML = items.map(it=>{
     const ds = useDates(it);
@@ -731,7 +751,7 @@ function show(v){
              form:["物品登録","名前と残りの数を入れてください。"],
              memo:["メモ","書いた日だけ、新しい順に並びます。"]}[v];
   $("#title").textContent = t[0]; $("#lead").textContent = t[1];
-  if(v==="items"){ drawTargets(); drawItems(); }
+  if(v==="items"){ drawTargets(); drawTColors(); drawItems(); }
   if(v==="memo") drawMemoList();
   window.scrollTo(0,0);
 }
@@ -772,10 +792,10 @@ $("#navMemo").onclick = () => show("memo");
 $("#tAdd").onclick = () => {
   const n = $("#tName").value.trim();
   if(!n) return;
-  const cs = ["#3f86c4","#c2609c","#4f9d63","#e89b3c","#8a6ec9","#e0736f"];
-  targets.push({id: Date.now(), name: n, color: cs[targets.length % cs.length]});
+  targets.push({id: Date.now(), name: n, color: tPicked});
   $("#tName").value = "";
-  saveT(); drawTargets(); drawTags();
+  tPicked = TCOLORS[(TCOLORS.indexOf(tPicked) + 1) % TCOLORS.length];
+  saveT(); drawTargets(); drawTColors(); drawTags();
 };
 $("#tName").addEventListener("keydown", e => { if(e.key === "Enter") $("#tAdd").click(); });
 $("#addOpen").onclick = () => openForm(null);
