@@ -1,6 +1,7 @@
 ---
 title: "LEDライト付きの猫の爪切りを使ってみた【バナナ型・血管が見える？】"
 date: 2026-09-26
+lastmod: 2026-09-27
 draft: false
 categories: ["便利グッズ"]
 tags: ["爪切り", "猫のケア", "LEDライト", "多頭飼い", "猫グッズ"]
@@ -122,6 +123,8 @@ cover:
 <b>まお君にはまだ使っていません。</b>怒るのが目に見えているので、機嫌のいい日をうかがっているところです。
 
 {{< cat-voice cat="mao" >}}来んでええからな{{< /cat-voice >}}
+
+![爪が飛び散らないのがいちばん助かった](/images/posts/cat-nail-clipper-illust.jpg)
 
 ---
 
