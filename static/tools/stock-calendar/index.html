@@ -338,6 +338,10 @@ input,select{font:inherit;font-size:16px;padding:9px 11px;border-radius:9px;bord
           <option value="14">2週間ごと</option>
           <option value="15">月2回（15日ごと）</option>
           <option value="30">月1回（30日ごと）</option>
+          <option value="60">2か月ごと</option>
+          <option value="90">3か月ごと</option>
+          <option value="180">半年ごと</option>
+          <option value="365">1年ごと</option>
         </select>
       </div>
       <div class="field">
@@ -377,7 +381,7 @@ input,select{font:inherit;font-size:16px;padding:9px 11px;border-radius:9px;bord
 <script>
 const $ = s => document.querySelector(s);
 const COLORS = ["#e0736f","#e89b3c","#4f9d63","#3f86c4","#8a6ec9","#c2609c"];
-const PACES = {1:"毎日",2:"1日おき",3:"2日おき",3.5:"週2回",7:"週1回",10:"10日ごと",14:"2週間ごと",15:"月2回",30:"月1回"};
+const PACES = {1:"毎日",2:"1日おき",3:"2日おき",3.5:"週2回",7:"週1回",10:"10日ごと",14:"2週間ごと",15:"月2回",30:"月1回",60:"2か月ごと",90:"3か月ごと",180:"半年ごと",365:"1年ごと"};
 const DOW = "日月火水木金土";
 const mid = d => { const x = new Date(d); x.setHours(0,0,0,0); return x; };
 const addD = (d,n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
