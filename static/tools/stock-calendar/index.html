@@ -608,7 +608,7 @@ function drawPlan(){
       <div class="ev">
         <i style="background:var(--navy)"></i>
         <span class="nm">${e.text}</span>
-        <span class="act"><button class="mini" data-ev="${e.id}">消す</button></span>
+        <span class="act"><button class="mini" data-ev="${e.id}">削除</button></span>
       </div>`);
     $("#planList").innerHTML = rows.concat(evRows).join("");
     $("#planList").querySelectorAll("[data-done]").forEach(b=>{
@@ -706,7 +706,7 @@ function drawItems(){
         </span>
         <span class="sp">
           <button class="mini" data-edit="${it.id}">なおす</button>
-          <button class="mini" data-del="${it.id}">消す</button>
+          <button class="mini" data-del="${it.id}">削除</button>
         </span></div>
       <div class="meta">
         のこり <b>${restQty(it)}</b> 個（<b>${times}</b> 日分） ／ ${PACES[it.pace]}${it.slots>1 ? ` ・1日${it.slots}回` : ""} ／ 1回 ${it.per} 個<br>
