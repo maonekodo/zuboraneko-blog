@@ -1,12 +1,12 @@
 ---
 title: "猫の点滴や薬、あと何日分あるかわからなくなる問題を解決した【無料ツールを作りました】"
 date: 2026-09-28
-draft: true
+draft: false
 categories: ["便利グッズ"]
 tags: ["猫の介護", "皮下点滴", "腎臓ケア", "無料ツール", "ストック管理"]
 description: "毎月もらってくる点滴・薬・ガーゼが、あと何日分あるのかわからなくなる。数えるのが面倒なので、残りと次の予定が自動で出るカレンダーを作りました。登録不要・無料です。"
 cover:
-  image: "/images/posts/stock-calendar-thumb.jpg"
+  image: "/images/posts/stock-calendar-thumb.png"
   alt: "ストックカレンダー"
 ---
 
