@@ -92,6 +92,10 @@ body{
 }
 .wrap{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
 h1{font-family:var(--round);font-size:22px;margin:0}
+header{position:relative}
+.theme{position:absolute;top:0;right:0;font:inherit;font-size:19px;line-height:1;width:44px;height:44px;
+  border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;padding:0}
+.theme:hover{border-color:var(--pink)}
 .lead{color:var(--sub);font-size:14px;margin:3px 0 0}
 
 /* カレンダー */
@@ -241,6 +245,7 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
   <header>
     <h1 id="title">ストックカレンダー</h1>
     <p class="lead" id="lead">やった日をチェックすると、次の予定がずれていきます。</p>
+    <button type="button" class="theme" id="themeBtn" aria-label="表示の明るさを切り替える" title="明るさを切り替える">🌙</button>
   </header>
 
   <!-- カレンダー -->
@@ -938,6 +943,26 @@ $("#evSave").onclick = () => {
   saveEv(); drawCal(); drawPlan();
 };
 $("#evText").addEventListener("keydown", e => { if(e.key === "Enter") $("#evSave").click(); });
+
+// ===== 明るさの切り替え（自動 → 明るい → 暗い）=====
+const THEMES = ["auto","light","dark"];
+const THEME_ICON = {auto:"🌓", light:"☀️", dark:"🌙"};
+const THEME_NAME = {auto:"端末の設定にあわせる", light:"明るい表示", dark:"暗い表示"};
+let theme = "auto";
+try{ theme = localStorage.getItem("stockcal_theme") || "auto"; }catch(e){}
+function applyTheme(){
+  const r = document.documentElement;
+  if(theme === "auto") r.removeAttribute("data-theme");
+  else r.setAttribute("data-theme", theme);
+  const b = $("#themeBtn");
+  if(b){ b.textContent = THEME_ICON[theme]; b.title = THEME_NAME[theme]; }
+  try{ localStorage.setItem("stockcal_theme", theme); }catch(e){}
+}
+$("#themeBtn").onclick = () => {
+  theme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
+  applyTheme();
+};
+applyTheme();
 
 // ===== 記録の持ち出し =====
 const pack = () => JSON.stringify({v:1, items, targets, events, notes}, null, 1);
