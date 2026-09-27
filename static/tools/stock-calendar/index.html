@@ -87,12 +87,12 @@ img{max-width:100%}
 html,body{height:100%}
 body{
   margin:0;background:var(--bg);color:var(--ink);
-  font-family:var(--sans);font-size:15px;line-height:1.7;
+  font-family:var(--sans);font-size:16.5px;line-height:1.75;
   padding-inline:16px;padding-block:20px 0;
 }
 .wrap{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
-h1{font-family:var(--round);font-size:20px;margin:0}
-.lead{color:var(--sub);font-size:12.5px;margin:2px 0 0}
+h1{font-family:var(--round);font-size:22px;margin:0}
+.lead{color:var(--sub);font-size:14px;margin:3px 0 0}
 
 /* カレンダー */
 .calbox{border:3px solid var(--navy);border-radius:16px;background:var(--pink-soft);padding:14px}
@@ -106,10 +106,10 @@ h1{font-family:var(--round);font-size:20px;margin:0}
   cursor:pointer;padding:4px 10px;border-radius:8px;font-family:var(--round)}
 .mon button:hover{background:rgba(35,50,92,.1)}
 .dows{display:grid;grid-template-columns:repeat(7,1fr);background:var(--pink);border-radius:8px;overflow:hidden}
-.dows span{text-align:center;font-size:11px;font-weight:700;color:var(--navy);padding:4px 0;letter-spacing:.04em}
+.dows span{text-align:center;font-size:12px;font-weight:700;color:var(--navy);padding:4px 0;letter-spacing:.04em}
 .days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:4px}
 .day{position:relative;aspect-ratio:1;border:0;border-radius:9px;background:var(--pink-soft);
-  font:inherit;font-family:var(--round);font-weight:700;font-size:16px;color:var(--navy);
+  font:inherit;font-family:var(--round);font-weight:700;font-size:17.5px;color:var(--navy);
   cursor:pointer;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;
   padding:0}
 .day:hover{background:var(--yellow-soft)}
@@ -126,25 +126,25 @@ h1{font-family:var(--round);font-size:20px;margin:0}
 
 /* 予定 */
 .plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
-.plan h2{font-family:var(--round);font-size:15px;margin:0 0 10px}
-.ev{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:2px solid var(--line)}
+.plan h2{font-family:var(--round);font-size:16.5px;margin:0 0 10px}
+.ev{display:flex;align-items:center;gap:9px;padding:12px 0;border-bottom:2px solid var(--line)}
 .ev:last-child{border-bottom:0}
 .ev i{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
-.ev .nm{font-family:var(--round);font-size:16px}
-.ev .nm small{display:block;font-family:var(--sans);font-size:11.5px;color:var(--sub);font-weight:400}
+.ev .nm{font-family:var(--round);font-size:16.5px;flex:1 1 auto;min-width:0;line-height:1.4}
+.ev .nm small{display:block;font-family:var(--sans);font-size:13px;color:var(--sub);font-weight:400}
 .ev .nm.is-done{color:var(--sub);text-decoration:line-through}
 .ev .act{margin-left:auto;display:flex;gap:6px;flex:0 0 auto}
-.chk{font:inherit;font-family:var(--round);font-weight:700;font-size:13px;border:2px solid var(--done);
+.chk{font:inherit;font-family:var(--round);font-weight:700;font-size:14.5px;border:2px solid var(--done);
   background:transparent;color:var(--done);border-radius:9px;padding:6px 12px;cursor:pointer;white-space:nowrap}
 .chk:hover{background:var(--done-soft)}
 .chk.on{background:var(--done);color:#fff;border-color:var(--done)}
-.mini{font:inherit;font-size:12px;border:1.5px solid var(--line);background:transparent;color:var(--sub);
+.mini{font:inherit;font-size:13px;border:1.5px solid var(--line);background:transparent;color:var(--sub);
   border-radius:8px;padding:5px 9px;cursor:pointer;white-space:nowrap}
 .mini:hover{border-color:var(--pink);color:var(--pink)}
-.empty{color:var(--sub);font-size:13px}
+.empty{color:var(--sub);font-size:14.5px}
 .memo{margin-top:14px;border-top:2px dashed var(--line);padding-top:14px}
-.memo label{display:flex;align-items:center;gap:6px;font-family:var(--round);font-size:14px;margin-bottom:6px}
-.memo textarea{font:inherit;font-size:15px;line-height:1.6;width:100%;min-height:86px;resize:vertical;
+.memo label{display:flex;align-items:center;gap:6px;font-family:var(--round);font-size:15.5px;margin-bottom:6px}
+.memo textarea{font:inherit;font-size:16.5px;line-height:1.6;width:100%;min-height:86px;resize:vertical;
   padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
 .memo textarea:focus-visible{outline:2.5px solid var(--navy);outline-offset:2px}
 .memo .saved{font-size:11.5px;color:var(--done);margin-top:4px;height:1.2em}
@@ -154,25 +154,25 @@ h1{font-family:var(--round);font-size:20px;margin:0}
 .item{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;background:var(--card)}
 .item .top{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 .item .top i{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
-.item .top b{font-family:var(--round);font-size:16px}
+.item .top b{font-family:var(--round);font-size:17.5px}
 .item .top .sp{margin-left:auto;display:flex;gap:6px}
-.item .meta{font-size:12.5px;color:var(--sub);margin-top:6px;line-height:1.6}
+.item .meta{font-size:14px;color:var(--sub);margin-top:7px;line-height:1.65}
 .item .meta b{color:var(--ink)}
 .item .bar{height:6px;border-radius:3px;background:var(--pink-soft);margin-top:8px;overflow:hidden}
 .item .bar em{display:block;height:100%;border-radius:3px}
 .warnline{margin-top:8px;background:var(--yellow-soft);border-left:3px solid var(--yellow);
-  border-radius:0 7px 7px 0;padding:7px 10px;font-size:12.5px}
+  border-radius:0 7px 7px 0;padding:8px 11px;font-size:13.5px}
 
 /* フォーム */
 .field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
-label{font-size:12.5px;font-weight:500}
-input,select{font:inherit;font-size:16px;padding:9px 11px;border-radius:9px;border:1.5px solid var(--line);
+label{font-size:14px;font-weight:500}
+input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;border:1.5px solid var(--line);
   background:var(--card);color:var(--ink);width:100%;font-variant-numeric:tabular-nums}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .swatches{display:flex;gap:8px;flex-wrap:wrap}
 .swatches button{width:30px;height:30px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;padding:0}
 .swatches button[aria-pressed="true"]{border-color:var(--navy)}
-.btn{font:inherit;font-family:var(--round);font-weight:700;font-size:15px;border:0;border-radius:11px;
+.btn{font:inherit;font-family:var(--round);font-weight:700;font-size:16.5px;border:0;border-radius:11px;
   padding:12px 18px;background:var(--yellow);color:var(--navy);cursor:pointer;width:100%}
 .btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--sub);font-weight:500}
 
@@ -181,34 +181,34 @@ input,select{font:inherit;font-size:16px;padding:9px 11px;border-radius:9px;bord
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr 1fr;
   background:var(--yellow);border-top:3px solid var(--navy);
   padding:0 0 env(safe-area-inset-bottom,0px)}
-.bar button{font:inherit;font-family:var(--round);font-weight:700;font-size:15px;border:0;background:transparent;
+.bar button{font:inherit;font-family:var(--round);font-weight:700;font-size:16px;border:0;background:transparent;
   color:var(--navy);padding:16px 6px;cursor:pointer}
 .bar button[aria-current="true"]{background:rgba(35,50,92,.13)}
-.note{font-size:12px;color:var(--sub)}
+.note{font-size:13px;color:var(--sub)}
 .memocard{width:100%;text-align:left;font:inherit;background:var(--card);border:1px solid var(--line);
   border-radius:12px;padding:13px 14px;margin-bottom:10px;cursor:pointer;color:var(--ink);display:block}
 .memocard:hover{border-color:var(--pink)}
-.memocard .dt{font-family:var(--round);font-size:14px;color:var(--navy);display:flex;align-items:center;gap:8px}
-.memocard .dt span{font-size:11.5px;color:var(--sub);font-weight:400;font-family:var(--sans)}
-.memocard .tx{font-size:14px;margin-top:5px;white-space:pre-wrap;line-height:1.65}
+.memocard .dt{font-family:var(--round);font-size:15.5px;color:var(--navy);display:flex;align-items:center;gap:8px}
+.memocard .dt span{font-size:13px;color:var(--sub);font-weight:400;font-family:var(--sans)}
+.memocard .tx{font-size:15.5px;margin-top:6px;white-space:pre-wrap;line-height:1.65}
 .memocard .tags{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
 .memocard .tags i{width:9px;height:9px;border-radius:50%;display:block}
-.who{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;
+.who{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;
   color:#fff;margin-right:6px;vertical-align:1px}
 .tagbox{margin-bottom:14px}
 .tagrow{margin-bottom:10px}
-.tagrow .hd{font-family:var(--round);font-size:13px;margin-bottom:5px;display:flex;align-items:center;gap:6px}
+.tagrow .hd{font-family:var(--round);font-size:14.5px;margin-bottom:5px;display:flex;align-items:center;gap:6px}
 .tagrow .bs{display:flex;gap:6px;flex-wrap:wrap}
-.tagrow button{font:inherit;font-size:12.5px;padding:6px 11px;border-radius:999px;cursor:pointer;
+.tagrow button{font:inherit;font-size:14px;padding:8px 13px;border-radius:999px;cursor:pointer;
   border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
 .tagrow button:hover{border-color:var(--pink);background:var(--pink-soft)}
 .target{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);
   border-radius:11px;background:var(--card);margin-bottom:8px}
-.target b{font-family:var(--round);font-size:15px}
+.target b{font-family:var(--round);font-size:16.5px}
 .target .sp{margin-left:auto}
-.subhead{font-family:var(--round);font-size:14px;margin:18px 0 8px}
+.subhead{font-family:var(--round);font-size:15.5px;margin:18px 0 8px}
 .item.child{margin-left:18px;border-left:3px solid var(--line)}
-.linkmark{font-size:11px;color:var(--sub)}
+.linkmark{font-size:12.5px;color:var(--sub)}
 .ord{display:flex;gap:4px;margin-left:auto}
 .ord button{font:inherit;font-size:14px;line-height:1;width:32px;height:30px;border-radius:8px;
   border:1.5px solid var(--line);background:transparent;color:var(--navy);cursor:pointer;padding:0}
