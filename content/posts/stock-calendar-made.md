@@ -75,7 +75,7 @@ cover:
 
 登録もログインもいりません。無料です。
 
-![ストックカレンダーの画面](/images/posts/stock-calendar-cal.jpg)
+![ストックカレンダーの画面](/images/posts/stock-calendar-cal.png)
 
 使う日がカレンダーに並んで、**やった日には緑のチェック**がつきます。
 
@@ -95,7 +95,7 @@ cover:
 
 そこで、**親子でつなげられる**ようにしました。
 
-![物品の一覧画面](/images/posts/stock-calendar-items.jpg)
+![物品の一覧画面](/images/posts/stock-calendar-items.png)
 
 **「やった」を1回押すだけで、ぶら下がっているものも一緒に減ります。**
 
@@ -128,7 +128,7 @@ cover:
 
 **吐いた・軟便・食欲なし**などを、**ワンタップで入れられるボタン**をつけました。
 
-![メモの一覧](/images/posts/stock-calendar-memo.jpg)
+![メモの一覧](/images/posts/stock-calendar-memo.png)
 
 書いた日だけが**新しい順に並ぶ**ので、**通院前に見返すのがラク**です。
 
