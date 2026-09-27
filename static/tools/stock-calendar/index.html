@@ -184,7 +184,7 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
 .bar button{font:inherit;font-family:var(--round);font-weight:700;font-size:15px;border:0;background:transparent;
   color:var(--navy);padding:16px 2px;cursor:pointer;position:relative}
 .bar .badge{position:absolute;top:8px;right:14px;min-width:20px;height:20px;border-radius:99px;
-  background:#c2410c;color:#fff;font-size:11.5px;line-height:20px;text-align:center;padding:0 5px}
+  background:var(--pink);color:var(--navy);font-size:11.5px;font-weight:700;line-height:20px;text-align:center;padding:0 5px}
 .bar button[aria-current="true"]{background:rgba(35,50,92,.13)}
 .note{font-size:13px;color:var(--sub)}
 .memocard{width:100%;text-align:left;font:inherit;background:var(--card);border:1px solid var(--line);
@@ -269,17 +269,17 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
     <div class="plan" style="margin-top:16px">
       <h2 id="planDate">今日の予定</h2>
       <div id="planList"></div>
+      <div id="evAdd" style="margin-top:12px">
+        <div style="display:grid;grid-template-columns:1fr auto;gap:8px">
+          <input id="evText" placeholder="受診、フード注文、爪切り…" aria-label="予定">
+          <button class="btn" id="evSave" style="width:auto;padding:10px 14px;font-size:15px">予定を追加</button>
+        </div>
+      </div>
       <div class="memo">
         <div class="tagbox" id="tagbox"></div>
         <label for="memoText">📝 この日のメモ</label>
         <textarea id="memoText" placeholder="点滴の入りが悪かった、ごはん半分残した、元気そう…"></textarea>
         <div class="saved" id="memoSaved"></div>
-      </div>
-      <div id="evAdd" style="margin-top:12px">
-        <div style="display:grid;grid-template-columns:1fr auto;gap:8px">
-          <input id="evText" placeholder="受診、フード注文、爪切り…" aria-label="予定">
-          <button class="btn" id="evSave" style="width:auto;padding:10px 16px">追加</button>
-        </div>
       </div>
     </div>
     <div class="spacer"></div>
