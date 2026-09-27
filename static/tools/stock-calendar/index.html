@@ -205,7 +205,11 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
 .target{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);
   border-radius:11px;background:var(--card);margin-bottom:8px}
 .target b{font-family:var(--round);font-size:16.5px}
-.target .sp{margin-left:auto}
+.target .sp{margin-left:auto;display:flex;gap:6px;align-items:center}
+.btn-tag{font:inherit;font-size:15px;line-height:1;padding:7px 10px;border-radius:9px;cursor:pointer;
+  border:1.5px solid var(--line);background:transparent}
+.btn-tag[aria-pressed="true"]{border-color:var(--navy);background:var(--yellow-soft)}
+.btn-tag[aria-pressed="false"]{opacity:.42}
 .subhead{font-family:var(--round);font-size:15.5px;margin:18px 0 8px}
 .item.child{margin-left:18px;border-left:3px solid var(--line)}
 .linkmark{font-size:12.5px;color:var(--sub)}
@@ -277,6 +281,7 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
       <button class="btn" id="tAdd" style="width:auto;padding:10px 16px">追加</button>
     </div>
     <div class="swatches" id="tColors" style="margin-bottom:6px"></div>
+    <p class="note" style="margin-bottom:10px">📝 を押すと、カレンダーのメモ欄に「吐いた」などのタグを出すかどうかを切り替えられます。</p>
     <p class="subhead">物品</p>
     <div id="itemList"></div>
     <button class="btn" id="addOpen">＋ 物品を追加</button>
@@ -410,6 +415,7 @@ function save(){ try{ localStorage.setItem("stockcal_items", JSON.stringify(item
 let targets = [];
 try{ const raw = localStorage.getItem("stockcal_targets"); if(raw) targets = JSON.parse(raw); }catch(e){}
 // 対象（だれの分か）も、最初は空
+targets.forEach(t => { if(t.tag === undefined) t.tag = true; });
 function saveT(){ try{ localStorage.setItem("stockcal_targets", JSON.stringify(targets)); }catch(e){} }
 const findT = id => targets.find(t => t.id === id);
 const TCOLORS = ["#3f86c4","#c2609c","#4f9d63","#e89b3c","#8a6ec9","#e0736f","#2fa3a3","#7a839d"];
@@ -629,8 +635,18 @@ function drawTargets(){
       <button type="button" data-tcol="${t.id}" title="色を変える"
         style="width:20px;height:20px;padding:0;border-radius:50%;border:2px solid ${tEditing===t.id ? "var(--navy)" : "transparent"};background:${t.color};cursor:pointer"></button>
       <b>${t.name}</b>
-      <span class="sp"><button class="mini" data-tdel="${t.id}">消す</button></span>
+      <span class="sp">
+        <button type="button" class="btn-tag" data-ttag="${t.id}" aria-pressed="${t.tag !== false}"
+          title="${t.tag !== false ? "メモのタグを出している" : "メモのタグを出さない"}">📝</button>
+        <button class="mini" data-tdel="${t.id}">削除</button>
+      </span>
     </div>`).join("") : `<p class="empty">まだ登録がありません。<br>猫の名前、自分、お子さんの名前など、ケアする相手を登録してください。</p>`;
+  el.querySelectorAll("[data-ttag]").forEach(b=>{
+    b.onclick = () => {
+      const t = findT(+b.dataset.ttag);
+      if(t){ t.tag = t.tag === false; saveT(); drawTargets(); drawTags(); }
+    };
+  });
   el.querySelectorAll("[data-tcol]").forEach(b=>{
     b.onclick = () => { tEditing = (tEditing === +b.dataset.tcol) ? null : +b.dataset.tcol; drawTargets(); drawTColors(); };
   });
@@ -652,7 +668,8 @@ function drawTags(){
     t.value = (t.value ? t.value.replace(/\s*$/,"") + "\n" : "") + txt;
     t.dispatchEvent(new Event("input"));
   };
-  const rows = targets.length ? targets : [{id:0, name:"", color:"var(--navy)"}];
+  const on = targets.filter(t => t.tag !== false);
+  const rows = on.length ? on : (targets.length ? [] : [{id:0, name:"", color:"var(--navy)"}]);
   box.innerHTML = rows.map(t=>`
     <div class="tagrow">
       ${t.name ? `<div class="hd"><i style="display:block;width:10px;height:10px;border-radius:50%;background:${t.color}"></i>${t.name}</div>` : ""}
@@ -809,7 +826,7 @@ $("#navMemo").onclick = () => show("memo");
 $("#tAdd").onclick = () => {
   const n = $("#tName").value.trim();
   if(!n) return;
-  targets.push({id: Date.now(), name: n, color: tPicked});
+  targets.push({id: Date.now(), name: n, color: tPicked, tag: true});
   $("#tName").value = "";
   tPicked = TCOLORS[(TCOLORS.indexOf(tPicked) + 1) % TCOLORS.length];
   saveT(); drawTargets(); drawTColors(); drawTags();
