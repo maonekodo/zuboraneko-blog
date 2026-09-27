@@ -305,7 +305,7 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
       <h2 id="formTitle">物品を登録</h2>
       <div class="field">
         <label for="fName">名前</label>
-        <input id="fName" placeholder="猫点滴（ソルラクト）">
+        <input id="fName" placeholder="使用するもの">
       </div>
       <div class="field">
         <label for="fParent">一緒に使うもの</label>
@@ -319,7 +319,7 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
       <div class="row2">
         <div class="field">
           <label for="fQty">残りの個数</label>
-          <input type="number" id="fQty" value="16" min="0" step="1" inputmode="numeric">
+          <input type="number" id="fQty" value="1" min="0" step="1" inputmode="numeric">
         </div>
         <div class="field">
           <label for="fPer">1回に使う数</label>
@@ -738,7 +738,7 @@ function openForm(it){
   editing = it || null;
   $("#formTitle").textContent = it ? "物品をなおす" : "物品を登録";
   $("#fName").value = it ? it.name : "";
-  $("#fQty").value  = it ? it.qty  : 16;
+  $("#fQty").value  = it ? it.qty  : 1;
   $("#fPer").value  = it ? it.per  : 1;
   $("#fPace").value = it ? it.pace : 2;
   $("#fSlots").value = it ? (it.slots || 1) : 1;
