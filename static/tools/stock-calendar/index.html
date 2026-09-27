@@ -300,7 +300,11 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
     <div id="itemList"></div>
 
     <p class="subhead">記録の持ち出し</p>
-    <p class="note" style="margin-bottom:8px">記録はこの端末の中だけに残ります。機種変や、パソコンと使い分けるときは、ここで書き出して読み込んでください。</p>
+    <p class="note" style="margin-bottom:8px">記録はこの端末の中だけに残ります。自動では消えませんが、下のような場合に消えます。
+      <br>・ブラウザで「<b>Cookie と他のサイトデータ</b>」を削除したとき（「キャッシュされた画像とファイル」だけなら消えません）
+      <br>・機種変更をしたとき
+      <br>・シークレットモードで使ったとき</p>
+    <p class="note" style="margin-bottom:8px"><b>月に1回、受診や買い足しのタイミングで書き出しておくと安心です。</b>書き出すと文字がコピーされるので、メモアプリなどに貼って保存してください。戻すときは「読み込む」に貼り付けます。</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
       <button class="btn ghost" id="expBtn">書き出す</button>
       <button class="btn ghost" id="impBtn">読み込む</button>
