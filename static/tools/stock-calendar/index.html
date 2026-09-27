@@ -178,11 +178,13 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
 
 /* 下バー */
 .spacer{height:86px;flex:0 0 auto}
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr 1fr;
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;
   background:var(--yellow);border-top:3px solid var(--navy);
   padding:0 0 env(safe-area-inset-bottom,0px)}
-.bar button{font:inherit;font-family:var(--round);font-weight:700;font-size:16px;border:0;background:transparent;
-  color:var(--navy);padding:16px 6px;cursor:pointer}
+.bar button{font:inherit;font-family:var(--round);font-weight:700;font-size:15px;border:0;background:transparent;
+  color:var(--navy);padding:16px 2px;cursor:pointer;position:relative}
+.bar .badge{position:absolute;top:8px;right:14px;min-width:20px;height:20px;border-radius:99px;
+  background:#c2410c;color:#fff;font-size:11.5px;line-height:20px;text-align:center;padding:0 5px}
 .bar button[aria-current="true"]{background:rgba(35,50,92,.13)}
 .note{font-size:13px;color:var(--sub)}
 .memocard{width:100%;text-align:left;font:inherit;background:var(--card);border:1px solid var(--line);
@@ -222,6 +224,17 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--sub);margin-top:10px}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:4px}
 .legend i.miss{border:1.5px solid var(--sub);background:transparent}
+.alert{border:1px solid var(--line);border-left:5px solid var(--yellow);border-radius:12px;
+  padding:14px;margin-bottom:10px;background:var(--card)}
+.alert .hd{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.alert .hd i{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
+.alert .hd b{font-family:var(--round);font-size:17.5px}
+.alert .body{font-size:14px;color:var(--sub);margin-top:7px;line-height:1.65}
+.alert .body b{color:var(--ink)}
+.alert.hot{border-left-color:#c2410c}
+.alert .when{display:inline-block;font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:999px;
+  background:var(--yellow-soft);color:#7a5a12;margin-top:8px}
+.alert.hot .when{background:#fbeee3;color:#c2410c}
 </style>
 
 <div class="wrap">
@@ -295,6 +308,12 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
     <textarea id="ioBox" hidden style="width:100%;min-height:110px;margin-top:8px;font-size:13px;
       padding:10px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)"></textarea>
     <div id="ioMsg" class="note" style="margin-top:6px"></div>
+    <div class="spacer"></div>
+  </section>
+
+  <!-- 準備するもの -->
+  <section id="viewAlert" hidden>
+    <div id="alertList"></div>
     <div class="spacer"></div>
   </section>
 
@@ -389,6 +408,7 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
 <nav class="bar">
   <button type="button" id="navItems">物品登録</button>
   <button type="button" id="navCal" aria-current="true">カレンダー</button>
+  <button type="button" id="navAlert">準備<span class="badge" id="alertBadge" hidden>0</span></button>
   <button type="button" id="navMemo">メモ</button>
 </nav>
 
@@ -561,7 +581,7 @@ function toggleDone(id, slot){
     if(on){ if(nx && nx <= sel) apply(kid); }
     else apply(kid);   // 取り消しは、入っていれば外す
   });
-  save(); drawCal(); drawPlan();
+  save(); drawCal(); drawPlan(); drawAlerts();
 }
 
 function drawPlan(){
@@ -723,7 +743,7 @@ function drawItems(){
       const id = +b.dataset.del;
       items = items.filter(x=>x.id !== id);
       items.forEach(x => { if(x.parent === id) x.parent = null; });
-      save(); drawItems(); drawCal(); drawPlan();
+      save(); drawItems(); drawCal(); drawPlan(); drawAlerts();
     };
   });
   const move = (id, dir) => {
@@ -731,7 +751,7 @@ function drawItems(){
     const j = i + dir;
     if(i < 0 || j < 0 || j >= items.length) return;
     [items[i], items[j]] = [items[j], items[i]];
-    save(); drawItems(); drawCal(); drawPlan();
+    save(); drawItems(); drawCal(); drawPlan(); drawAlerts();
   };
   $("#itemList").querySelectorAll("[data-up]").forEach(b=>{ b.onclick = () => move(+b.dataset.up, -1) });
   $("#itemList").querySelectorAll("[data-down]").forEach(b=>{ b.onclick = () => move(+b.dataset.down, 1) });
@@ -775,19 +795,57 @@ function openForm(it){
 }
 
 function show(v){
-  ["Cal","Items","Form","Memo"].forEach(x=>$("#view"+x).hidden = true);
-  $("#view"+{cal:"Cal",items:"Items",form:"Form",memo:"Memo"}[v]).hidden = false;
+  ["Cal","Items","Form","Memo","Alert"].forEach(x=>$("#view"+x).hidden = true);
+  $("#view"+{cal:"Cal",items:"Items",form:"Form",memo:"Memo",alert:"Alert"}[v]).hidden = false;
   $("#navCal").setAttribute("aria-current", String(v==="cal"));
   $("#navItems").setAttribute("aria-current", String(v==="items"||v==="form"));
   $("#navMemo").setAttribute("aria-current", String(v==="memo"));
+  $("#navAlert").setAttribute("aria-current", String(v==="alert"));
   const t = {cal:["ストックカレンダー","やった日をチェックすると、次の予定がずれていきます。"],
              items:["物品登録","登録しているものの、のこりです。"],
              form:["物品登録","名前と残りの数を入れてください。"],
-             memo:["メモ","書いた日だけ、新しい順に並びます。"]}[v];
+             memo:["メモ","書いた日だけ、新しい順に並びます。"],
+             alert:["準備するもの","そろそろ用意したほうがいいものが並びます。"]}[v];
   $("#title").textContent = t[0]; $("#lead").textContent = t[1];
   if(v==="items"){ drawTargets(); drawTColors(); drawItems(); }
   if(v==="memo") drawMemoList();
+  if(v==="alert") drawAlerts();
   window.scrollTo(0,0);
+}
+
+// 用意する時期が来ているものを集める
+function alertItems(){
+  const today = mid(new Date());
+  return items.map(it=>{
+    const ds = useDates(it);
+    const last = ds[ds.length-1];
+    if(!ds.length) return {it, days:-1, last:null, out:true};
+    const visit = addD(last, -it.lead);
+    const vd = Math.round((visit - today)/86400000);
+    const left = Math.round((last - today)/86400000);
+    return {it, days:vd, left, last, out:false};
+  }).filter(x => x.out || x.days <= 3);
+}
+
+function drawAlerts(){
+  const list = alertItems().sort((a,b)=>(a.out?-1:0)-(b.out?-1:0) || a.days-b.days);
+  const el = $("#alertList");
+  if(el){
+    el.innerHTML = list.length ? list.map(x=>{
+      const it = x.it, who = it.who && findT(it.who);
+      if(x.out) return `<div class="alert hot">
+        <div class="hd"><i style="background:${it.color}"></i>${who?`<span class="who" style="background:${who.color}">${who.name}</span>`:""}<b>${it.name}</b></div>
+        <div class="body">在庫がありません。</div>
+        <span class="when">今すぐ用意</span></div>`;
+      return `<div class="alert${x.days<=0?" hot":""}">
+        <div class="hd"><i style="background:${it.color}"></i>${who?`<span class="who" style="background:${who.color}">${who.name}</span>`:""}<b>${it.name}</b></div>
+        <div class="body">のこり <b>${restQty(it)}</b> 個（<b>${restDays(it)}</b> 日分）<br>
+          最後は <b>${x.last.getMonth()+1}月${x.last.getDate()}日</b>（あと ${x.left} 日）</div>
+        <span class="when">${x.days<=0?"そろそろ用意する時期です":`あと ${x.days} 日で用意の目安`}</span></div>`;
+    }).join("") : `<p class="empty">いま用意するものはありません。<br>「何日前に知らせる？」の設定に近づくと、ここに並びます。</p>`;
+  }
+  const b = $("#alertBadge");
+  if(b){ b.hidden = list.length === 0; b.textContent = list.length; }
 }
 
 function drawMemoList(){
@@ -823,6 +881,7 @@ $("#next").onclick = () => { cur = new Date(cur.getFullYear(), cur.getMonth()+1,
 $("#navCal").onclick = () => show("cal");
 $("#navItems").onclick = () => show("items");
 $("#navMemo").onclick = () => show("memo");
+$("#navAlert").onclick = () => show("alert");
 $("#tAdd").onclick = () => {
   const n = $("#tName").value.trim();
   if(!n) return;
@@ -852,7 +911,7 @@ $("#save").onclick = () => {
   };
   if(editing) items = items.map(x => x.id === editing.id ? o : x);
   else items.push(o);
-  save(); drawCal(); drawPlan(); show("items");
+  save(); drawCal(); drawPlan(); drawAlerts(); show("items");
 };
 
 let memoTimer = null;
@@ -913,7 +972,7 @@ $("#impBtn").onclick = () => {
   }
 };
 
-drawColors(); drawCal(); drawPlan(); drawMemo(); drawTags();
+drawColors(); drawCal(); drawPlan(); drawMemo(); drawTags(); drawAlerts();
 </script>
 
 <p class="pagefoot">
