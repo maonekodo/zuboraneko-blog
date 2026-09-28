@@ -212,6 +212,14 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
   border-radius:11px;background:var(--card);margin-bottom:8px}
 .target b{font-family:var(--round);font-size:16.5px}
 .target .sp{margin-left:auto;display:flex;gap:6px;align-items:center}
+.target.on{border-color:var(--navy);background:var(--yellow-soft)}
+.target .nm{flex:1;text-align:left;font:inherit;background:none;border:0;cursor:pointer;padding:6px 0;color:inherit;
+  display:flex;align-items:center;gap:9px;min-width:0}
+.target .nm b{font-family:var(--round);font-size:16.5px}
+.filterbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--yellow-soft);
+  border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin-bottom:10px;font-size:14px}
+.filterbar button{font:inherit;font-size:13px;font-weight:700;border:1.5px solid var(--navy);background:transparent;
+  color:var(--navy);border-radius:9px;padding:6px 12px;cursor:pointer;margin-left:auto}
 .btn-tag{font:inherit;font-size:15px;line-height:1;padding:7px 10px;border-radius:9px;cursor:pointer;
   border:1.5px solid var(--line);background:transparent}
 .btn-tag[aria-pressed="true"]{border-color:var(--navy);background:var(--yellow-soft)}
@@ -301,6 +309,7 @@ input,select{font:inherit;font-size:16.5px;padding:11px 12px;border-radius:9px;b
     <div class="swatches" id="tColors" style="margin-bottom:6px"></div>
     <p class="note" style="margin-bottom:10px">📝 を押すと、カレンダーのメモ欄に「吐いた」などのタグを出すかどうかを切り替えられます。</p>
     <p class="subhead">物品</p>
+    <div class="filterbar" id="filterBar" hidden></div>
     <button class="btn" id="addOpen" style="margin-bottom:12px">＋ 物品を追加</button>
     <div id="itemList"></div>
 
@@ -464,6 +473,7 @@ function drawTColors(){
     };
   });
 }
+let filterWho = null;   // だれの分だけ表示するか
 const kidsOf = id => items.filter(x => x.parent === id);
 const isChild = it => !!it.parent && items.some(x => x.id === it.parent);
 
@@ -660,16 +670,23 @@ function drawTargets(){
   const el = $("#targetList");
   if(!el) return;
   el.innerHTML = targets.length ? targets.map(t=>`
-    <div class="target">
+    <div class="target${filterWho===t.id ? " on" : ""}">
       <button type="button" data-tcol="${t.id}" title="色を変える"
         style="width:20px;height:20px;padding:0;border-radius:50%;border:2px solid ${tEditing===t.id ? "var(--navy)" : "transparent"};background:${t.color};cursor:pointer"></button>
-      <b>${t.name}</b>
+      <button type="button" class="nm" data-tfil="${t.id}" title="この人のものだけ表示"><b>${t.name}</b></button>
       <span class="sp">
         <button type="button" class="btn-tag" data-ttag="${t.id}" aria-pressed="${t.tag !== false}"
           title="${t.tag !== false ? "メモのタグを出している" : "メモのタグを出さない"}">📝</button>
         <button class="mini" data-tdel="${t.id}">削除</button>
       </span>
     </div>`).join("") : `<p class="empty">まだ登録がありません。<br>猫の名前、自分、お子さんの名前など、ケアする相手を登録してください。</p>`;
+  el.querySelectorAll("[data-tfil]").forEach(b=>{
+    b.onclick = () => {
+      const id = +b.dataset.tfil;
+      filterWho = (filterWho === id) ? null : id;
+      drawTargets(); drawItems();
+    };
+  });
   el.querySelectorAll("[data-ttag]").forEach(b=>{
     b.onclick = () => {
       const t = findT(+b.dataset.ttag);
@@ -714,9 +731,24 @@ function drawTags(){
 }
 
 function drawItems(){
+  const shown = filterWho ? items.filter(x => x.who === filterWho) : items;
+  const bar = $("#filterBar");
+  if(bar){
+    const t = findT(filterWho);
+    bar.hidden = !t;
+    if(t) bar.innerHTML = `<i style="display:block;width:12px;height:12px;border-radius:50%;background:${t.color}"></i>
+      <span><b>${t.name}</b> のものだけ表示中（${shown.length}件）</span>
+      <button type="button" id="filterOff">すべて表示</button>`;
+    const off = $("#filterOff");
+    if(off) off.onclick = () => { filterWho = null; drawTargets(); drawItems(); };
+  }
+  if(!shown.length && filterWho){
+    $("#itemList").innerHTML = `<p class="empty">この人の物品は、まだ登録されていません。</p>`;
+    return;
+  }
   if(!items.length){ $("#itemList").innerHTML = `<p class="empty">まだ登録がありません。<br>下の「＋ 物品を追加」から、点滴・薬・サプリ・ガーゼなど、残りを数えたいものを登録してください。</p>`; return; }
   const today = mid(new Date());
-  $("#itemList").innerHTML = items.map(it=>{
+  $("#itemList").innerHTML = shown.map(it=>{
     const ds = useDates(it);
     const times = ds.length;
     const last = ds[times-1];
