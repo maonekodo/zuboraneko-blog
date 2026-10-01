@@ -638,7 +638,7 @@ function drawPlan(){
         const k = doneKey(sel, slot);
         const isDone = it.done.includes(k);
         const left = (info && typeof info.left === "number") ? info.left : restDays(it);
-        const label = isDone ? "やった"
+        const label = isDone ? "済"
           : kind === "extra" ? "予定外"
           : past ? "やってない"
           : (info && info.last) || left <= 1 ? "最後の1つ"
@@ -646,7 +646,7 @@ function drawPlan(){
         rows.push(`<div class="ev">
           <i style="background:${it.color}"></i>
           <span class="nm ${isDone ? "is-done" : ""}">${it.who && findT(it.who) ? `<span class="who" style="background:${findT(it.who).color}">${findT(it.who).name}</span>` : ""}${it.name}${slot ? `<b style="font-weight:700">（${slot}）</b>` : ""}<small>${label}${(() => { const due = kidsOf(it.id).filter(k => { const n = useDates(k)[0]; return (n && n <= sel) || k.done.includes(doneKey(sel, slot)); }); return due.length ? `　＋ ${due.map(k=>k.name).join("・")}` : ""; })()}</small></span>
-          ${it.check ? `<span class="act"><button class="chk ${isDone ? "on" : ""}" data-done="${it.id}" data-slot="${slot}">${isDone ? "✓ やった" : "やった"}</button></span>` : ""}
+          ${it.check ? `<span class="act"><button class="chk ${isDone ? "on" : ""}" data-done="${it.id}" data-slot="${slot}">${isDone ? "✓ 済" : "やった"}</button></span>` : ""}
         </div>`);
       });
     };
