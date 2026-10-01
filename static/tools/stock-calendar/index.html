@@ -528,7 +528,10 @@ function useDates(it){
   const lastDay = sorted.length ? fromIso(sorted[sorted.length-1]) : null;
   // その日の朝・夜がぜんぶ済んでいれば次の日へ。まだ残っていればその日のまま
   const allDone = lastDay && slotsOf(it).every(sl => it.done.includes(doneKey(lastDay, sl)));
-  const base = lastDay ? (allDone ? addD(lastDay, step(it,0)) : lastDay) : fromIso(it.next);
+  let base = lastDay ? (allDone ? addD(lastDay, step(it,0)) : lastDay) : fromIso(it.next);
+  // 「次に使う日」を手で先の日付に直したときは、そちらを優先する
+  const picked = fromIso(it.next);
+  if(picked && mid(picked) > mid(base)) base = mid(picked);
   const today = mid(new Date());
   let start = base;
   // やり忘れて日が過ぎていたら、今日からやり直す
