@@ -168,11 +168,11 @@ msmaflink({"n":"ROJECO 自動猫おもちゃ LEDライト 不規則な軌跡の�
 
 ### ★★★【タイマー付き】RURU PET にゃんクルル
 
-**→ タイマー付きで自動停止！2スピードで30日間満足保証つき**
+**→ タイマー付きで自動停止！2スピード切り替えの国内正規品**
 
 電動の回転式おもちゃで、タイマー機能付きが最大の特徴。一定時間で自動停止してくれるので、「つけっぱなしで猫が疲れすぎないか心配」というズボラ飼い主にぴったりです。2スピード切り替え対応で、猫の気分やテンションに合わせて調整できます。
 
-30日間満足保証つきという安心感も◎。「試してみたいけど失敗したくない」という方にも選びやすい一品です。
+国内正規品で、取扱説明書もしっかりしているのが安心材料。「試してみたいけど失敗したくない」という方にも選びやすい一品です。
 
 <b>「勝手に止まる」がうちには一番刺さります。</b>
 
@@ -192,9 +192,9 @@ b[a]=b[a]||function(){arguments.currentScript=c.currentScript
 c.getElementById(a)||(d=c.createElement(f),d.src=g,
 d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
 (window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
-msmaflink({"n":"猫 おもちゃ 【電動】【自動】 猫じゃらし 一人遊びに！ 15分タイマーで安心！静音！ 電池式 留守番 室内猫の運動不足・ストレス解消に 30日間満足保証 RURU PET にゃんクルル","b":"","t":"","d":"https:\/\/thumbnail.image.rakuten.co.jp","c_p":"\/@0_mall\/ruru\/cabinet","p":["\/05874542\/thum-nykurugn.jpg","\/03187969\/nykurupk\/nyakkurulp100.jpg","\/03187969\/nykurupk\/nykurugn-01.jpg"],"u":{"u":"https:\/\/item.rakuten.co.jp\/ruru\/nykurubl\/","t":"rakuten","r_v":""},"v":"2.1","b_l":[{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/item.rakuten.co.jp\/ruru\/nykurubl\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":1}],"eid":"fBzYm","s":"l"});
+msmaflink({"n":"RURU PET 電動 猫おもちゃ 国内正規品 にゃんクルル(２スピード) 猫 ネコ おもちゃ 玩具 猫じゃらし 電動 自動 電池式 タイマー付き","b":"ルルペット","t":"nykurubl","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/51B1XIkD-RL._SL500_.jpg","\/51OqgSEMzCL._SL500_.jpg","\/51AiGoVo7FL._SL500_.jpg","\/515U9Dsq+HL._SL500_.jpg","\/51vr4zNrq6L._SL500_.jpg","\/51589yvle1L._SL500_.jpg","\/51+MTPY6WkL._SL500_.jpg","\/51EohFopw+L._SL500_.jpg","\/51xJJxN7zrL._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B0BNBNWJTZ","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B0BNBNWJTZ","a_id":5531911,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/RURU%20PET%20%E9%9B%BB%E5%8B%95%20%E7%8C%AB%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%20%E5%9B%BD%E5%86%85%E6%AD%A3%E8%A6%8F%E5%93%81%20%E3%81%AB%E3%82%83%E3%82%93%E3%82%AF%E3%83%AB%E3%83%AB(%EF%BC%92%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89)%20%E7%8C%AB%20%E3%83%8D%E3%82%B3%20%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%20%E7%8E%A9%E5%85%B7%20%E7%8C%AB%E3%81%98%E3%82%83%E3%82%89%E3%81%97%20%E9%9B%BB%E5%8B%95%20%E8%87%AA%E5%8B%95%20%E9%9B%BB%E6%B1%A0%E5%BC%8F%20%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC%E4%BB%98%E3%81%8D\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1&p=RURU%20PET%20%E9%9B%BB%E5%8B%95%20%E7%8C%AB%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%20%E5%9B%BD%E5%86%85%E6%AD%A3%E8%A6%8F%E5%93%81%20%E3%81%AB%E3%82%83%E3%82%93%E3%82%AF%E3%83%AB%E3%83%AB(%EF%BC%92%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89)%20%E7%8C%AB%20%E3%83%8D%E3%82%B3%20%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%20%E7%8E%A9%E5%85%B7%20%E7%8C%AB%E3%81%98%E3%82%83%E3%82%89%E3%81%97%20%E9%9B%BB%E5%8B%95%20%E8%87%AA%E5%8B%95%20%E9%9B%BB%E6%B1%A0%E5%BC%8F%20%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC%E4%BB%98%E3%81%8D","a_id":5531909,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"0MLlT","s":"l"});
 </script>
-<div id="msmaflink-fBzYm">リンク</div>
+<div id="msmaflink-0MLlT">リンク</div>
 <!-- MoshimoAffiliateEasyLink END -->
 
 ---
@@ -220,7 +220,7 @@ msmaflink({"n":"猫 おもちゃ 【電動】【自動】 猫じゃらし 一人
 | ★ | 猫壱 キャッチ・ミー・イフ・ユー・キャン2 | まず試したい・コスパ優先 |
 | ★★ | 自動UFO 猫おもちゃ | 追いかけ系が好きな猫に |
 | ★★ | ROJECO 自動LEDポインター | 光を追いたい猫に・自動で止まるのが安心 |
-| ★★★ | RURU PET にゃんクルル | タイマーで安心・保証重視の方に |
+| ★★★ | RURU PET にゃんクルル | タイマーで勝手に止まってほしい方に |
 
 <b>💡 うちが買うならこれ</b>
 
