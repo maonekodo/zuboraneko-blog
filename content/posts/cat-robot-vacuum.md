@@ -91,7 +91,7 @@ Amazonの低評価レビューを確認すると、「猫を飼っています�
 
 ## 調査結果：猫がいる家のおすすめ機種
 
-### ◎ Narwal A8｜「猫の毛問題を全部解決した設計」で評判
+### ◎ Narwal Freo Z10｜「猫の毛問題を全部解決した設計」で評判
 
 調べた結果、猫がいる家のレビューで圧倒的に評価が高かったのがNarwalシリーズです。
 
@@ -100,6 +100,19 @@ Amazonの低評価レビューを確認すると、「猫を飼っています�
 - 「猫2匹飼いですが毛絡まりが本当に少ない。前のロボット掃除機は毎日詰まってたのに」
 - 「モップを自動で洗って乾燥までしてくれるのが神。猫砂の粉塵があっても清潔を保てる」
 - 「猫が最初だけビビってたけど1週間で慣れて、今は乗りたがっている」
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"Narwal (ナーワル) Freo Z10 ロボット掃除機 吸引・水拭き両用 可動式モップ","b":"NARWAL(ナーワル)","t":"YJCC020","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/31+5vypcDCL._SL500_.jpg","\/41kQU4os-wL._SL500_.jpg","\/41+BzN-Tu2L._SL500_.jpg","\/41KvzkdOneL._SL500_.jpg","\/41mBT48DugL._SL500_.jpg","\/41MrBqkTgnL._SL500_.jpg","\/41GQg+yQCFL._SL500_.jpg","\/41ZTpdmHeVL._SL500_.jpg","\/41llc2W5RfL._SL500_.jpg","\/41V740j9JrL._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B0DW8MPL2P","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B0DW8MPL2P","a_id":5531911,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/Narwal%20(%E3%83%8A%E3%83%BC%E3%83%AF%E3%83%AB)%20Freo%20Z10%20%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F%20%E5%90%B8%E5%BC%95%E3%83%BB%E6%B0%B4%E6%8B%AD%E3%81%8D%E4%B8%A1%E7%94%A8%20%E5%8F%AF%E5%8B%95%E5%BC%8F%E3%83%A2%E3%83%83%E3%83%97\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1&p=Narwal%20(%E3%83%8A%E3%83%BC%E3%83%AF%E3%83%AB)%20Freo%20Z10%20%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F%20%E5%90%B8%E5%BC%95%E3%83%BB%E6%B0%B4%E6%8B%AD%E3%81%8D%E4%B8%A1%E7%94%A8%20%E5%8F%AF%E5%8B%95%E5%BC%8F%E3%83%A2%E3%83%83%E3%83%97","a_id":5531909,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"EVM4B","s":"l"});
+</script>
+<div id="msmaflink-EVM4B">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
 
 **特に注目したスペック：**
 
@@ -187,6 +200,19 @@ Narwalを入れると、毎日こうなります。
 調べた中で猫飼いユーザーの満足度が最も高く、3つの条件を全部満たしているのはNarwalだけでした。
 
 安いの買って後悔するより、最初からちゃんとしたもの1台入れる方が結果的にラク。
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"Narwal (ナーワル) Freo Z10 ロボット掃除機 吸引・水拭き両用 可動式モップ","b":"NARWAL(ナーワル)","t":"YJCC020","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/31+5vypcDCL._SL500_.jpg","\/41kQU4os-wL._SL500_.jpg","\/41+BzN-Tu2L._SL500_.jpg","\/41KvzkdOneL._SL500_.jpg","\/41mBT48DugL._SL500_.jpg","\/41MrBqkTgnL._SL500_.jpg","\/41GQg+yQCFL._SL500_.jpg","\/41ZTpdmHeVL._SL500_.jpg","\/41llc2W5RfL._SL500_.jpg","\/41V740j9JrL._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B0DW8MPL2P","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B0DW8MPL2P","a_id":5531911,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/Narwal%20(%E3%83%8A%E3%83%BC%E3%83%AF%E3%83%AB)%20Freo%20Z10%20%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F%20%E5%90%B8%E5%BC%95%E3%83%BB%E6%B0%B4%E6%8B%AD%E3%81%8D%E4%B8%A1%E7%94%A8%20%E5%8F%AF%E5%8B%95%E5%BC%8F%E3%83%A2%E3%83%83%E3%83%97\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1&p=Narwal%20(%E3%83%8A%E3%83%BC%E3%83%AF%E3%83%AB)%20Freo%20Z10%20%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F%20%E5%90%B8%E5%BC%95%E3%83%BB%E6%B0%B4%E6%8B%AD%E3%81%8D%E4%B8%A1%E7%94%A8%20%E5%8F%AF%E5%8B%95%E5%BC%8F%E3%83%A2%E3%83%83%E3%83%97","a_id":5531909,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"EVM4B","s":"l"});
+</script>
+<div id="msmaflink-EVM4B">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
 
 ---
 
