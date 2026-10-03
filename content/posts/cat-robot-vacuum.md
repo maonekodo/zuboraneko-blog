@@ -93,9 +93,6 @@ Amazonの低評価レビューを確認すると、「猫を飼っています�
 
 ### ◎ Narwal A8｜「猫の毛問題を全部解決した設計」で評判
 
-<a href="https://px.a8.net/svt/ejp?a8mat=4B1WM5+1O4TNE+5Q1I+5YJRM" rel="nofollow">革新技術で掃除機の常識を超える！【Narwal（ナーワル）】</a>
-<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1WM5+1O4TNE+5Q1I+5YJRM" alt="">
-
 調べた結果、猫がいる家のレビューで圧倒的に評価が高かったのがNarwalシリーズです。
 
 **猫飼いユーザーのレビューで多かった声：**
@@ -190,9 +187,6 @@ Narwalを入れると、毎日こうなります。
 調べた中で猫飼いユーザーの満足度が最も高く、3つの条件を全部満たしているのはNarwalだけでした。
 
 安いの買って後悔するより、最初からちゃんとしたもの1台入れる方が結果的にラク。
-
-<a href="https://px.a8.net/svt/ejp?a8mat=4B1WM5+1O4TNE+5Q1I+65U42" rel="nofollow">Narwal Flow Performance ロボット掃除機</a>
-<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B1WM5+1O4TNE+5Q1I+65U42" alt="">
 
 ---
 
