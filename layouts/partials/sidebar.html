@@ -25,14 +25,6 @@
     </ul>
   </div>
 
-  {{/* タグウィジェット */}}
-  <div class="sidebar-widget">
-    <h3 class="sidebar-title">🏷️ タグ</h3>
-    <div class="sidebar-tags">
-      {{ range site.Taxonomies.tags.ByCount }}
-      <a href="{{ .Page.Permalink }}" class="sidebar-tag">{{ .Page.Title }}</a>
-      {{ end }}
-    </div>
-  </div>
+  {{/* タグはフッターに移動した（数が多く、サイドバーが記事より長くなるため） */}}
 
 </aside>

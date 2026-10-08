@@ -1,0 +1,24 @@
+{{/* フッターのタグ一覧。記事数の多いタグほど大きく表示する。
+     もとはサイドバーに置いていたが、数が多くて記事一覧より下まで伸びるため移動した */}}
+{{- $tags := site.Taxonomies.tags -}}
+{{- if $tags -}}
+{{- $max := 1 -}}
+{{- range $tags }}{{ if gt (len .) $max }}{{ $max = len . }}{{ end }}{{ end -}}
+<div class="footer-tags">
+  <div class="footer-tags__inner">
+    <h2 class="footer-tags__title">🏷️ タグから探す</h2>
+    <div class="footer-tags__list">
+      {{- range site.Taxonomies.tags.ByCount -}}
+        {{- $n := .Count -}}
+        {{/* 件数に応じて small / mid / large の3段階に振り分ける */}}
+        {{- $size := "small" -}}
+        {{- if ge $n (add (div $max 2) 1) }}{{ $size = "large" }}
+        {{- else if gt $n 1 }}{{ $size = "mid" }}{{ end -}}
+        <a class="footer-tags__tag footer-tags__tag--{{ $size }}" href="{{ .Page.Permalink }}">
+          {{ .Page.Title }}<span class="footer-tags__count">{{ $n }}</span>
+        </a>
+      {{- end -}}
+    </div>
+  </div>
+</div>
+{{- end -}}

@@ -577,3 +577,68 @@ div[id^="msmaflink-"] a[style*="background"]:hover,
   margin: 0 !important;
   max-width: 1px !important;
 }
+
+/* ===========================================================
+   フッターのタグ一覧
+   もとはサイドバーにあったが、数が多く記事一覧より下まで伸びるため移動
+   =========================================================== */
+.footer-tags {
+  margin-top: 40px;
+  padding: 32px 0 10px;
+  border-top: 2px solid var(--color-border);
+  background-color: #fffaf3;
+}
+.footer-tags__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.footer-tags__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+.footer-tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.footer-tags__tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-accent-light);
+  color: var(--color-text) !important;
+  border-radius: 20px;
+  padding: 4px 11px;
+  text-decoration: none !important;
+  line-height: 1.4;
+  transition: background-color .15s ease, transform .15s ease;
+}
+.footer-tags__tag:hover {
+  background-color: var(--color-accent);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+.footer-tags__count {
+  font-size: .72em;
+  opacity: .6;
+  margin-left: 5px;
+}
+
+/* 記事数が多いタグほど大きく */
+.footer-tags__tag--small { font-size: .78rem; }
+.footer-tags__tag--mid   { font-size: .86rem; }
+.footer-tags__tag--large {
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .footer-tags { margin-top: 28px; padding: 24px 0 6px; }
+  .footer-tags__inner { padding: 0 16px; }
+  .footer-tags__list { gap: 6px; }
+  .footer-tags__tag { padding: 3px 9px; }
+  .footer-tags__tag--large { font-size: .9rem; }
+}
