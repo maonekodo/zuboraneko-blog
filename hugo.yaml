@@ -86,3 +86,15 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+outputFormats:
+  LINKCSV:
+    mediaType: "text/csv"
+    baseName: "links"
+    isPlainText: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - LINKCSV

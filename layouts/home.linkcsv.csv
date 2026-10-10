@@ -1,0 +1,54 @@
+{{- /* リンク管理表がIMPORTDATAで読むCSV。
+       公開済みの記事を古い順に並べ、発リンク・被リンクは1セルに1つずつ横に並べる。
+       スラッグは管理表に合わせて /posts/ を外した形で出す */ -}}
+{{- $posts := sort (where site.RegularPages "Section" "posts") "Params.no" -}}
+
+{{- /* スラッグ → 番号（#1, #2…）の対応表 */ -}}
+{{- $no := dict -}}
+{{- range $i, $p := $posts -}}
+  {{- $no = merge $no (dict $p.RelPermalink (printf "#%v" $p.Params.no)) -}}
+{{- end -}}
+
+{{- /* 各記事が張っているリンク（発リンク） */ -}}
+{{- $out := dict -}}
+{{- range $p := $posts -}}
+  {{- $links := slice -}}
+  {{- range findRE `\]\(/posts/[a-z0-9-]+/\)` $p.RawContent -}}
+    {{- $path := replaceRE `^\]\(|\)$` "" . -}}
+    {{- with index $no $path -}}
+      {{- if and (ne . (index $no $p.RelPermalink)) (not (in $links .)) -}}
+        {{- $links = $links | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $out = merge $out (dict $p.RelPermalink $links) -}}
+{{- end -}}
+
+{{- /* 被リンクを逆引き */ -}}
+{{- $in := dict -}}
+{{- range $p := $posts -}}
+  {{- $me := index $no $p.RelPermalink -}}
+  {{- $from := slice -}}
+  {{- range $q := $posts -}}
+    {{- if in (index $out $q.RelPermalink) $me -}}
+      {{- $from = $from | append (index $no $q.RelPermalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $in = merge $in (dict $p.RelPermalink $from) -}}
+{{- end -}}
+
+{{- /* 列幅をそろえる */ -}}
+{{- $maxOut := 1 -}}{{- $maxIn := 1 -}}
+{{- range $p := $posts -}}
+  {{- if gt (len (index $out $p.RelPermalink)) $maxOut }}{{ $maxOut = len (index $out $p.RelPermalink) }}{{ end -}}
+  {{- if gt (len (index $in $p.RelPermalink)) $maxIn }}{{ $maxIn = len (index $in $p.RelPermalink) }}{{ end -}}
+{{- end -}}
+
+No.,スラッグ,公開日,更新日,カテゴリ,タイトル,発,被,孤立{{ range $k := seq $maxOut }},発リンク{{ end }}{{ range $k := seq $maxIn }},被リンク{{ end }}
+{{- range $i, $p := $posts -}}
+{{- $o := index $out $p.RelPermalink -}}
+{{- $n := index $in $p.RelPermalink }}
+{{ printf "#%v" $p.Params.no }},{{ replace $p.RelPermalink "/posts" "" }},{{ $p.Date.Format "2006/01/02" }},{{ $p.Lastmod.Format "2006/01/02" }},{{ delimit $p.Params.categories "・" }},"{{ replace $p.Title "\"" "\"\"" }}",{{ len $o }},{{ len $n }},{{ if eq (len $n) 0 }}孤立{{ end }}
+  {{- range $k := seq $maxOut }},{{ if le $k (len $o) }}{{ index $o (sub $k 1) }}{{ end }}{{ end }}
+  {{- range $k := seq $maxIn }},{{ if le $k (len $n) }}{{ index $n (sub $k 1) }}{{ end }}{{ end }}
+{{- end -}}
