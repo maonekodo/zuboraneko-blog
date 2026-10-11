@@ -13,6 +13,12 @@ theme: PaperMod
 hasCJKLanguage: true
 enableRobotsTXT: true
 enableGitInfo: true
+
+# 更新日は front matter の lastmod を最優先にする。
+# enableGitInfo だけだと git のコミット日時が優先され、
+# 全記事を一括で触ったときに更新日が全部同じ日になってしまうため。
+frontmatter:
+  lastmod: ['lastmod', ':fileModTime', ':default']
 buildDrafts: false
 buildFuture: false
 timeZone: Asia/Tokyo

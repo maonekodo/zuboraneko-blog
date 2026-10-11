@@ -2,6 +2,7 @@
 no: 1
 title: "ズボラ猫暮らし。はじめました🐱"
 date: 2026-04-23
+lastmod: 2026-04-23
 draft: false
 categories: ["お知らせ"]
 tags: ["はじめに"]
