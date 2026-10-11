@@ -48,7 +48,7 @@ No.,スラッグ,公開日,更新日,カテゴリ,タイトル,発,被,孤立{{ 
 {{- range $i, $p := $posts -}}
 {{- $o := index $out $p.RelPermalink -}}
 {{- $n := index $in $p.RelPermalink }}
-{{ printf "#%v" $p.Params.no }},{{ replace $p.RelPermalink "/posts" "" }},{{ $p.Date.Format "2006/01/02" }},{{ $p.Lastmod.Format "2006/01/02" }},{{ delimit $p.Params.categories "・" }},"{{ replace $p.Title "\"" "\"\"" }}",{{ len $o }},{{ len $n }},{{ if eq (len $n) 0 }}孤立{{ end }}
+{{ printf "#%v" $p.Params.no }},{{ $p.Permalink }},{{ $p.Date.Format "2006/01/02" }},{{ $p.Lastmod.Format "2006/01/02" }},{{ delimit $p.Params.categories "・" }},"{{ replace $p.Title "\"" "\"\"" }}",{{ len $o }},{{ len $n }},{{ if eq (len $n) 0 }}孤立{{ end }}
   {{- range $k := seq $maxOut }},{{ if le $k (len $o) }}{{ index $o (sub $k 1) }}{{ end }}{{ end }}
   {{- range $k := seq $maxIn }},{{ if le $k (len $n) }}{{ index $n (sub $k 1) }}{{ end }}{{ end }}
 {{- end -}}
