@@ -6,8 +6,12 @@ name: Scheduled Rebuild
 
 on:
   schedule:
+    # GitHub Actions のスケジュールは混雑時に発火しないことがあるため、
+    # 朝のうちに3回仕掛けておく（記事が出ていれば2回目以降は何もしない）。
     # UTC 21:00 = JST 6:00（前日UTCなので日本の朝6時）
     - cron: '0 21 * * *'
+    - cron: '30 22 * * *'   # JST 7:30
+    - cron: '0 0 * * *'     # JST 9:00
   workflow_dispatch:   # 手動実行もできるようにしておく
 
 permissions:
@@ -31,10 +35,29 @@ jobs:
           if [ -z "$HIT" ]; then
             echo "本日公開予定の記事なし"
             echo "found=false" >> $GITHUB_OUTPUT
-          else
-            echo "本日公開予定:"
-            echo "$HIT"
+            exit 0
+          fi
+
+          echo "本日公開予定:"
+          echo "$HIT"
+
+          # すでに公開されていれば何もしない。
+          # スケジュールを1日に何度か仕掛けているので、
+          # この確認が無いと同じ記事で何度もビルドが走ってしまう。
+          STILL=false
+          for f in $HIT; do
+            SLUG=$(basename "$f" .md)
+            CODE=$(curl -s -o /dev/null -w '%{http_code}' "https://zubora-neko.com/posts/${SLUG}/")
+            echo "  ${SLUG} -> ${CODE}"
+            [ "$CODE" = "200" ] || STILL=true
+          done
+
+          if [ "$STILL" = "true" ]; then
+            echo "まだ公開されていないので再ビルドする"
             echo "found=true" >> $GITHUB_OUTPUT
+          else
+            echo "すでに公開済みなので何もしない"
+            echo "found=false" >> $GITHUB_OUTPUT
           fi
 
       - name: 空コミットで再ビルドを起こす
