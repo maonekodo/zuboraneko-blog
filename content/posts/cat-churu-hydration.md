@@ -45,6 +45,8 @@ cover:
 
 でも、<b>猫にとってはそこが価値</b>なんです。
 
+![ちゅ〜るは水分ばっかり、それでいいという話](/images/posts/cat-churu-hydration-illust.jpg)
+
 ---
 
 ## 猫は、もともと水をあまり飲まない動物
