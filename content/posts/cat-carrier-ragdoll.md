@@ -2,7 +2,7 @@
 no: 27
 title: "ラグドール用キャリーケースの選び方｜大きめ・出入り口・原付通院のリアル"
 date: 2026-07-11
-lastmod: 2026-10-04
+lastmod: 2026-10-18
 draft: false
 categories: ["便利グッズ"]
 tags: ["キャリーバッグ", "キャリーケース", "ラグドール", "大型猫", "通院", "リュック型"]
@@ -46,7 +46,7 @@ cover:
 
 ![リュックに収まったまお君](/images/posts/cat-carrier-ragdoll-front.jpg)
 
-メッシュ窓から顔を出して、けっこうリラックス。
+メッシュ窓から顔を出して、結構リラックス。
 
 ![キャリーの中でくつろぐまお君](/images/posts/cat-carrier-ragdoll-relax.jpg)
 
