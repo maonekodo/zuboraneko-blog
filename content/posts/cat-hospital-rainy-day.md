@@ -166,6 +166,21 @@ msmaflink({"n":"[ヴァストランド] ストレッチレインポンチョ メ
 
 布の靴は**一度濡れると、待っているあいだ乾きません**。
 
+ショート丈のサイドゴアタイプなら、**普通の靴っぽく見えて脱ぎ履きもラク**です👟
+
+<!-- START MoshimoAffiliateEasyLink -->
+<script type="text/javascript">
+(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;
+b[a]=b[a]||function(){arguments.currentScript=c.currentScript
+||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};
+c.getElementById(a)||(d=c.createElement(f),d.src=g,
+d.id=a,e=c.getElementsByTagName("body")[0],e.appendChild(d))})
+(window,document,"script","//dn.msmstatic.com/site/cardlink/bundle.js?20220329","msmaflink");
+msmaflink({"n":"[ＰＡＦＨＬ] レインブーツ レインシューズ レディース メンズ 雨靴 ショート ブーツ サイドゴア おしゃれ 雨 防水 シューズ 梅雨 台風 完全防水 れいんしゅーず 晴雨兼用 黒","b":"ＰＡＦＨＬ","t":"","d":"https:\/\/m.media-amazon.com","c_p":"\/images\/I","p":["\/31tHSfnrViL._SL500_.jpg","\/51D7fo7cDBL._SL500_.jpg","\/5115v-WAP8L._SL500_.jpg","\/51O3ZB6t0gL._SL500_.jpg","\/41UPDgdyR4L._SL500_.jpg","\/51YX56rqWUL._SL500_.jpg","\/41ga4r8snmL._SL500_.jpg","\/51IQHDO7swL._SL500_.jpg","\/41MefxgKezL._SL500_.jpg"],"u":{"u":"https:\/\/www.amazon.co.jp\/dp\/B0BXS3254P","t":"amazon","r_v":""},"v":"2.1","b_l":[{"id":1,"u_tx":"Amazonで見る","u_bc":"#f79256","u_url":"https:\/\/www.amazon.co.jp\/dp\/B0BXS3254P","a_id":5531911,"p_id":170,"pl_id":27060,"pc_id":185,"s_n":"amazon","u_so":1},{"id":2,"u_tx":"楽天市場で見る","u_bc":"#f76956","u_url":"https:\/\/search.rakuten.co.jp\/search\/mall\/%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA%20%E3%82%B5%E3%82%A4%E3%83%89%E3%82%B4%E3%82%A2%20%E5%AE%8C%E5%85%A8%E9%98%B2%E6%B0%B4\/","a_id":5510005,"p_id":54,"pl_id":27059,"pc_id":54,"s_n":"rakuten","u_so":2},{"id":3,"u_tx":"Yahoo!ショッピングで見る","u_bc":"#66a7ff","u_url":"https:\/\/shopping.yahoo.co.jp\/search?first=1&p=%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA%20%E3%82%B5%E3%82%A4%E3%83%89%E3%82%B4%E3%82%A2%20%E5%AE%8C%E5%85%A8%E9%98%B2%E6%B0%B4","a_id":5531909,"p_id":1225,"pl_id":27061,"pc_id":1925,"s_n":"yahoo","u_so":3}],"eid":"UGvbn","s":"l"});
+</script>
+<div id="msmaflink-UGvbn">リンク</div>
+<!-- MoshimoAffiliateEasyLink END -->
+
 ---
 
 ## 帰ってきてから、一応チェックすること
