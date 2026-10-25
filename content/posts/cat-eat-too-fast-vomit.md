@@ -5,7 +5,7 @@ date: 2026-09-05
 lastmod: 2026-10-18
 draft: false
 categories: ["フード"]
-tags: ["吐き戻し", "早食い", "キャットフード", "自動給餌器", "多頭飼い"]
+tags: ["吐き戻し", "キャットフード", "自動給餌器", "多頭飼い"]
 description: "猫がごはんのあとにすぐ吐くのは早食いが原因かもしれません。1回の食事を2回に分けるだけで吐き戻しが減った我が家のやり方と、道具を買わずにできる対策をまとめました。"
 cover:
   image: "/images/posts/cat-eat-too-fast-vomit-thumb.png"

@@ -5,7 +5,7 @@ date: 2026-06-06T10:00:00+09:00
 lastmod: 2026-10-18
 draft: false
 categories: ["まとめ・ガイド"]
-tags: ["罪悪感", "一人遊び", "室内猫", "ズボラ"]
+tags: ["一人遊び"]
 description: "猫と遊んであげられない罪悪感に悩むズボラ飼い主へ。その罪悪感を捨てていい理由と、仕組みで解決する方法をまとめました。"
 cover:
   image: "images/cat-play-guilty.png"

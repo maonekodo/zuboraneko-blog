@@ -5,7 +5,7 @@ date: 2026-04-24
 lastmod: 2026-10-18
 draft: false
 categories: ["便利グッズ"]
-tags: ["給水器", "自動給水器", "猫の水分不足", "腎臓病", "多頭飼い"]
+tags: ["給水器", "水分補給", "腎臓ケア", "多頭飼い"]
 description: "猫の自動給水器はどれを選べばいい？腎機能が低下した猫を自宅ケアしている飼い主が、コードレス・大容量・蛇口式・保温タイプの4つをズボラ目線で比較して調べました。"
 cover:
   image: "/images/posts/cat-water-fountain-thumb.png"

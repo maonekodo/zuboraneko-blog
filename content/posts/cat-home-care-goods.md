@@ -5,7 +5,7 @@ date: 2026-08-22
 lastmod: 2026-10-18
 draft: false
 categories: ["まとめ・ガイド"]
-tags: ["自宅ケア", "ガーゼ", "包帯", "看病", "介護", "シニア猫"]
+tags: ["自宅ケア", "シニア猫"]
 description: "猫の自宅ケアで実際に使っているものを、毎日ガーゼ交換をしている飼い主がまとめました。メロリン・給水パッド・自着包帯の使い方から、実は買わなくてよかったものまで書いています。"
 cover:
   image: "/images/posts/cat-home-care-goods-thumb.png"

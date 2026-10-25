@@ -5,7 +5,7 @@ date: 2026-08-15
 lastmod: 2026-08-15
 draft: false
 categories: ["まとめ・ガイド"]
-tags: ["ノミ", "ダニ", "室内飼い", "予防", "ベランダ", "猫の健康管理"]
+tags: ["ノミダニ対策", "脱走防止"]
 description: "猫のノミ・ダニ対策は完全室内飼いでも必要？ベランダに出る猫を飼う飼い主が、侵入ルート・症状・予防方法を調べてまとめました。犬用の薬を猫に使ってはいけない理由も解説しています。"
 cover:
   image: "/images/posts/cat-flea-tick-thumb.png"

@@ -5,7 +5,7 @@ date: 2026-09-26
 lastmod: 2026-10-18
 draft: false
 categories: ["便利グッズ"]
-tags: ["爪切り", "猫のケア", "LEDライト", "多頭飼い", "猫グッズ"]
+tags: ["爪切り", "自宅ケア", "多頭飼い", "猫グッズ"]
 description: "LEDライト付きのバナナ型の猫用爪切りを実際に使ってみました。電池の種類、ライトの明るさ、切れ味、切った爪が飛び散らないカバーまで、写真つきでまとめています。"
 cover:
   image: "/images/posts/cat-nail-clipper-thumb.jpg"

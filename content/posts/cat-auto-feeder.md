@@ -5,7 +5,7 @@ date: 2026-04-25
 lastmod: 2026-09-24
 draft: false
 categories: ["便利グッズ"]
-tags: ["自動給餌器", "留守番", "多頭飼い", "時短", "ズボラグッズ"]
+tags: ["自動給餌器", "留守番", "多頭飼い", "ズボラグッズ"]
 description: "仕事で帰りが遅い・ごはんやり忘れが不安…そんなズボラ飼い主に贈る自動給餌器5選。タイプ別に比較しました。"
 cover:
   image: "/images/posts/cat-auto-feeder-thumb.png"

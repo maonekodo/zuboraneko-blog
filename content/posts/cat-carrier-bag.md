@@ -5,7 +5,7 @@ date: 2026-05-15
 lastmod: 2026-05-15
 draft: false
 categories: ["便利グッズ"]
-tags: ["キャリーバッグ", "通院", "大型猫", "ラグドール", "ズボラグッズ"]
+tags: ["キャリーバッグ", "通院", "ラグドール", "ズボラグッズ"]
 description: "7kgのラグドールを原付で月1通院。2台使い比べてわかった、猫キャリーリュックの選び方。大型猫でも3,000円台でじゅうぶんでした。"
 cover:
   image: "/images/posts/cat-carrier-bag-thumb.png"

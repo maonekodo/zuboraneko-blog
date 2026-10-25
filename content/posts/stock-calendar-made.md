@@ -5,7 +5,7 @@ date: 2026-09-28
 lastmod: 2026-10-18
 draft: false
 categories: ["便利グッズ"]
-tags: ["猫の介護", "皮下点滴", "腎臓ケア", "無料ツール", "ストック管理"]
+tags: ["自宅ケア", "腎臓ケア"]
 description: "毎月もらってくる点滴・薬・ガーゼが、あと何日分あるのかわからなくなる。数えるのが面倒なので、残りと次の予定が自動で出るカレンダーを作りました。登録不要・無料です。"
 cover:
   image: "/images/posts/stock-calendar-thumb.png"

@@ -5,7 +5,7 @@ date: 2026-04-29
 lastmod: 2026-09-17
 draft: false
 categories: ["便利グッズ"]
-tags: ["ロボット掃除機", "猫の毛", "掃除", "ズボラグッズ", "一人暮らし"]
+tags: ["ロボット掃除機", "抜け毛", "ズボラグッズ", "一人暮らし"]
 description: "猫の毛・猫砂で床が汚れる…そんなズボラ猫飼い主のためのロボット掃除機選び。選び方を間違えると地獄を見ます。猫がいる家に特化した徹底比較まとめ。"
 cover:
   image: "/images/posts/cat-robot-vacuum-thumb.png"

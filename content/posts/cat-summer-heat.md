@@ -5,7 +5,7 @@ date: 2026-05-03
 lastmod: 2026-10-17
 draft: false
 categories: ["便利グッズ"]
-tags: ["暑さ対策", "熱中症", "夏", "留守番", "一人暮らし", "ズボラグッズ"]
+tags: ["暑さ対策", "留守番", "一人暮らし", "ズボラグッズ"]
 description: "猫の夏対策、難しく考えなくていいです。ズボラでも続く最低ラインと神アイテムを紹介。留守中も安心できる一人暮らし向けガイド。"
 cover:
   image: "/images/posts/cat-summer-heat-thumb.png"

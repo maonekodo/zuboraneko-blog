@@ -5,7 +5,7 @@ date: 2026-06-27
 lastmod: 2026-10-18
 draft: false
 categories: ["フード"]
-tags: ["キャットフード", "ピュリナワン", "ロイヤルカナン", "ドライフード", "フード比較"]
+tags: ["キャットフード", "ピュリナワン", "ロイヤルカナン"]
 description: "ピュリナワンとロイヤルカナン、どっちがいい？価格・原材料・粒の大きさ・食いつきで比較して、2匹の猫を飼う我が家が選んだ答えを書いています。丸のみする子向けの砕く工夫も紹介。"
 cover:
   image: "/images/posts/cat-food-purina-vs-royal-canin-thumb.png"

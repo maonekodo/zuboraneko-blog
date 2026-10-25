@@ -5,7 +5,7 @@ date: 2026-05-13
 lastmod: 2026-05-13
 draft: false
 categories: ["便利グッズ"]
-tags: ["消臭", "脱臭", "ニオイ対策", "猫グッズ", "ペット臭", "便利グッズ", "トイレ"]
+tags: ["ニオイ対策", "猫グッズ", "猫トイレ"]
 description: "猫本人はいいにおいなのに、部屋がなんか臭い問題。差すだけ・置くだけ・シュッとするだけ、ズボラでも続けられる消臭グッズを3つだけ選んだ。"
 cover:
   image: "/images/posts/cat-deodorizer-thumb.png"

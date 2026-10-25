@@ -5,7 +5,7 @@ date: 2026-04-25
 lastmod: 2026-10-18
 draft: false
 categories: ["まとめ・ガイド"]
-tags: ["自動化", "時短グッズ", "ズボラグッズ", "給水器", "自動給餌器", "自動トイレ"]
+tags: ["ズボラグッズ", "給水器", "自動給餌器", "自動トイレ"]
 description: "仕事で疲れて帰っても、猫のお世話が山積み……そんな忙しい飼い主に贈る「猫のお世話自動化ガイド」。給水・給餌・トイレの3つを自動化するだけで、猫も飼い主も楽に。"
 cover:
   image: "/images/posts/cat-care-automation-thumb.png"

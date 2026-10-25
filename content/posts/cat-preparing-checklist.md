@@ -5,7 +5,7 @@ date: 2026-04-28
 lastmod: 2026-09-17
 draft: false
 categories: ["まとめ・ガイド"]
-tags: ["猫の飼い方", "初心者", "準備", "チェックリスト", "一人暮らし", "ズボラグッズ"]
+tags: ["猫の飼い方", "一人暮らし", "ズボラグッズ"]
 description: "猫を迎える前に何を準備すればいい？必須グッズ・費用・環境づくりをチェックリスト形式でまとめました。初めて猫を飼う方・一人暮らしの方に向けたズボラ飼い主目線の完全ガイドです。"
 cover:
   image: "/images/posts/cat-preparing-checklist-thumb.png"

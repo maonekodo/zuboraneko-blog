@@ -5,7 +5,7 @@ date: 2026-05-11
 lastmod: 2026-05-11
 draft: false
 categories: ["まとめ・ガイド"]
-tags: ["防災", "猫の防災", "避難グッズ", "猫グッズ", "準備", "チェックリスト"]
+tags: ["防災", "猫グッズ", "猫の飼い方"]
 description: "猫の防災バッグって何を入れればいい？めんどくさいからこそ一回ちゃんと作れば後はほったらかしでOK。最低限チェックリストとおすすめ防災バッグを紹介。"
 cover:
   image: "/images/posts/cat-disaster-bag-thumb.png"

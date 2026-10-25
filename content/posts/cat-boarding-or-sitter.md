@@ -5,7 +5,7 @@ date: 2026-10-10
 lastmod: 2026-10-18
 draft: false
 categories: ["まとめ・ガイド"]
-tags: ["ペットホテル", "ペットシッター", "猫の留守番", "腎臓ケア", "旅行"]
+tags: ["預け先", "留守番", "腎臓ケア"]
 description: "旅行や入院で猫を預けたいとき、ペットホテルとペットシッターのどちらがいいのか。猫にとってのストレス、料金の考え方、投薬が必要な子の預け先まで、腎臓ケア中の猫がいる家が調べました。"
 cover:
   image: "/images/posts/cat-boarding-or-sitter-thumb.png"

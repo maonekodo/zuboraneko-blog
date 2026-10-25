@@ -5,7 +5,7 @@ date: 2026-04-26
 lastmod: 2026-09-17
 draft: false
 categories: ["便利グッズ"]
-tags: ["猫砂", "自動トイレ", "鉱物砂", "ベントナイト", "消臭"]
+tags: ["猫トイレ", "自動トイレ", "ニオイ対策"]
 description: "全自動猫トイレを買ったはいいけど、どの猫砂を使えばいいか迷っていませんか？自動トイレ対応・固まりやすい・ほこりが少ない鉱物系猫砂3選をズボラ目線で比較しました。"
 cover:
   image: "/images/posts/cat-litter-auto-toilet-thumb.png"

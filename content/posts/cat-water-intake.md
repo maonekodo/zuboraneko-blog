@@ -5,7 +5,7 @@ date: 2026-10-03
 lastmod: 2026-10-18
 draft: false
 categories: ["猫の豆知識"]
-tags: ["水分補給", "猫の豆知識", "飲水量", "腎臓ケア", "多頭飼い"]
+tags: ["水分補給", "猫の豆知識", "腎臓ケア", "多頭飼い"]
 description: "猫が1日に飲む水の量は、体重1kgあたり約40〜60mlが目安と言われています。体重別の早見表、ごはんから入る水分の考え方、ズボラでもできる測り方、飲みすぎ・飲まなさすぎのサインまでまとめました。"
 cover:
   image: "/images/posts/cat-water-intake-thumb.jpg"

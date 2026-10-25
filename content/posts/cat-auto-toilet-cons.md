@@ -5,7 +5,7 @@ date: 2026-06-20T10:00:00+09:00
 lastmod: 2026-10-18
 draft: false
 categories: ["便利グッズ"]
-tags: ["自動トイレ", "猫トイレ", "デメリット", "ズボラグッズ", "ラグドール"]
+tags: ["自動トイレ", "猫トイレ", "ズボラグッズ", "ラグドール"]
 description: "全自動猫トイレって本当にラク？ズボラ飼い主が5つのデメリットをまとめました。大型猫・腎臓ケア中の猫がいる我が家が、買う前に調べた本音レポートです。"
 cover:
   image: "/images/posts/cat-auto-toilet-cons-thumb.png"

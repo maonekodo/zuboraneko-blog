@@ -5,7 +5,7 @@ date: 2026-09-12
 lastmod: 2026-10-18
 draft: false
 categories: ["猫の豆知識"]
-tags: ["猫の視力", "猫の豆知識", "おもちゃ", "留守番", "多頭飼い"]
+tags: ["猫の豆知識", "おもちゃ", "留守番", "多頭飼い"]
 description: "猫の視力は人間の10分の1。赤が見えにくい、暗闇に強い、近くはぼやける。猫の見え方を知ると「気を遣わなくていいこと」がわかります。ズボラ飼い主目線でまとめました。"
 cover:
   image: "/images/posts/cat-eyesight-thumb.jpg"

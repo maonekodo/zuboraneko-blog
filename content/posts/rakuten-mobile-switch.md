@@ -5,7 +5,7 @@ date: 2026-05-23T10:00:00+09:00
 lastmod: 2026-10-18
 draft: false
 categories: ["固定費・節約"]
-tags: ["楽天モバイル", "節約", "固定費削減", "スマホ代", "猫の医療費", "乗り換え", "au"]
+tags: ["節約", "猫の医療費"]
 description: "auから楽天モバイルに乗り換えたら年間約7万円浮いた実体験記。店舗ゼロ・電話1本でMNP完了。使ってみた電波の様子も。猫の医療費がかさんで固定費を見直したズボラ飼い主の話。"
 cover:
   image: "images/rakuten-mobile-switch.png"

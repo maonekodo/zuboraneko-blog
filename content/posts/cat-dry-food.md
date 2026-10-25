@@ -5,7 +5,7 @@ date: 2026-04-26
 lastmod: 2026-10-04
 draft: false
 categories: ["フード"]
-tags: ["ドライフード", "キャットフード", "室内猫", "去勢避妊後"]
+tags: ["キャットフード", "猫の飼い方"]
 description: "室内で暮らす猫に何を食べさせるか迷っていませんか？ピュリナワン・ロイヤルカナン・ヒルズの3つをズボラ飼い主目線で比較しました。選び方のポイントも解説します。"
 cover:
   image: "/images/posts/cat-dry-food-thumb.png"

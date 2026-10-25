@@ -5,7 +5,7 @@ date: 2026-05-30T10:00:00+09:00
 lastmod: 2026-09-28
 draft: false
 categories: ["便利グッズ"]
-tags: ["爪とぎ", "猫グッズ", "猫用品", "まお君", "らびちゃん"]
+tags: ["爪とぎ", "猫グッズ"]
 description: "猫の爪とぎ選びに悩むズボラ飼い主へ。まおらびコンビが実際に愛用中のおすすめ2選を紹介。素材・形・安定感の選び方ポイントも解説。"
 cover:
   image: "images/cat-scratching-post.png"
