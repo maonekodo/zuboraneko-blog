@@ -526,7 +526,8 @@ function useDates(it){
     const t0 = mid(new Date());
     return allDates(it).filter(d => d >= t0);
   }
-  const sorted = [...it.done].map(x => x.split("#")[0]).sort();
+  // 補充したあとの「やった日」だけを見る（補充前の履歴に引きずられないように）
+  const sorted = it.done.slice(it.used0 || 0).map(x => x.split("#")[0]).sort();
   const lastDay = sorted.length ? fromIso(sorted[sorted.length-1]) : null;
   // その日の朝・夜がぜんぶ済んでいれば次の日へ。まだ残っていればその日のまま
   const allDone = lastDay && slotsOf(it).every(sl => it.done.includes(doneKey(lastDay, sl)));
