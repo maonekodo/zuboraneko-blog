@@ -451,7 +451,7 @@ const fromIso = s => mid(new Date(s + "T00:00:00"));
 let items = [];
 try{ const raw = localStorage.getItem("stockcal_items"); if(raw) items = JSON.parse(raw); }catch(e){}
 // はじめて開いた人には、何も入っていない状態で見せる
-items.forEach(it => { if(!Array.isArray(it.done)) it.done = []; if(!it.slots) it.slots = 1; if(it.check === undefined) it.check = true; if(it.pause === undefined) it.pause = false; });
+items.forEach(it => { if(!Array.isArray(it.done)) it.done = []; if(!it.slots) it.slots = 1; if(it.check === undefined) it.check = true; if(it.pause === undefined) it.pause = false; if(it.used0 === undefined) it.used0 = 0; });
 const SLOT_NAMES = {1:[""], 2:["朝","夜"], 3:["朝","昼","夜"]};
 const slotsOf = it => SLOT_NAMES[it.slots] || [""];
 const doneKey = (d, name) => iso(d) + (name ? "#" + name : "");
@@ -513,7 +513,9 @@ function allDates(it){
 // 自動でへるぶん（「やった」ボタンを出さないもの）
 const autoUsed = it => (it.check || isChild(it)) ? 0 : allDates(it).filter(d => d < mid(new Date())).length;
 // 親にぶら下がっているものは、親のチェックで入った done で数える
-const restQty = it => Math.max(0, Math.round((it.qty - ((it.check || isChild(it)) ? it.done.length : autoUsed(it) * it.slots) * it.per) * 100) / 100);
+// 補充したときの「やった回数」を起点にして、そこから先だけ数える
+const usedCount = it => Math.max(0, it.done.length - (it.used0 || 0));
+const restQty = it => Math.max(0, Math.round((it.qty - ((it.check || isChild(it)) ? usedCount(it) : autoUsed(it) * it.slots) * it.per) * 100) / 100);
 // 何日分のこっているか（1日に slots 回ぶん使う）
 const restDays = it => Math.floor(restQty(it) / (it.per * it.slots));
 const restTimes = it => restDays(it);
@@ -784,7 +786,7 @@ function drawItems(){
         のこり <b>${restQty(it)}</b> 個（<b>${times}</b> 日分） ／ ${PACES[it.pace]}${it.slots>1 ? ` ・1日${it.slots}回` : ""} ／ 1回 ${it.per} 個<br>
         ${nextDay ? `次は <b>${nextDay.getMonth()+1}月${nextDay.getDate()}日</b>` : "使いきりました"}
         ${last ? ` ・ 最後は <b>${last.getMonth()+1}月${last.getDate()}日</b>（あと ${left} 日）` : ""}<br>
-        ${isChild(it) ? `一緒に使った回数：${it.done.length} 回` : it.check ? `やった回数：${it.done.length} 回` : `自動でへる設定（${autoUsed(it)} 日ぶん使用ずみ）`}
+        ${isChild(it) ? `一緒に使った回数：${usedCount(it)} 回${(it.used0||0) ? `（ぜんぶで ${it.done.length} 回）` : ""}` : it.check ? `やった回数：${usedCount(it)} 回${(it.used0||0) ? `（ぜんぶで ${it.done.length} 回）` : ""}` : `自動でへる設定（${autoUsed(it)} 日ぶん使用ずみ）`}
       </div>
       <div class="bar"><em style="width:${pct}%;background:${it.color}"></em></div>
       ${warn ? `<div class="warnline">${warn}</div>` : ""}
@@ -966,8 +968,11 @@ $("#save").onclick = () => {
     next: $("#fNext").value || iso(new Date()),
     color: pickedColor,
     lead: Math.max(0, parseInt($("#fLead").value) || 0),
-    done: editing ? editing.done : []
+    done: editing ? editing.done : [],
+    used0: editing ? (editing.used0 || 0) : 0
   };
+  // 個数を入れ直したら、そこを新しい起点にする（過去のぶんは引かない）
+  if(editing && o.qty !== editing.qty) o.used0 = editing.done.length;
   if(editing) items = items.map(x => x.id === editing.id ? o : x);
   else items.push(o);
   save(); drawCal(); drawPlan(); drawAlerts(); show("items");
@@ -1042,7 +1047,7 @@ $("#impBtn").onclick = () => {
     const o = JSON.parse(box.value);
     if(!o || !Array.isArray(o.items)) throw 0;
     items = o.items; targets = o.targets || targets; events = o.events || []; notes = o.notes || {};
-    items.forEach(it => { if(!Array.isArray(it.done)) it.done = []; if(!it.slots) it.slots = 1; if(it.check === undefined) it.check = true; if(it.pause === undefined) it.pause = false; });
+    items.forEach(it => { if(!Array.isArray(it.done)) it.done = []; if(!it.slots) it.slots = 1; if(it.check === undefined) it.check = true; if(it.pause === undefined) it.pause = false; if(it.used0 === undefined) it.used0 = 0; });
     save(); saveT(); saveEv(); saveNotes();
     drawTargets(); drawItems(); drawCal(); drawPlan(); drawMemo(); drawTags();
     box.hidden = true; $("#ioMsg").textContent = "読み込みました。";
