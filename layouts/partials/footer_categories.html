@@ -1,0 +1,31 @@
+{{/* フッターのカテゴリ一覧。タグ一覧の上に置く。
+     スマホではメニューにカテゴリが埋もれて見つけられないため追加した（2026-11-03）。
+     絵文字はアイキャッチのカテゴリ別カラーと揃えている */}}
+{{- $cats := site.Taxonomies.categories -}}
+{{- if $cats -}}
+{{- $icons := dict
+  "便利グッズ" "🧰"
+  "フード" "🍚"
+  "まとめ・ガイド" "📚"
+  "猫の豆知識" "💡"
+  "おもちゃ・遊び" "🧶"
+  "固定費・節約" "💰"
+  "お知らせ" "📢"
+-}}
+<div class="footer-cats">
+  <div class="footer-cats__inner">
+    <h2 class="footer-cats__title">📂 カテゴリから探す</h2>
+    <div class="footer-cats__list">
+      {{- range $cats.ByCount -}}
+        {{/* カテゴリページのtitleはSEO用の長い見出しなので、ここでは分類名そのものを使う */}}
+        {{- $term := .Page.Data.Term -}}
+        <a class="footer-cats__cat" href="{{ .Page.Permalink }}">
+          <span class="footer-cats__icon">{{ index $icons $term | default "🐾" }}</span>
+          <span class="footer-cats__name">{{ $term }}</span>
+          <span class="footer-cats__count">{{ .Count }}</span>
+        </a>
+      {{- end -}}
+    </div>
+  </div>
+</div>
+{{- end -}}

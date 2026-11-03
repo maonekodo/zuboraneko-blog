@@ -579,6 +579,97 @@ div[id^="msmaflink-"] a[style*="background"]:hover,
 }
 
 /* ===========================================================
+   フッターのカテゴリ一覧（タグ一覧の上）
+   PCはサイドバーにカテゴリがあるが、768px以下でサイドバーが消えて
+   カテゴリへの入口が無くなるため、スマホ・タブレットだけに出す（2026-11-03）
+   =========================================================== */
+.footer-cats {
+  display: none;
+  margin-top: 40px;
+  padding: 28px 0 24px;
+  border-top: 2px solid var(--color-border);
+  background-color: #fff4e6;
+}
+@media (max-width: 768px) {
+  .footer-cats { display: block; }
+}
+.footer-cats__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.footer-cats__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+.footer-cats__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.footer-cats__cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fff;
+  color: var(--color-text) !important;
+  border: 2px solid var(--color-accent-light);
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: .95rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  line-height: 1.4;
+  transition: background-color .15s ease, border-color .15s ease, transform .15s ease;
+}
+.footer-cats__cat:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+.footer-cats__icon {
+  font-size: 1.1em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.footer-cats__name {
+  white-space: nowrap;
+}
+.footer-cats__count {
+  font-size: .75em;
+  font-weight: 400;
+  opacity: .6;
+  margin-left: 3px;
+  flex-shrink: 0;
+}
+
+/* スマホでは2列に並べて押しやすくする */
+@media (max-width: 600px) {
+  .footer-cats { margin-top: 28px; padding: 22px 0 18px; }
+  .footer-cats__inner { padding: 0 16px; }
+  .footer-cats__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .footer-cats__cat {
+    padding: 10px 12px;
+    font-size: .88rem;
+    justify-content: flex-start;
+  }
+}
+
+/* タグ一覧とカテゴリ一覧が続くときは、間の線を消す */
+.footer-cats + .footer-tags {
+  margin-top: 0;
+  border-top: none;
+}
+
+/* ===========================================================
    フッターのタグ一覧
    もとはサイドバーにあったが、数が多く記事一覧より下まで伸びるため移動
    =========================================================== */
