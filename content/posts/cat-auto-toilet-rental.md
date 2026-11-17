@@ -8,8 +8,8 @@ categories: ["便利グッズ"]
 tags: ["自動トイレ", "猫トイレ", "ズボラグッズ"]
 description: "全自動猫トイレは高いうえに、猫が使ってくれるかは置いてみないとわかりません。そこで調べたのがレンタルです。月額いくらで借りられるのか、何か月で自分のものになるのか、途中で返すといくらかかるのか。レンティオとGEXのレンタルプランを比べてまとめました。"
 cover:
-  image: "/images/posts/cat-auto-toilet-rental-thumb.png"
-  alt: ""
+  image: "/images/posts/cat-auto-toilet-rental-thumb.jpg"
+  alt: "全自動トイレをのぞきこむサビ猫と、うしろで首をかしげるラグドール"
 ---
 
 全自動猫トイレ、気になってはいるんです。
